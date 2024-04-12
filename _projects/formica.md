@@ -1,7 +1,7 @@
 ---
 layout: page
 title: Formica
-description: Agent based model to replicate the results of {% cite WATMOUGH1995357 %}Watmough and Edelstein-Keshet's 1993 paper
+description: Agent based model to replicate the results of Watmough and Edelstein-Keshet's 1993 paper
 img: assets/img/formica_header.jpg
 importance: 2
 category: studies
