@@ -2,20 +2,17 @@
 layout: about
 title: about
 permalink: /
-subtitle: this site is still in development
+#subtitle: this site is still in development
 
 profile:
   align: right
   image: jasmine.jpg
   image_circular: false # crops the image to make it circular
   more_info: >
-    #<p>555 your office number</p>
-    #<p>123 your address street</p>
-    #<p>your city, state 12345</p>
-
+    me
 news: true # includes a list of news items
-selected_papers: true # includes a list of papers marked as "selected={true}"
-social: true # includes social icons at the bottom of the page
+#selected_papers: true # includes a list of papers marked as "selected={true}"
+#social: true # includes social icons at the bottom of the page
 ---
 
 Hello, my name is Alex
