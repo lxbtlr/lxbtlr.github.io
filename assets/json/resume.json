@@ -11,7 +11,7 @@
   "work": [
     {
       "name": "IBM",
-      "position": "Sr. Firmware Developer Intern, System Architecture",
+      "position": "  Sr. Firmware Developer Intern, System Architecture",
       "url": "www.ibm.com",
       "startDate": "2024-04-22",
       "endDate": "",
@@ -20,7 +20,7 @@
     },
     {
       "name": "IBM",
-      "position": "Hardware Developer Intern, Millicode",
+      "position": "  Hardware Developer Intern, Millicode",
       "url": "www.ibm.com",
       "startDate": "2022-05-20",
       "endDate": "2023-08-20",
@@ -29,7 +29,7 @@
     },
     {
       "name": "Watts Water Technologies",
-      "position": "Research and Technologies Coop",
+      "position": "  Research and Technologies Coop",
       "url": "www.watts.com",
       "startDate": "2021-01-21",
       "endDate": "2021-08-20",
@@ -40,10 +40,10 @@
   "education": [
     {
       "institution": "Franklin W. Olin College of Engineering",
-      "location": "Needham, Massachusetts",
+      "location": "Needham, Ma",
       "url": "https://www.olin.edu/",
       "area": "Electrical & Computer Engineering",
-      "studyType": "BS",
+      "studyType": "  BS",
       "startDate": "2019-08-24",
       "endDate": "2023-12-16",
       "score": "",
