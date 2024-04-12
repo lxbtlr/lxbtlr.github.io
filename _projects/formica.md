@@ -5,6 +5,7 @@ description: Agent based model to replicate the results of Watmough and Edelstei
 img: assets/img/formica_header.jpg
 importance: 2
 category: studies
+related_publications: true
 giscus_comments: false
 ---
 
