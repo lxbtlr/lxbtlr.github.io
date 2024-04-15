@@ -17,7 +17,7 @@ news: true # includes a list of news items
 
 Hello, my name is Alex
 
-I am first year computer science PhD student at [Northwestern University](https://www.northwestern.edu/) in Evanston, Illinois. I earned my bachelors degree in electrical & computer engineering from [Olin College of Engineering](https://www.olin.edu).
+I am a first year computer science PhD student at [Northwestern University](https://www.northwestern.edu/) in Evanston, Illinois. I earned my bachelors degree in electrical & computer engineering from [Olin College of Engineering](https://www.olin.edu).
 
 For the past three years, I have interned at IBM working on the IBM Z mainframes as a part of the Millicode and System Architecture teams.
 
