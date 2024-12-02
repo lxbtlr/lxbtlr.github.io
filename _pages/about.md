@@ -9,9 +9,10 @@ profile:
   image: me.png #jasmine.jpg
   image_circular: false # crops the image to make it circular
   more_info: >
-    Contact
-    email: lxbtlr@u.northwestern.edu
-    git, linkedin: lxbtlr
+    <p>📬: lxbtlr@u.northwestern.edu</p>
+    <p>Mudd Library, Room 3302</p>
+    <p>2233 Tech Drive</p>
+    <p>Evanston, Il 60208</p>
 news: true # includes a list of news items
 #selected_papers: true # includes a list of papers marked as "selected={true}"
 #social: true # includes social icons at the bottom of the page
