@@ -25,7 +25,7 @@ I am a first year computer science PhD student at [Northwestern University](http
 
 I earned my bachelors degree in electrical & computer engineering from [Olin College of Engineering](https://www.olin.edu), focusing on work in power electronics, software systems, and hardware design (ASICs to PCBs).
 
-For the past three summers, I have interned at IBM working on the IBM Z mainframes as a part of the Millicode and System Architecture teams. Most recently I worked on formalizing the Z/Archicture memory model from its specifications.
+For the past three summers, I have interned at IBM working on the IBM Z mainframes as a part of the Millicode and System Architecture teams. Most recently I worked on formalizing the Z/Architecture memory model from its specifications.
 
 My research interests primarily lie in hardware / software codesign. Specifically in addressing how and where to integrate hardware accelerators, collective communication schemas for parallel computing, and more generally; high performance computing.
 
