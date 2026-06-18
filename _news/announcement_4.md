@@ -5,4 +5,4 @@ inline: true
 related_posts: false
 ---
 
-Recieved GEM PhD Fellowship
+Received GEM PhD Fellowship

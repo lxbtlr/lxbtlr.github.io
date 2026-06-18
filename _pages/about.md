@@ -21,11 +21,12 @@ news: true # includes a list of news items
 
 Hello, my name is Alex
 
-I am a computer science PhD student at [Northwestern University](https://www.northwestern.edu/) in Evanston, Illinois. I currently work in the Prescience Lab with Dr. Peter Dinda.
+I am a computer science PhD candidate at [Northwestern University](https://www.northwestern.edu/) in Evanston, Illinois. I currently work in the Prescience Lab with Dr. Peter Dinda.
 
 I earned my bachelors degree in electrical & computer engineering from [Olin College of Engineering](https://www.olin.edu), focusing on work in power electronics, software systems, and hardware design (ASICs to PCBs).
 
 For the past three summers, I have interned at IBM working on the IBM Z mainframes as a part of the Millicode and System Architecture teams. Most recently I worked on formalizing the Z/Architecture memory model from its specifications.
 
-My research interests primarily lie in hardware / software codesign. Specifically in addressing synchronization for parallel and high performance computing on modern devices. My recent focus has been focused on database systems.
+My research interests primarily lie in architecture-aware optimizations for parallel systems, with work ranging from synchronization primitives to wimpy-node/efficient computing clusters. My recent focus has been focused on vectorized and compilation based query processing engines for database systems.
+
 
