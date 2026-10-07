@@ -5,7 +5,7 @@ description: A student designed and built kinetic battery testbench
 img: assets/img/diskos_header.jpg
 importance: 1
 category: studies
-related_publications: true
+#related_publications: true
 ---
 
 <div class="row">
