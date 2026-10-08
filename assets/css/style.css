@@ -1,16 +1,15 @@
 /* ---------------------------------------------------------
    Black, white and green theme on top of pico.css. Layout and
    component rules adapted from tommymcm/materials (MIT).
-   Light and dark palettes share the same variable names, so
-   everything below this block follows the active theme.
+   Light only: the page forces data-theme="light" so pico's
+   dark mode never kicks in.
 --------------------------------------------------------- */
 
 :root {
   --measure: 38rem;
-}
+  color-scheme: light;
 
-:root:not([data-theme="dark"]) {
-  --ink: #111111;
+  --ink: #000000;
   --ink-muted: #555555;
   --paper: #ffffff;
   --rule: #cccccc;
@@ -18,29 +17,8 @@
   --code-bg: #f2f2f2;
 }
 
-@media only screen and (prefers-color-scheme: dark) {
-  :root:not([data-theme="light"]) {
-    --ink: #e6e6e6;
-    --ink-muted: #9a9a9a;
-    --paper: #0b0b0b;
-    --rule: #3a3a3a;
-    --green: #3ddc84;
-    --code-bg: #1a1a1a;
-  }
-}
-
-:root[data-theme="dark"] {
-  --ink: #e6e6e6;
-  --ink-muted: #9a9a9a;
-  --paper: #0b0b0b;
-  --rule: #3a3a3a;
-  --green: #3ddc84;
-  --code-bg: #1a1a1a;
-}
-
 :root,
-:root:not([data-theme]),
-:root[data-theme="dark"] {
+:root[data-theme="light"] {
   --pico-background-color: var(--paper);
   --pico-color: var(--ink);
   --pico-muted-color: var(--ink-muted);
