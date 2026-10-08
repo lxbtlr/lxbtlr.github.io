@@ -35,3 +35,6 @@ Actions. Repository Settings → Pages → Source must be set to "GitHub Actions
 
 Layout and templates adapted from [tommymcm/materials](https://github.com/tommymcm/materials)
 (MIT License, Copyright (c) 2025 Tommy McMichen).
+
+Fonts: [Atkinson Hyperlegible Next and Mono](https://www.brailleinstitute.org/freefont/)
+by the Braille Institute, SIL Open Font License 1.1, installed via Fontsource.

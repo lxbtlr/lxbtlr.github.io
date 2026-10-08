@@ -8,6 +8,13 @@ module.exports = function(eleventyConfig) {
   eleventyConfig.addPassthroughCopy("assets");
   eleventyConfig.addPassthroughCopy({
     "node_modules/@picocss/pico/css/pico.css": "assets/css/pico.css/style.css",
+    // Atkinson Hyperlegible (SIL OFL 1.1), self-hosted
+    "node_modules/@fontsource-variable/atkinson-hyperlegible-next/index.css": "assets/fonts/atkinson-next/index.css",
+    "node_modules/@fontsource-variable/atkinson-hyperlegible-next/files": "assets/fonts/atkinson-next/files",
+    "node_modules/@fontsource-variable/atkinson-hyperlegible-next/LICENSE": "assets/fonts/atkinson-next/LICENSE",
+    "node_modules/@fontsource-variable/atkinson-hyperlegible-mono/index.css": "assets/fonts/atkinson-mono/index.css",
+    "node_modules/@fontsource-variable/atkinson-hyperlegible-mono/files": "assets/fonts/atkinson-mono/files",
+    "node_modules/@fontsource-variable/atkinson-hyperlegible-mono/LICENSE": "assets/fonts/atkinson-mono/LICENSE",
   });
 
   // Head filter - get the first n items
