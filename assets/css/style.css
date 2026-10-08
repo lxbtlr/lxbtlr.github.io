@@ -201,10 +201,10 @@ sup {
   font-size: 0.7em;
 }
 
-/* Links: ink-colored text with a green wavy underline */
+/* Links: ink-colored text with a green underline */
 a {
   color: var(--pico-color);
-  text-decoration: underline wavy;
+  text-decoration: underline solid;
   text-decoration-thickness: 2px;
   text-underline-offset: 3px;
   text-decoration-color: var(--pico-accent-color);
@@ -212,7 +212,7 @@ a {
   margin-inline: -0.1em;
 }
 /* Scale the underline down for small text (e.g. poster venue links)
-   so the wavy line doesn't dwarf the smaller font. */
+   so the line doesn't dwarf the smaller font. */
 a:has(small),
 small a {
   text-decoration-thickness: 1px;
@@ -240,20 +240,20 @@ nav a {
 }
 
 nav a:hover {
-  text-decoration: underline wavy;
+  text-decoration: underline solid;
   text-decoration-thickness: 2px;
   text-underline-offset: 8px;
   text-decoration-color: var(--pico-accent-color);
 }
 
-/* Project card titles: same hover-only wavy underline as the navbar,
+/* Project card titles: same hover-only underline as the navbar,
    instead of showing it all the time like a regular body link. */
 a.card-title {
   text-decoration: none;
 }
 
 a.card-title:hover {
-  text-decoration: underline wavy;
+  text-decoration: underline solid;
   text-decoration-thickness: 2px;
   text-underline-offset: 8px;
   text-decoration-color: var(--pico-accent-color);
@@ -393,7 +393,7 @@ details > :not(summary) {
 
 /* Current page in the nav and the footer */
 nav a[aria-current="page"] {
-  text-decoration: underline wavy;
+  text-decoration: underline solid;
   text-decoration-thickness: 2px;
   text-underline-offset: 8px;
   text-decoration-color: var(--pico-accent-color);

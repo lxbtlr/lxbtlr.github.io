@@ -1,5 +1,11 @@
 [
   {
+    "name": "Wimpy Nodes",
+    "desc": "Cluster of Single Board Computers to achieve similar performance to brawny nodes",
+    "url": "/projects/wimpynodes/",
+    "img": "/assets/images/wimpynodes_header.jpg"
+  },
+  {
     "name": "Diskos",
     "desc": "A student designed and built kinetic battery testbench.",
     "url": "/projects/diskos/",
