@@ -5,29 +5,31 @@ title: Projects
 
 <br>
 
-<div class="grid" style="grid-template-columns: repeat(auto-fit, minmax(14rem, 1fr));">
+<div class="project-list">
 
   {% for project in projects %}
 
-  <article>
-    <header>
-      <center>
-        <h3>
-          <a href="{{ project.url }}" class="card-title">
-            {{ project.name }}
-          </a>
-        </h3>
+  <article class="project-row">
+    {% if project.img %}
+    <a href="{{ project.url }}" class="project-thumb">
+      <img src="{{ project.img }}" alt="{{ project.name }}">
+    </a>
+    {% endif %}
 
-        {% if project.img %}
-        <img src="{{ project.img }}" alt="{{ project.name }}" style="height: 120px; object-fit: contain;">
-        {% endif %}
-      </center>
-    </header>
+    <div>
+      <h3>
+        <a href="{{ project.url }}" class="card-title">
+          {{ project.name }}
+        </a>
+      </h3>
 
-    <p>
-      {{ project.desc }}
-    </p>
+      <p>
+        {{ project.desc }}
+      </p>
+    </div>
   </article>
+
+  {% if not loop.last %}<hr />{% endif %}
 
   {% endfor %}
 
