@@ -71,6 +71,19 @@ module.exports = function(eleventyConfig) {
     return `<span class="sidenote-wrapper"><sup>${n}</sup><span class="sidenote"><sup>${n}</sup> ${content}</span></span>`;
   });
 
+  // The card page must fit in one TCP packet: 1460-byte MSS minus
+  // room for HTTP response headers. Warn when it outgrows that.
+  const CARD_BUDGET = 1400;
+  eleventyConfig.on('eleventy.after', ({ dir }) => {
+    const fs = require("fs");
+    const path = require("path");
+    const card = path.join(dir.output, "card", "index.html");
+    if (!fs.existsSync(card)) return;
+    const size = fs.statSync(card).size;
+    const status = size <= CARD_BUDGET ? "ok" : "OVER BUDGET";
+    console.log(`[card] ${size}/${CARD_BUDGET} bytes (${status})`);
+  });
+
   return {
     dir: {
       input: ".",

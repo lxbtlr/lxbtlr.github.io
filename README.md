@@ -20,6 +20,9 @@ Structured content lives in `_data/`:
 - `projects.json` — project cards; full pages live in `projects/*.md`
 - `education.json`, `experience.json` — C/V page
 
+`card.njk` renders `/card/`, a text-only summary kept under 1400 bytes so it fits in one
+TCP packet; the build prints its size.
+
 Theme colors are CSS variables at the top of `assets/css/style.css`.
 
 ## Deployment
