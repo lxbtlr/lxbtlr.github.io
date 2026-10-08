@@ -1,0 +1,46 @@
+---
+layout: layouts/base.njk
+title: C/V
+---
+
+<article>
+
+<h1><center>{{ site.name }}</center></h1>
+
+<center>
+<a href="/files/Alex_Butler_RESUME.pdf" download="Alex_Butler_RESUME.pdf">Download</a>
+</center>
+
+<br>
+
+<article>
+<h2>Education</h2>
+
+{% for edu in education %}
+<b>{{ edu.institution }}</b>, <i>{{ edu.location }}</i>.
+
+  {% for degree in edu.degrees %}
+    <br>
+    {{ degree.degree }} in {{ degree.major }}{%- if degree.advisor -%}, <i>Advised by {{ degree.advisor }}</i>{%- endif -%}. {{ degree.date }}.
+  {% endfor %}
+
+  {% if not loop.last %}<hr />{% endif %}
+
+{% endfor %}
+</article>
+
+<article>
+<h2>Experience</h2>
+{% for job in experience %}
+  <hgroup>
+    <h5>{{ job.role }}</h5>
+    <small>
+      <i>{{ job.org }}</i>, {{ job.date }}.
+    </small>
+  </hgroup>
+  {% if job.desc %}<p>{{ job.desc }}</p>{% endif %}
+  {% if not loop.last %}<hr />{% endif %}
+{% endfor %}
+</article>
+
+</article>

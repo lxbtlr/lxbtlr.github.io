@@ -1,0 +1,25 @@
+[
+  {
+    "institution": "Northwestern University",
+    "location": "Evanston, IL",
+    "degrees": [
+      {
+        "degree": "Ph.D.",
+        "major": "Computer Science",
+        "advisor": "Peter Dinda",
+        "date": "2024–present"
+      }
+    ]
+  },
+  {
+    "institution": "Olin College of Engineering",
+    "location": "Needham, MA",
+    "degrees": [
+      {
+        "degree": "B.S.",
+        "major": "Electrical & Computer Engineering",
+        "date": "2023"
+      }
+    ]
+  }
+]

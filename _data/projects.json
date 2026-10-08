@@ -1,0 +1,20 @@
+[
+  {
+    "name": "Diskos",
+    "desc": "A student designed and built kinetic battery testbench.",
+    "url": "/projects/diskos/",
+    "img": "/assets/images/diskos_header.jpg"
+  },
+  {
+    "name": "Formica",
+    "desc": "Agent based model replicating Watmough and Edelstein-Keshet's ant trail network results.",
+    "url": "/projects/formica/",
+    "img": "/assets/images/formica_header.jpg"
+  },
+  {
+    "name": "Spectrum Coexistence",
+    "desc": "Unlicensed access + microwave fixed links @ 6 GHz.",
+    "url": "/projects/spectrum/",
+    "img": "/assets/images/spectrumx.jpg"
+  }
+]

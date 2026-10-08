@@ -1,0 +1,430 @@
+/* ---------------------------------------------------------
+   Black, white and green theme on top of pico.css. Layout and
+   component rules adapted from tommymcm/materials (MIT).
+   Light and dark palettes share the same variable names, so
+   everything below this block follows the active theme.
+--------------------------------------------------------- */
+
+:root {
+  --measure: 38rem;
+}
+
+:root:not([data-theme="dark"]) {
+  --ink: #111111;
+  --ink-muted: #555555;
+  --paper: #ffffff;
+  --rule: #cccccc;
+  --green: #1a7f37;
+  --code-bg: #f2f2f2;
+}
+
+@media only screen and (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    --ink: #e6e6e6;
+    --ink-muted: #9a9a9a;
+    --paper: #0b0b0b;
+    --rule: #3a3a3a;
+    --green: #3ddc84;
+    --code-bg: #1a1a1a;
+  }
+}
+
+:root[data-theme="dark"] {
+  --ink: #e6e6e6;
+  --ink-muted: #9a9a9a;
+  --paper: #0b0b0b;
+  --rule: #3a3a3a;
+  --green: #3ddc84;
+  --code-bg: #1a1a1a;
+}
+
+:root,
+:root:not([data-theme]),
+:root[data-theme="dark"] {
+  --pico-background-color: var(--paper);
+  --pico-color: var(--ink);
+  --pico-muted-color: var(--ink-muted);
+  --pico-muted-border-color: var(--rule);
+  --pico-border-color: var(--rule);
+
+  --pico-primary: var(--green);
+  --pico-primary-background: var(--green);
+  --pico-primary-hover: var(--ink-muted);
+  --pico-primary-hover-background: var(--ink);
+  --pico-primary-focus: color-mix(in srgb, var(--green) 25%, transparent);
+  --pico-primary-inverse: var(--paper);
+
+  --pico-contrast: var(--ink);
+  --pico-contrast-hover: var(--ink-muted);
+  --pico-contrast-inverse: var(--paper);
+
+  --pico-h1-color: var(--ink);
+  --pico-h2-color: var(--ink);
+  --pico-h3-color: var(--ink);
+  --pico-h4-color: var(--ink);
+  --pico-h5-color: var(--ink);
+  --pico-h6-color: var(--ink);
+
+  --pico-accent-color: var(--green);
+  --pico-underline: var(--green);
+
+  --pico-card-background-color: var(--paper);
+  --pico-card-sectioning-background-color: transparent;
+  --pico-card-border-color: var(--paper);
+  --pico-card-box-shadow: none;
+  --pico-button-box-shadow: none;
+  --pico-button-hover-box-shadow: none;
+
+  --pico-code-background-color: var(--code-bg);
+  --pico-code-color: var(--ink-muted);
+}
+
+:root {
+  --pico-font-family-sans-serif: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  --pico-font-family: var(--pico-font-family-sans-serif);
+  --pico-font-family-monospace: ui-monospace, SFMono-Regular, Menlo, Consolas, "Liberation Mono", monospace;
+  --font-family-heading: var(--pico-font-family-sans-serif);
+  --pico-font-weight: 400;
+  --pico-border-radius: 2px;
+  --pico-line-height: 1.6;
+  --pico-typography-spacing-vertical: 1.2rem;
+}
+
+/* Home page */
+.home-photo {
+  aspect-ratio: 1 / 1;
+  object-fit: cover;
+  width: 25%;
+  margin-right: 0%;
+  margin-left: 5%;
+  border-radius: var(--pico-border-radius);
+  box-shadow: var(--pico-card-box-shadow);
+}
+
+/* Hide the photo on mobile: at narrow widths it eats too much space
+   next to the name/contact block. Without the photo (and its
+   margin-left) ahead of it, the title row loses the only thing that
+   was giving it a left gutter, so it needs its own padding to line
+   up with the card gutter below it. */
+@media (max-width: 768px) {
+  .home-photo {
+    display: none;
+  }
+
+  .title-row {
+    padding-inline: var(--pico-block-spacing-horizontal);
+  }
+}
+
+/* Layout: constrain article width to a narrow, essay-like measure */
+main {
+  margin-inline: auto;
+  overflow: visible;
+}
+
+/* Sticky header: pinned full-width so its fade can reach the
+   viewport edges, with the nav inside it keeping the usual centered
+   measure. The gradient fades from the page background color down to
+   transparent, so content scrolling underneath gradually dissolves
+   into the header rather than getting a hard clipped edge. */
+.site-header {
+  position: sticky;
+  top: 0;
+  z-index: 20;
+  width: 100%;
+  padding: 1rem 0 1rem;
+  background: linear-gradient(to bottom, var(--pico-background-color) 60%, transparent);
+}
+
+.site-header nav {
+  margin-inline: auto;
+}
+
+@media (min-width: 768px) {
+  main, .site-header nav {
+    max-width: var(--measure);
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+
+@media (max-width: 768px) {
+  main {
+    max-width: 100vw;
+    margin-right: 0vw;
+    margin-left: 0vw;
+  }
+
+  .site-header nav {
+    max-width: 90vw;
+    margin-inline: auto;
+  }
+}
+
+/* Hand-drawn divider: a slightly wobbly pen stroke, tapered at the
+   ends. Drawn as a mask over the muted border color so it follows the
+   theme. Four stroke variants cycle through successive rules, and every
+   other one is mirrored, so neighbouring dividers don't look stamped. */
+hr {
+  --hr-stroke: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 600 8' preserveAspectRatio='none'><path d='M2 3.88 C35 3.49 50 3.05 70 3.57 105 3.98 120 4.38 140 4.47 180 3.82 195 2.98 215 3.43 255 3.93 270 4.41 290 4.26 330 4.5 345 4.05 365 3.96 405 3.28 420 3.97 440 3.4 480 3.67 495 4.64 515 4.21 563 3.12 578 2.94 598 3.37' fill='none' stroke='black' stroke-width='1.79' stroke-linecap='round'/><path d='M2 3.88 C35 3.49 50 3.05 70 3.57 105 3.98 120 4.38 140 4.47 180 3.82 195 2.98 215 3.43 255 3.93 270 4.41 290 4.26 330 4.5 345 4.05 365 3.96 405 3.28 420 3.97 440 3.4 480 3.67 495 4.64 515 4.21 563 3.12 578 2.94 598 3.37' transform='translate(0 0.5)' fill='none' stroke='black' stroke-width='0.8' stroke-linecap='round' stroke-dasharray='0 50 460 1000' opacity='0.55'/></svg>");
+  height: 8px;
+  border: 0;
+  background-color: var(--pico-muted-border-color);
+  -webkit-mask: var(--hr-stroke) center / 100% 100% no-repeat;
+  mask: var(--hr-stroke) center / 100% 100% no-repeat;
+}
+hr:nth-of-type(4n+2) { --hr-stroke: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 600 8' preserveAspectRatio='none'><path d='M2 3.0 C35 3.26 50 5.34 70 5.6 105 5.37 120 3.53 140 3.3 180 3.51 195 5.19 215 5.4 255 5.22 270 3.78 290 3.6 330 3.76 345 5.04 365 5.2 405 5.02 420 3.58 440 3.4 480 3.56 495 4.84 515 5.0 563 4.88 578 3.92 598 3.8' fill='none' stroke='black' stroke-width='1.7' stroke-linecap='round'/><path d='M2 3.0 C35 3.26 50 5.34 70 5.6 105 5.37 120 3.53 140 3.3 180 3.51 195 5.19 215 5.4 255 5.22 270 3.78 290 3.6 330 3.76 345 5.04 365 5.2 405 5.02 420 3.58 440 3.4 480 3.56 495 4.84 515 5.0 563 4.88 578 3.92 598 3.8' transform='translate(0 0.5)' fill='none' stroke='black' stroke-width='0.8' stroke-linecap='round' stroke-dasharray='0 40 480 1000' opacity='0.6'/></svg>"); }
+hr:nth-of-type(4n+3) { --hr-stroke: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 600 8' preserveAspectRatio='none'><path d='M2 3.79 C35 5.01 50 4.37 70 4.55 105 3.95 120 3.25 140 3.42 180 4.75 195 4.61 215 4.62 255 3.52 270 3.6 290 3.86 330 4.63 345 4.22 365 4.34 405 5.03 420 4.53 440 4.53 480 3.7 495 3.98 515 4.1 563 4.32 578 4.15 598 4.59' fill='none' stroke='black' stroke-width='1.69' stroke-linecap='round'/><path d='M2 3.79 C35 5.01 50 4.37 70 4.55 105 3.95 120 3.25 140 3.42 180 4.75 195 4.61 215 4.62 255 3.52 270 3.6 290 3.86 330 4.63 345 4.22 365 4.34 405 5.03 420 4.53 440 4.53 480 3.7 495 3.98 515 4.1 563 4.32 578 4.15 598 4.59' transform='translate(0 -0.5)' fill='none' stroke='black' stroke-width='0.8' stroke-linecap='round' stroke-dasharray='0 30 500 1000' opacity='0.55'/></svg>"); }
+hr:nth-of-type(4n+4) { --hr-stroke: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 600 8' preserveAspectRatio='none'><path d='M2 4.9 C50 4.73 70 3.37 95 3.2 145 3.39 165 4.91 190 5.1 245 4.93 265 3.57 290 3.4 345 3.56 365 4.84 390 5.0 445 4.85 465 3.65 490 3.5 553 3.58 573 4.22 598 4.3' fill='none' stroke='black' stroke-width='1.6' stroke-linecap='round'/><path d='M2 4.9 C50 4.73 70 3.37 95 3.2 145 3.39 165 4.91 190 5.1 245 4.93 265 3.57 290 3.4 345 3.56 365 4.84 390 5.0 445 4.85 465 3.65 490 3.5 553 3.58 573 4.22 598 4.3' transform='translate(0 -0.5)' fill='none' stroke='black' stroke-width='0.8' stroke-linecap='round' stroke-dasharray='0 80 440 1000' opacity='0.55'/></svg>"); }
+hr:nth-of-type(even) { transform: scaleX(-1); }
+
+/* Headings: tighten line-height for a display feel. */
+h1, h2, h3, h4, h5, h6,
+article > header {
+  font-weight: 700;
+  line-height: 1.15;
+}
+
+h1 {
+  font-family: var(--font-family-heading);
+  font-size: 2.4rem;
+  padding-top: 1.0em;
+}
+
+/* Title card (home page name + contact block): role, affiliation and
+   contact lines are body weight, just larger than running text. */
+.title-card h5 {
+  font-family: var(--pico-font-family-sans-serif);
+  font-weight: 400;
+  font-size: 1.4rem;
+  line-height: 125%;
+}
+
+.title-card h6 {
+  font-family: var(--pico-font-family-sans-serif);
+  font-weight: 400;
+  font-size: 1.15rem;
+  line-height: 120%;
+}
+
+/* Keep <sup> from breaking link underlines into two segments. Pico
+   already raises <sup> via `position: relative` rather than
+   `vertical-align`, but browsers still paint text-decoration lines
+   per inline text fragment, so the raised glyph still gets its own
+   segment of underline. Making it an atomic inline box (inline-block)
+   fixes this: decoration lines are drawn straight through atomic
+   inline boxes at the ancestor's single baseline instead of
+   following the fragment's own shifted position. */
+sup {
+  display: inline-block;
+  vertical-align: baseline;
+  position: relative;
+  top: -0.4em;
+  font-size: 0.7em;
+}
+
+/* Links: ink-colored text with a green wavy underline */
+a {
+  color: var(--pico-color);
+  text-decoration: underline wavy;
+  text-decoration-thickness: 2px;
+  text-underline-offset: 3px;
+  text-decoration-color: var(--pico-accent-color);
+  padding-inline: 0.1em;
+  margin-inline: -0.1em;
+}
+/* Scale the underline down for small text (e.g. poster venue links)
+   so the wavy line doesn't dwarf the smaller font. */
+a:has(small),
+small a {
+  text-decoration-thickness: 1px;
+  text-underline-offset: 3px;
+}
+
+a:hover,
+a:focus {
+  color: var(--pico-accent-color);
+  text-decoration-color: var(--pico-accent-color);
+}
+
+button a {
+  color: inherit;
+}
+
+/* Nav: plain text links, no colorful per-item underline accents */
+nav {
+  white-space: nowrap;
+}
+
+nav a {
+  color: inherit;
+  text-decoration: none;
+}
+
+nav a:hover {
+  text-decoration: underline wavy;
+  text-decoration-thickness: 2px;
+  text-underline-offset: 8px;
+  text-decoration-color: var(--pico-accent-color);
+}
+
+/* Project card titles: same hover-only wavy underline as the navbar,
+   instead of showing it all the time like a regular body link. */
+a.card-title {
+  text-decoration: none;
+}
+
+a.card-title:hover {
+  text-decoration: underline wavy;
+  text-decoration-thickness: 2px;
+  text-underline-offset: 8px;
+  text-decoration-color: var(--pico-accent-color);
+}
+
+/* Flatten buttons/inputs to match the plain, undecorated aesthetic */
+button, input[type="submit"], input[type="button"], [role="button"] {
+  box-shadow: none;
+}
+
+/* Sidenotes via absolute positioning in a relative wrapper */
+.sidenote {
+  float: right;
+  clear: right;
+  width: 18vw;
+  margin-right: calc(-20vw - 1ch);
+  font-size: 0.85rem;
+  color: var(--pico-muted-color);
+  text-align: left;
+}
+
+.sidenote-wrapper {
+  position: static; /* remove relative */
+}
+
+/* Collapse on mobile */
+@media (max-width: 768px) {
+  .sidenote {
+    position: static;
+    display: block;
+    border-left: 2px solid var(--pico-primary);
+    padding-left: 0.75rem;
+    margin: 0.5rem 0;
+  }
+}
+
+.sc {
+  font-variant: small-caps;
+}
+
+/* Containers */
+.container {
+  display: flex;
+}
+
+/* News roll: date in a fixed mono column, item text beside it */
+.news-list {
+  display: grid;
+  grid-template-columns: max-content 1fr;
+  column-gap: 1.5rem;
+  row-gap: 0.5rem;
+  margin: 0;
+}
+
+.news-list dt {
+  font-family: var(--pico-font-family-monospace);
+  font-size: 0.9em;
+  font-weight: 400;
+  color: var(--pico-accent-color);
+}
+
+.news-list dd {
+  margin: 0;
+}
+
+/* Figures on project pages */
+figure img {
+  border-radius: var(--pico-border-radius);
+}
+
+figcaption {
+  font-size: 0.9rem;
+  color: var(--pico-muted-color);
+  text-align: center;
+}
+
+.embed {
+  aspect-ratio: 16 / 9;
+  width: 100%;
+  height: auto;
+  border: 0;
+}
+
+/* Inline code */
+:not(pre) > code {
+  padding: 0.1em 0.3em;
+  border-radius: 1em;
+}
+
+/* Reformat summary menu */
+summary {
+  list-style: none;
+}
+
+summary::marker {
+  content: none;
+}
+
+summary::-webkit-details-marker {
+  display: none;
+}
+
+/* Summary disclosure icon: a small hand-drawn caret in place of Pico's
+   geometric chevron, drawn as two tapered pen strokes. Pico already rotates it (right when closed, down
+   when open); here it is a mask over the muted ink color so it follows
+   the theme, and warms to the accent color on hover. */
+details summary::after {
+  background-image: none;
+  background-color: var(--pico-muted-border-color);
+  -webkit-mask: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'><path d='M2.05 5.21 L2.25 5.43 L2.44 5.65 L2.65 5.89 L2.86 6.13 L3.07 6.39 L3.29 6.66 L3.50 6.94 L3.73 7.23 L3.95 7.53 L4.18 7.84 L4.41 8.16 L4.65 8.49 L4.88 8.82 L5.12 9.16 L5.37 9.50 L5.61 9.84 L5.86 10.19 L6.11 10.54 L6.36 10.89 L6.62 11.24 L6.87 11.59 L7.13 11.94 L8.67 10.66 L8.38 10.35 L8.10 10.04 L7.81 9.72 L7.53 9.40 L7.25 9.08 L6.96 8.77 L6.68 8.45 L6.40 8.13 L6.12 7.82 L5.84 7.52 L5.56 7.21 L5.28 6.92 L5.01 6.63 L4.73 6.35 L4.46 6.08 L4.18 5.82 L3.91 5.58 L3.64 5.34 L3.36 5.13 L3.09 4.92 L2.82 4.74 L2.55 4.59Z'/><path d='M8.66 11.95 L8.87 11.64 L9.09 11.31 L9.29 10.97 L9.49 10.63 L9.68 10.28 L9.87 9.93 L10.06 9.58 L10.25 9.22 L10.44 8.86 L10.64 8.50 L10.85 8.14 L11.07 7.78 L11.30 7.42 L11.54 7.07 L11.79 6.71 L12.07 6.36 L12.36 6.02 L12.67 5.68 L13.01 5.34 L13.37 5.02 L13.76 4.70 L14.19 4.39 L13.81 3.81 L13.34 4.08 L12.89 4.38 L12.46 4.68 L12.06 5.00 L11.67 5.33 L11.31 5.67 L10.97 6.01 L10.65 6.36 L10.34 6.71 L10.05 7.06 L9.77 7.41 L9.51 7.75 L9.25 8.10 L9.00 8.43 L8.76 8.76 L8.52 9.07 L8.29 9.38 L8.06 9.67 L7.84 9.94 L7.61 10.19 L7.38 10.43 L7.14 10.65Z'/><circle cx='7.95' cy='11.25' r='1'/></svg>") center / 100% 100% no-repeat;
+  mask: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'><path d='M2.05 5.21 L2.25 5.43 L2.44 5.65 L2.65 5.89 L2.86 6.13 L3.07 6.39 L3.29 6.66 L3.50 6.94 L3.73 7.23 L3.95 7.53 L4.18 7.84 L4.41 8.16 L4.65 8.49 L4.88 8.82 L5.12 9.16 L5.37 9.50 L5.61 9.84 L5.86 10.19 L6.11 10.54 L6.36 10.89 L6.62 11.24 L6.87 11.59 L7.13 11.94 L8.67 10.66 L8.38 10.35 L8.10 10.04 L7.81 9.72 L7.53 9.40 L7.25 9.08 L6.96 8.77 L6.68 8.45 L6.40 8.13 L6.12 7.82 L5.84 7.52 L5.56 7.21 L5.28 6.92 L5.01 6.63 L4.73 6.35 L4.46 6.08 L4.18 5.82 L3.91 5.58 L3.64 5.34 L3.36 5.13 L3.09 4.92 L2.82 4.74 L2.55 4.59Z'/><path d='M8.66 11.95 L8.87 11.64 L9.09 11.31 L9.29 10.97 L9.49 10.63 L9.68 10.28 L9.87 9.93 L10.06 9.58 L10.25 9.22 L10.44 8.86 L10.64 8.50 L10.85 8.14 L11.07 7.78 L11.30 7.42 L11.54 7.07 L11.79 6.71 L12.07 6.36 L12.36 6.02 L12.67 5.68 L13.01 5.34 L13.37 5.02 L13.76 4.70 L14.19 4.39 L13.81 3.81 L13.34 4.08 L12.89 4.38 L12.46 4.68 L12.06 5.00 L11.67 5.33 L11.31 5.67 L10.97 6.01 L10.65 6.36 L10.34 6.71 L10.05 7.06 L9.77 7.41 L9.51 7.75 L9.25 8.10 L9.00 8.43 L8.76 8.76 L8.52 9.07 L8.29 9.38 L8.06 9.67 L7.84 9.94 L7.61 10.19 L7.38 10.43 L7.14 10.65Z'/><circle cx='7.95' cy='11.25' r='1'/></svg>") center / 100% 100% no-repeat;
+  transition: transform var(--pico-transition), background-color var(--pico-transition);
+}
+
+details summary:hover::after {
+  background-color: var(--pico-accent-color);
+}
+
+/* Expanded summary content: styled like a note tucked under the entry,
+   with a slightly darker page tint and a green margin line. */
+details > :not(summary) {
+  padding: 0.75rem 1rem;
+  border-left: 3px solid var(--pico-accent-color);
+  border-radius: 0 var(--pico-border-radius) var(--pico-border-radius) 0;
+  background-color: color-mix(in srgb, var(--pico-color) 5%, transparent);
+}
+
+/* Mobile/desktop-only content */
+@media (min-width: 769px) {
+  .mobile-only  { display: none !important; }
+  .desktop-only { display: auto; }
+}
+@media (max-width: 768px) {
+  .mobile-only { display: auto; }
+  .desktop-only  { display: none !important; }
+}
+
+/* Current page in the nav and the footer */
+nav a[aria-current="page"] {
+  text-decoration: underline wavy;
+  text-decoration-thickness: 2px;
+  text-underline-offset: 8px;
+  text-decoration-color: var(--pico-accent-color);
+}
+
+.site-footer {
+  max-width: var(--measure);
+  margin: 2rem auto;
+  padding-inline: var(--pico-block-spacing-horizontal);
+  text-align: center;
+  color: var(--pico-muted-color);
+}

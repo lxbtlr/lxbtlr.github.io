@@ -1,0 +1,25 @@
+{% set navItems = [
+  ["Projects", "/projects/"],
+  ["C/V", "/cv/"]
+] %}
+
+<header class="site-header">
+  <nav>
+    <ul>
+      <li>
+        <a href="/">
+          <strong>{{ site.name }}</strong>
+        </a>
+      </li>
+    </ul>
+    <ul>
+      {% for name, link in navItems %}
+        <li>
+          <a href="{{ link }}"{% if page.url.startsWith(link) %} aria-current="page"{% endif %}>
+            {{ name }}
+          </a>
+        </li>
+      {% endfor %}
+    </ul>
+  </nav>
+</header>

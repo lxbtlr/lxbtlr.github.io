@@ -1,0 +1,97 @@
+---
+layout: layouts/base.njk
+---
+
+<div class="title-row" style="display: flex; align-items: left; gap: 5%;">
+  <img src="/assets/images/me.png" alt="Photo of {{ site.name }}" class="home-photo"/>
+  <hgroup class="title-card">
+    <h1>{{ site.name }}</h1>
+    <h5>{{ site.title }}</h5>
+    <h5>{{ site.institution }}</h5>
+    <div style="margin-top: 0.25rem;"></div>
+    <h6>
+      <a href="mailto:{{ site.email }}">{{ site.email }}</a>
+    </h6>
+    <div style="margin-top: 0.5rem;"></div>
+    <h6>
+      {{ site.office.room }}<br>
+      {{ site.office.street }}<br>
+      {{ site.office.city }}
+    </h6>
+  </hgroup>
+</div>
+
+<br>
+
+<article>
+  <p>
+    I am a computer science PhD candidate at
+    <a href="https://www.northwestern.edu/" target="_blank">Northwestern University</a>
+    in Evanston, Illinois. I currently work in the {{ site.lab }} with Dr. Peter Dinda.
+  </p>
+  <p>
+    I earned my bachelor's degree in electrical &amp; computer engineering from
+    <a href="https://www.olin.edu" target="_blank">Olin College of Engineering</a>,
+    focusing on work in power electronics, software systems, and hardware design (ASICs to PCBs).
+  </p>
+  <p>
+    From 2021&ndash;2025, I interned working on the IBM Z mainframes as a part of the Millicode and
+    System Architecture teams. Most recently I worked on formalizing the z/Architecture memory model
+    from its specifications.
+  </p>
+  <p>
+    My research interests primarily lie in architecture-aware optimizations for parallel systems,
+    with work ranging from synchronization primitives to wimpy-node/efficient computing clusters.
+    My recent focus has been on low-level performance engineering for database execution engines
+    (vectorized and compilation based).
+  </p>
+</article>
+
+<article>
+  <h2>News</h2>
+
+  <hr />
+
+  <dl class="news-list">
+    {% for item in news | sort("date") | reverse %}
+    <dt><time datetime="{{ item.date }}">{{ item.date | dateFormat("MMM yyyy") }}</time></dt>
+    <dd>{{ item.text }}</dd>
+    {% endfor %}
+  </dl>
+</article>
+
+<article>
+  <h2>Find me online</h2>
+
+  <div class="grid">
+    <article>
+      <center>
+        <h4>
+          <a href="https://github.com/{{ site.github }}" target="_blank">
+            GitHub
+          </a>
+        </h4>
+      </center>
+    </article>
+
+    <article>
+      <center>
+        <h4>
+          <a href="https://www.zotero.org/{{ site.zotero }}" target="_blank">
+            Zotero
+          </a>
+        </h4>
+      </center>
+    </article>
+
+    <article>
+      <center>
+        <h4>
+          <a href="/files/Alex_Butler_RESUME.pdf" target="_blank">
+            Resume
+          </a>
+        </h4>
+      </center>
+    </article>
+  </div>
+</article>

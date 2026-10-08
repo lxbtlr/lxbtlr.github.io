@@ -1,0 +1,14 @@
+[
+  {
+    "role": "Ph.D. Researcher",
+    "org": "Prescience Lab, Northwestern University",
+    "date": "2024–present",
+    "desc": "Architecture-aware optimizations for parallel systems and low-level performance engineering for database execution engines."
+  },
+  {
+    "role": "Intern, Millicode and System Architecture",
+    "org": "IBM Z",
+    "date": "2021–2025",
+    "desc": "Worked on IBM Z mainframes; most recently formalized the z/Architecture memory model from its specifications."
+  }
+]
