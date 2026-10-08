@@ -18,6 +18,7 @@ Structured content lives in `_data/`:
 - `site.json` — name, title, contact info
 - `news.json` — news roll on the home page (`date`, `text`)
 - `projects.json` — project cards; full pages live in `projects/*.md`
+  (copy `projects/_template.md` to start a new one)
 - `education.json`, `experience.json` — C/V page
 
 `card.njk` renders `/card/`, a text-only summary kept under 1400 bytes so it fits in one
