@@ -6,6 +6,10 @@
   <title>{% if title %}{{ title }} - {% endif %}{{ site.name }}</title>
   <meta name="description" content="{{ description or metadata.description }}">
 
+  <!-- Apply saved light/dark theme before first paint -->
+  <script>try{if(localStorage.getItem("theme")==="dark")document.documentElement.dataset.theme="dark"}catch(e){}</script>
+  <script src="/assets/js/theme.js" defer></script>
+
   <!-- Fonts: Atkinson Hyperlegible Next + Mono -->
   <link rel="stylesheet" href="/assets/fonts/atkinson-next/index.css">
   <link rel="stylesheet" href="/assets/fonts/atkinson-mono/index.css">

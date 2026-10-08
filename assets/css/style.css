@@ -1,8 +1,10 @@
 /* ---------------------------------------------------------
    Black, white and green theme on top of pico.css. Layout and
    component rules adapted from tommymcm/materials (MIT).
-   Light only: the page forces data-theme="light" so pico's
-   dark mode never kicks in.
+   Light is the default. The header toggle sets
+   data-theme="dark" on <html>; /assets/js/theme.js stores the
+   choice. Both palettes share variable names, so everything
+   below this block follows the active theme.
 --------------------------------------------------------- */
 
 :root {
@@ -17,8 +19,21 @@
   --code-bg: #f2f2f2;
 }
 
+/* Same hue as the light green, lightened to stay readable on black */
+:root[data-theme="dark"] {
+  color-scheme: dark;
+
+  --ink: #ffffff;
+  --ink-muted: #a6a6a6;
+  --paper: #000000;
+  --rule: #3a3a3a;
+  --green: #5BB383;
+  --code-bg: #161616;
+}
+
 :root,
-:root[data-theme="light"] {
+:root[data-theme="light"],
+:root[data-theme="dark"] {
   --pico-background-color: var(--paper);
   --pico-color: var(--ink);
   --pico-muted-color: var(--ink-muted);
@@ -451,4 +466,24 @@ nav a[aria-current="page"] {
   .project-thumb img {
     height: 10rem;
   }
+}
+
+/* Light/dark toggle in the header: a plain text button, styled like
+   the nav links rather than a pico button. */
+.theme-toggle {
+  padding: 0;
+  margin: 0;
+  border: 0;
+  background: none;
+  color: inherit;
+  font: inherit;
+  line-height: 1;
+  cursor: pointer;
+  width: auto;
+}
+
+.theme-toggle:hover,
+.theme-toggle:focus-visible {
+  color: var(--pico-accent-color);
+  background: none;
 }
