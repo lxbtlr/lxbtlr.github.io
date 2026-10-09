@@ -279,29 +279,48 @@ button, input[type="submit"], input[type="button"], [role="button"] {
   box-shadow: none;
 }
 
-/* Sidenotes via absolute positioning in a relative wrapper */
+/* Sidenotes. Blog posts keep the text column narrower than the page
+   and leave a right-hand gutter; each note floats out into that gutter
+   beside the line that references it. Below the breakpoint the gutter
+   goes away and notes drop inline under their paragraph text. */
+:root {
+  --sidenote-gutter: 17rem;
+}
+
+.post {
+  margin-right: var(--sidenote-gutter);
+}
+
 .sidenote {
   float: right;
   clear: right;
-  width: 18vw;
-  margin-right: calc(-20vw - 1ch);
+  width: calc(var(--sidenote-gutter) - 2.5rem);
+  margin-right: calc(-1 * var(--sidenote-gutter));
+  margin-bottom: 1rem;
   font-size: 0.85rem;
+  line-height: 1.45;
   color: var(--pico-muted-color);
   text-align: left;
 }
 
-.sidenote-wrapper {
-  position: static; /* remove relative */
+.sidenote-wrapper > sup,
+.sidenote > sup {
+  color: var(--pico-accent-color);
+  font-weight: 700;
 }
 
-/* Collapse on mobile */
-@media (max-width: 768px) {
+@media (max-width: 62rem) {
+  .post {
+    margin-right: 0;
+  }
+
   .sidenote {
-    position: static;
+    float: none;
     display: block;
-    border-left: 2px solid var(--pico-primary);
-    padding-left: 0.75rem;
+    width: auto;
     margin: 0.5rem 0;
+    padding-left: 0.75rem;
+    border-left: 2px solid var(--pico-accent-color);
   }
 }
 
