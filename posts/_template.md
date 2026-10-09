@@ -35,3 +35,14 @@ Notes can hold images too.{% sidenote %}![Describe the image](/assets/images/<fi
   <img src="/assets/images/<file>.jpg" alt="Describe the image">
   <figcaption>Caption.</figcaption>
 </figure>
+
+Images default to 75% of the text column, centered:
+
+![Describe the image](/assets/images/<file>.jpg)
+
+Add `class="wide"` to a figure to span the text column and the sidenote gutter:
+
+<figure class="wide">
+  <img src="/assets/images/<file>.jpg" alt="Describe the image">
+  <figcaption>Wide caption.</figcaption>
+</figure>

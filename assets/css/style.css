@@ -600,3 +600,34 @@ pre[class*="language-"] > code {
     max-width: 20rem;
   }
 }
+
+/* Blog post images. Markdown images and figures default to a centered,
+   reduced width; change --post-image-width to retune. Sidenote images
+   are not direct children of <p> or <figure>, so they are unaffected.
+   <figure class="wide"> bleeds across the text column and the sidenote
+   gutter on wide screens, and is plain full width below the breakpoint. */
+:root {
+  --post-image-width: 75%;
+}
+
+.post p > img,
+.post figure > img {
+  display: block;
+  width: var(--post-image-width);
+  height: auto;
+  margin-inline: auto;
+}
+
+.post figure.wide {
+  margin-right: calc(-1 * var(--sidenote-gutter));
+}
+
+.post figure.wide > img {
+  width: 100%;
+}
+
+@media (max-width: 62rem) {
+  .post figure.wide {
+    margin-right: 0;
+  }
+}
