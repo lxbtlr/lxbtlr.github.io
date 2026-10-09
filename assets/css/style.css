@@ -585,3 +585,18 @@ pre[class*="language-"] > code {
   padding: 0;
   background: none;
 }
+
+/* Images inside sidenotes: full note width, small gap before the text */
+.sidenote img {
+  display: block;
+  width: 100%;
+  height: auto;
+  margin: 0.25rem 0 0.4rem;
+  border-radius: var(--pico-border-radius);
+}
+
+@media (max-width: 62rem) {
+  .sidenote img {
+    max-width: 20rem;
+  }
+}

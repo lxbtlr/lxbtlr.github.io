@@ -29,6 +29,7 @@ int main(void) {
 ```
 
 Margin notes use the sidenote shortcode.{% sidenote %}This text appears in the margin on wide screens and inline on phones.{% endsidenote %}
+Notes can hold images too.{% sidenote %}![Describe the image](/assets/images/<file>.jpg) Caption text after the image.{% endsidenote %}
 
 <figure>
   <img src="/assets/images/<file>.jpg" alt="Describe the image">
