@@ -1,0 +1,10 @@
+/* Paper Mono by Paper Design (Lost Coast Labs), based on Geist Mono.
+   SIL Open Font License 1.1, see LICENSE.txt. One variable file covers
+   weights 100-800; there is no italic, so browsers slant it. */
+@font-face {
+  font-family: "Paper Mono";
+  src: url("./PaperMono-Variable.woff2") format("woff2");
+  font-weight: 100 800;
+  font-style: normal;
+  font-display: swap;
+}

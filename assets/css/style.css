@@ -73,9 +73,9 @@
 }
 
 :root {
-  --pico-font-family-sans-serif: "Atkinson Hyperlegible Next Variable", "Atkinson Hyperlegible Next", "Atkinson Hyperlegible", system-ui, sans-serif;
+  --pico-font-family-sans-serif: "Paper Mono", "Atkinson Hyperlegible Next Variable", "Atkinson Hyperlegible Next", "Atkinson Hyperlegible", system-ui, sans-serif;
   --pico-font-family: var(--pico-font-family-sans-serif);
-  --pico-font-family-monospace: "Atkinson Hyperlegible Mono Variable", "Atkinson Hyperlegible Mono", ui-monospace, monospace;
+  --pico-font-family-monospace: "Paper Mono", "Atkinson Hyperlegible Mono Variable", "Atkinson Hyperlegible Mono", ui-monospace, monospace;
   --font-family-heading: var(--pico-font-family-sans-serif);
   --pico-font-weight: 400;
   --pico-border-radius: 2px;
