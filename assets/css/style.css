@@ -73,9 +73,11 @@
 }
 
 :root {
-  --pico-font-family-sans-serif: "Paper Mono", "Atkinson Hyperlegible Next Variable", "Atkinson Hyperlegible Next", "Atkinson Hyperlegible", system-ui, sans-serif;
+  --pico-font-family-sans-serif: "Atkinson Hyperlegible Next Variable", "Atkinson Hyperlegible Next", "Atkinson Hyperlegible", system-ui, sans-serif;
   --pico-font-family: var(--pico-font-family-sans-serif);
   --pico-font-family-monospace: "Paper Mono", "Atkinson Hyperlegible Mono Variable", "Atkinson Hyperlegible Mono", ui-monospace, monospace;
+  /* Paper Mono is for code only; other monospace text (roll dates) keeps Atkinson Mono */
+  --font-family-mono-text: "Atkinson Hyperlegible Mono Variable", "Atkinson Hyperlegible Mono", ui-monospace, monospace;
   --font-family-heading: var(--pico-font-family-sans-serif);
   --pico-font-weight: 400;
   --pico-border-radius: 2px;
@@ -343,7 +345,7 @@ button, input[type="submit"], input[type="button"], [role="button"] {
 }
 
 .news-list dt {
-  font-family: var(--pico-font-family-monospace);
+  font-family: var(--font-family-mono-text);
   font-size: 0.9em;
   font-weight: 400;
   color: var(--pico-accent-color);

@@ -43,6 +43,7 @@ Layout and templates adapted from [tommymcm/materials](https://github.com/tommym
 (MIT License, Copyright (c) 2025 Tommy McMichen).
 
 Fonts: [Paper Mono](https://github.com/paper-design/paper-mono) by Paper Design (based on
-Geist Mono), SIL Open Font License 1.1, vendored in `assets/fonts/paper-mono/`. Fallback:
+Geist Mono), SIL Open Font License 1.1, vendored in `assets/fonts/paper-mono/`, used for code.
+Text:
 [Atkinson Hyperlegible Next and Mono](https://www.brailleinstitute.org/freefont/)
 by the Braille Institute, SIL Open Font License 1.1, installed via Fontsource.
