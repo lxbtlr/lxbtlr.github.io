@@ -1,0 +1,24 @@
+---
+layout: layouts/page.njk
+title: Blog
+eleventyExcludeFromCollections: true
+---
+
+<p><center><a href="/feed.xml">Follow the feed.</a></center></p>
+
+{% set posts = collections.posts | reverse %}
+
+{% if posts.length %}
+<dl class="news-list post-list">
+  {% for post in posts %}
+  <dt><time datetime="{{ post.date | dateFormat("yyyy-MM-dd") }}">{{ post.date | dateFormat("MMM d, yyyy") }}</time></dt>
+  <dd>
+    <a href="{{ post.url }}" class="card-title"><b>{{ post.data.title }}</b></a>
+    {%- if post.data.draft %} <mark>draft</mark>{% endif %}
+    {%- if post.data.description %}<br><small>{{ post.data.description }}</small>{% endif %}
+  </dd>
+  {% endfor %}
+</dl>
+{% else %}
+<p><center>No posts yet.</center></p>
+{% endif %}

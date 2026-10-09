@@ -1,0 +1,20 @@
+---
+layout: layouts/base.njk
+---
+<article class="post">
+
+  <hgroup>
+    <h1>{{ title }}</h1>
+    <p>
+      <time datetime="{{ page.date | dateFormat("yyyy-MM-dd") }}">{{ page.date | dateFormat("MMMM d, yyyy") }}</time>
+      {%- if draft %} &middot; <mark>draft</mark>{% endif %}
+    </p>
+  </hgroup>
+
+  {{ content | safe }}
+
+  <hr />
+
+  <p><a href="/posts/">&larr; All posts</a></p>
+
+</article>

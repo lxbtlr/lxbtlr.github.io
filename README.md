@@ -24,6 +24,12 @@ Structured content lives in `_data/`:
 `card.njk` renders `/card/`, a text-only summary kept under 1400 bytes so it fits in one
 TCP packet; the build prints its size.
 
+## Blog posts
+
+Copy `posts/_template.md` to `posts/<slug>.md`. Posts with `draft: true` show under
+`make serve` (marked "draft") but are left out of `make build` and the deployed site.
+Delete that line to publish. The feed is at `/feed.xml`.
+
 Theme colors are CSS variables at the top of `assets/css/style.css`.
 
 ## Deployment

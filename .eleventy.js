@@ -1,6 +1,33 @@
 // Adapted from tommymcm/materials (MIT).
 
+const { feedPlugin } = require("@11ty/eleventy-plugin-rss");
+const syntaxHighlight = require("@11ty/eleventy-plugin-syntaxhighlight");
+const metadata = require("./_data/metadata.json");
+
 module.exports = function(eleventyConfig) {
+  // Blog: code highlighting and an Atom feed of the latest posts
+  eleventyConfig.addPlugin(syntaxHighlight);
+  eleventyConfig.addPlugin(feedPlugin, {
+    type: "atom",
+    outputPath: "/feed.xml",
+    collection: { name: "posts", limit: 10 },
+    metadata: {
+      language: "en",
+      title: metadata.title,
+      subtitle: metadata.description,
+      base: metadata.url + "/",
+      author: { name: metadata.title }
+    }
+  });
+
+  // Drafts: posts with `draft: true` render under `make serve` but are
+  // left out of `make build`, so they never reach the deployed site.
+  eleventyConfig.addPreprocessor("drafts", "*", (data) => {
+    if (data.draft && process.env.ELEVENTY_RUN_MODE === "build") {
+      return false;
+    }
+  });
+
   // Copy static assets
   eleventyConfig.addPassthroughCopy("robots.txt");
   eleventyConfig.addPassthroughCopy("favicon.svg");

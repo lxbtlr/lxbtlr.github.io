@@ -487,3 +487,82 @@ nav a[aria-current="page"] {
   color: var(--pico-accent-color);
   background: none;
 }
+
+/* Blog */
+.post hgroup p {
+  color: var(--pico-muted-color);
+}
+
+.post-list dt {
+  padding-top: 0.15rem;
+}
+
+.post-list dd {
+  margin-bottom: 0.75rem;
+}
+
+mark {
+  padding: 0 0.3em;
+  font-size: 0.8em;
+  background: var(--pico-accent-color);
+  color: var(--pico-background-color);
+}
+
+/* Code blocks, highlighted by Prism at build time. Token colors use the
+   theme variables, so they follow light/dark mode. */
+pre[class*="language-"] {
+  padding: 1rem;
+  overflow-x: auto;
+  border: 1px solid var(--pico-muted-border-color);
+  border-radius: var(--pico-border-radius);
+  background: var(--pico-code-background-color);
+}
+
+pre[class*="language-"],
+code[class*="language-"] {
+  color: var(--pico-color);
+  font-family: var(--pico-font-family-monospace);
+  font-size: 0.9em;
+}
+
+.token.comment,
+.token.prolog,
+.token.doctype,
+.token.cdata {
+  color: var(--pico-muted-color);
+  font-style: italic;
+}
+
+.token.keyword,
+.token.directive,
+.token.selector,
+.token.atrule,
+.token.builtin {
+  color: var(--pico-accent-color);
+  font-weight: 700;
+}
+
+.token.string,
+.token.char,
+.token.attr-value,
+.token.regex {
+  color: var(--pico-accent-color);
+}
+
+.token.number,
+.token.boolean,
+.token.constant {
+  color: var(--pico-color);
+  font-weight: 700;
+}
+
+.token.punctuation,
+.token.operator {
+  color: var(--pico-muted-color);
+}
+
+/* Pico pads <pre><code> too; keep only the <pre> padding above. */
+pre[class*="language-"] > code {
+  padding: 0;
+  background: none;
+}
