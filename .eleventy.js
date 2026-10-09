@@ -80,6 +80,12 @@ module.exports = function(eleventyConfig) {
         month: 'short',
         timeZone: 'UTC'
       }),
+      "MMM d, yyyy": d.toLocaleDateString('en-US', {
+        year: 'numeric',
+        month: 'short',
+        day: 'numeric',
+        timeZone: 'UTC'
+      }),
       "MMMM d, yyyy": d.toLocaleDateString('en-US', {
         year: 'numeric',
         month: 'long',
