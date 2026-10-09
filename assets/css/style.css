@@ -652,3 +652,22 @@ pre[class*="language-"] > code {
     gap: 0;
   }
 }
+
+/* Boxed, shaded text section ({% box %} shortcode) */
+.box {
+  margin: 1.75rem 0;
+  padding: 1rem 1.25rem;
+  border: 1px solid color-mix(in srgb, var(--pico-accent-color) 35%, transparent);
+  border-radius: var(--pico-border-radius);
+  background: color-mix(in srgb, var(--pico-accent-color) 8%, transparent);
+}
+
+.box > :last-child {
+  margin-bottom: 0;
+}
+
+.box-title {
+  margin-bottom: 0.5rem;
+  font-weight: 700;
+  color: var(--pico-accent-color);
+}

@@ -99,6 +99,14 @@ module.exports = function(eleventyConfig) {
 
   eleventyConfig.addShortcode("year", () => `${new Date().getFullYear()}`);
 
+  // Boxed, shaded text section. The blank lines around the content let
+  // markdown inside the box (lists, code, links) render normally.
+  //   {% box %}...{% endbox %}   or   {% box "Title" %}...{% endbox %}
+  eleventyConfig.addPairedShortcode("box", function(content, title) {
+    const heading = title ? `<p class="box-title">${title}</p>\n` : "";
+    return `<div class="box">\n${heading}\n${content}\n\n</div>`;
+  });
+
   // Sidenotes
   const sidenoteCounters = new Map();
   eleventyConfig.on('eleventy.before', () => {

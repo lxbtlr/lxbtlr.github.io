@@ -46,3 +46,9 @@ Add `class="wide"` to a figure to span the text column and the sidenote gutter:
   <img src="/assets/images/<file>.jpg" alt="Describe the image">
   <figcaption>Wide caption.</figcaption>
 </figure>
+
+Boxed, shaded sections (title optional; markdown works inside):
+
+{% box "Optional title" %}
+Text, lists, `code`, and links all render inside the box.
+{% endbox %}
