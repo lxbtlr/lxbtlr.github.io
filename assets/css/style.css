@@ -631,3 +631,22 @@ pre[class*="language-"] > code {
     margin-right: 0;
   }
 }
+
+/* Home page: news and blog rolls side by side, stacked on narrow screens */
+.rolls {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2rem;
+  margin-bottom: var(--pico-block-spacing-vertical);
+}
+
+.rolls > article {
+  margin: 0;
+}
+
+@media (max-width: 768px) {
+  .rolls {
+    grid-template-columns: 1fr;
+    gap: 0;
+  }
+}

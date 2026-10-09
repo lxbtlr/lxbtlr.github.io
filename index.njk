@@ -46,18 +46,42 @@ layout: layouts/base.njk
     from its specifications.
   </p>
 </article>
+<div class="rolls">
+  <article>
+    <h2>News</h2>
 
-<article>
-  <h2>News</h2>
+    <hr />
 
-  <hr />
+    <dl class="news-list">
+      {% for item in news | sort("date") | reverse %}
+      <dt><time datetime="{{ item.date }}">{{ item.date | dateFormat("MMM yyyy") }}</time></dt>
+      <dd>{{ item.text }}</dd>
+      {% endfor %}
+    </dl>
+  </article>
 
-  <dl class="news-list">
-    {% for item in news | sort("date") | reverse %}
-    <dt><time datetime="{{ item.date }}">{{ item.date | dateFormat("MMM yyyy") }}</time></dt>
-    <dd>{{ item.text }}</dd>
-    {% endfor %}
-  </dl>
+  <article>
+    <h2><a href="/posts/" class="card-title">Blog</a></h2>
+
+    <hr />
+
+    {% set recentPosts = collections.posts | reverse | head(7) %}
+    {% if recentPosts.length %}
+    <dl class="news-list">
+      {% for post in recentPosts %}
+      <dt><time datetime="{{ post.date | dateFormat("yyyy-MM-dd") }}">{{ post.date | dateFormat("MMM yyyy") }}</time></dt>
+      <dd>
+        <a href="{{ post.url }}">{{ post.data.title }}</a>
+        {%- if post.data.draft %} <mark>draft</mark>{% endif %}
+      </dd>
+      {% endfor %}
+    </dl>
+    <p><small><a href="/posts/">All posts &rarr;</a></small></p>
+    {% else %}
+    <p>No posts yet.</p>
+    {% endif %}
+  </article>
+</div>
 </article>
 
 <article>
