@@ -780,3 +780,9 @@ nav a.home-link:hover {
   display: flex;
   align-items: center;
 }
+
+/* Home page bio: a slightly narrower measure than the page column */
+.home-bio {
+  max-width: 48rem;
+  margin-inline: auto;
+}
