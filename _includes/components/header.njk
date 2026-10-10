@@ -6,7 +6,7 @@
           <strong class="home-text">{{ site.name }}</strong>
           <span class="home-frames" aria-hidden="true" style="--n: {{ homeArt.length }}">
             {%- for frame in homeArt %}
-            <svg viewBox="0 0 {{ frame.width }} {{ frame.height }}" style="--i: {{ loop.index0 }}" focusable="false"><use href="/assets/home-art.svg#home-{{ frame.preset }}" width="{{ frame.width }}" height="{{ frame.height }}"/></svg>
+            <svg viewBox="0 0 {{ frame.width }} {{ frame.height }}" style="--i: {{ loop.index0 }}" focusable="false"><use href="/assets/home-art.svg#{{ frame.id }}" width="{{ frame.width }}" height="{{ frame.height }}"/></svg>
             {%- endfor %}
           </span>
         </a>

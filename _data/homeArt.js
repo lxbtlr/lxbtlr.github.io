@@ -18,10 +18,14 @@ const PRESETS = ["block", "throwup", "bubble", "bubbles", "marquee", "simple", "
 const DISPLAY_HEIGHT_PX = 33.28;
 const MIN_STROKE_PX = 1.25;
 
+// Each preset is drawn once per seed; the cycle runs every preset with the
+// first seed, then every preset with the next.
+const SEEDS = ["home", "home-2"];
+
 module.exports = async function () {
   const frames = [];
-  for (const preset of PRESETS) {
-    const svg = await render(site.name, preset, "home");
+  for (const [s, seed] of SEEDS.entries()) for (const preset of PRESETS) {
+    const svg = await render(site.name, preset, seed);
     const viewBox = svg.match(/viewBox="([^"]*)"/)[1];
     // Frames are drawn with <use>, which places the symbol at 0,0; size
     // the outer SVG from 0,0 too so the negative viewBox origin is kept.
@@ -34,7 +38,7 @@ module.exports = async function () {
       .replace(/fill="#fff"/g, 'style="fill:var(--paper)"')
       .replace(/stroke="#fff"/g, 'style="stroke:var(--paper)"')
       .replace(/stroke-width="([\d.]+)"/g, (m, w) => `stroke-width="${Math.max(+w, minStroke).toFixed(2)}"`);
-    frames.push({ preset, viewBox, width, height, body });
+    frames.push({ id: `home-${preset}-${s + 1}`, preset, seed, viewBox, width, height, body });
   }
   return frames;
 };
