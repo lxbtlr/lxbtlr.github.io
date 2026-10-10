@@ -1,9 +1,3 @@
-{% set navItems = [
-  ["projects", "/projects/"],
-  ["blog", "/posts/"],
-  ["about me", "/cv/"]
-] %}
-
 <header class="site-header">
   <nav>
     <ul>
@@ -14,10 +8,10 @@
       </li>
     </ul>
     <ul>
-      {% for name, link in navItems %}
+      {% for item in nav %}
         <li>
-          <a href="{{ link }}"{% if page.url.startsWith(link) %} aria-current="page"{% endif %}>
-            {{ name }}
+          <a href="{{ item.url }}" class="nav-art" aria-label="{{ item.name }}"{% if page.url and page.url.startsWith(item.url) %} aria-current="page"{% endif %}>
+            {{ navArt[item.name] | safe }}
           </a>
         </li>
       {% endfor %}

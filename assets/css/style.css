@@ -671,3 +671,39 @@ pre[class*="language-"] > code {
   font-weight: 700;
   color: var(--pico-accent-color);
 }
+
+/* Nav word art (bouffont SVGs from _data/navArt.js). The SVGs use plain
+   #000 ink and #fff paper; remap them to the theme so they follow light/
+   dark mode, and let the ink turn green on hover and on the current page.
+   Paper uses --paper, not --pico-background-color: Pico sets the latter
+   to transparent on links. */
+.nav-art {
+  display: inline-flex;
+  align-items: center;
+  padding-block: 0;
+  text-decoration: none;
+}
+
+.nav-art svg {
+  height: 2.6rem;
+  width: auto;
+  display: block;
+  overflow: visible;
+}
+
+.nav-art [fill="#000"] { fill: currentColor; }
+.nav-art [stroke="#000"] { stroke: currentColor; }
+.nav-art [fill="#fff"] { fill: var(--paper); }
+.nav-art [stroke="#fff"] { stroke: var(--paper); }
+
+nav a.nav-art:hover,
+nav a.nav-art[aria-current="page"] {
+  color: var(--pico-accent-color);
+  text-decoration: none;
+}
+
+@media (max-width: 768px) {
+  .nav-art svg {
+    height: 1.9rem;
+  }
+}
