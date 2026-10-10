@@ -18,13 +18,13 @@ const PRESETS = ["block", "throwup", "bubble", "bubbles", "marquee", "simple", "
 const DISPLAY_HEIGHT_PX = 33.28;
 const MIN_STROKE_PX = 1.25;
 
-// Each preset is drawn once per seed; the cycle runs every preset with the
-// first seed, then every preset with the next.
+// Each preset is drawn once per seed; the cycle shows both seeds of a
+// preset back to back, then moves on to the next preset.
 const SEEDS = ["home", "home-2"];
 
 module.exports = async function () {
   const frames = [];
-  for (const [s, seed] of SEEDS.entries()) for (const preset of PRESETS) {
+  for (const preset of PRESETS) for (const [s, seed] of SEEDS.entries()) {
     const svg = await render(site.name, preset, seed);
     const viewBox = svg.match(/viewBox="([^"]*)"/)[1];
     // Frames are drawn with <use>, which places the symbol at 0,0; size
