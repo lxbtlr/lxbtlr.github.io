@@ -685,7 +685,7 @@ pre[class*="language-"] > code {
 }
 
 .nav-art svg {
-  height: 2.6rem;
+  height: 2.08rem;
   width: auto;
   display: block;
   overflow: visible;
@@ -704,6 +704,6 @@ nav a.nav-art[aria-current="page"] {
 
 @media (max-width: 768px) {
   .nav-art svg {
-    height: 1.9rem;
+    height: 1.52rem;
   }
 }
