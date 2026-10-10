@@ -691,10 +691,10 @@ pre[class*="language-"] > code {
   overflow: visible;
 }
 
-.nav-art [fill="#000"] { fill: currentColor; }
-.nav-art [stroke="#000"] { stroke: currentColor; }
-.nav-art [fill="#fff"] { fill: var(--paper); }
-.nav-art [stroke="#fff"] { stroke: var(--paper); }
+.nav-art [fill="#000"], .theme-toggle [fill="#000"] { fill: currentColor; }
+.nav-art [stroke="#000"], .theme-toggle [stroke="#000"] { stroke: currentColor; }
+.nav-art [fill="#fff"], .theme-toggle [fill="#fff"] { fill: var(--paper); }
+.nav-art [stroke="#fff"], .theme-toggle [stroke="#fff"] { stroke: var(--paper); }
 
 nav a.nav-art:hover,
 nav a.nav-art[aria-current="page"] {
@@ -785,4 +785,18 @@ nav a.home-link:hover {
 .home-bio {
   max-width: 48rem;
   margin-inline: auto;
+}
+
+/* Theme toggle icon (bouffont sun from _data/themeArt.js) */
+.theme-toggle svg {
+  height: 1.8rem;
+  width: auto;
+  display: block;
+  overflow: visible;
+}
+
+@media (max-width: 768px) {
+  .theme-toggle svg {
+    height: 1.4rem;
+  }
 }

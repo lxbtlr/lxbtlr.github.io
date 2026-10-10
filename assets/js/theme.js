@@ -10,7 +10,6 @@
 
   function label(button, theme) {
     var next = theme === "dark" ? "light" : "dark";
-    button.textContent = "☀";
     button.setAttribute("aria-label", "Switch to " + next + " mode");
     button.title = "Switch to " + next + " mode";
   }
