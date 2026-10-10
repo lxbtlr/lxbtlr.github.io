@@ -715,7 +715,9 @@ nav a.nav-art[aria-current="page"] {
 .home-link {
   --frame: 300ms;
   position: relative;
-  display: inline-block;
+  display: inline-flex;
+  align-items: center;
+  padding-block: 0;
   text-decoration: none;
 }
 
@@ -724,7 +726,7 @@ nav a.nav-art[aria-current="page"] {
   position: absolute;
   left: 0;
   top: 50%;
-  height: 2.3rem;
+  height: 2.08rem;
   transform: translateY(-50%);
   pointer-events: none;
 }
@@ -770,4 +772,11 @@ nav a.home-link:hover {
   .home-link:focus-visible .home-frames svg:first-child {
     visibility: visible;
   }
+}
+
+/* Center every nav item (text, word art, toggle) on one line. Without
+   this, the SVG links sit on the text baseline and ride high. */
+.site-header nav li {
+  display: flex;
+  align-items: center;
 }

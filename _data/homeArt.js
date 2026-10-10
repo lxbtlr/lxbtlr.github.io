@@ -22,7 +22,10 @@ module.exports = async function () {
       .replace(/(fill|stroke)="#000"/g, '$1="currentColor"')
       .replace(/fill="#fff"/g, 'style="fill:var(--paper)"')
       .replace(/stroke="#fff"/g, 'style="stroke:var(--paper)"');
-    frames.push({ preset, viewBox, body });
+    // Frames are drawn with <use>, which places the symbol at 0,0; size
+    // the outer SVG from 0,0 too so the negative viewBox origin is kept.
+    const [, , width, height] = viewBox.split(/\s+/).map(Number);
+    frames.push({ preset, viewBox, width, height, body });
   }
   return frames;
 };
