@@ -9,7 +9,8 @@
 const site = require("./site.json");
 const { render } = require("../lib/bouffont");
 
-const PRESETS = ["block", "throwup", "bubble", "candy", "bubbles", "marquee", "simple", "crowd"];
+// candy is left out: it garbles the name past reading in any font.
+const PRESETS = ["block", "throwup", "bubble", "bubbles", "marquee", "simple", "crowd"];
 
 // The frames display at .home-frames' height (2.08rem = 33.28px at the
 // default 16px root). bouffont's outlines come out around 0.3-0.6px at
