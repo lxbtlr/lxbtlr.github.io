@@ -789,7 +789,7 @@ nav a.home-link:hover {
 
 /* Theme toggle icon (bouffont sun from _data/themeArt.js) */
 .theme-toggle svg {
-  height: 1.8rem;
+  height: 1.44rem;
   width: auto;
   display: block;
   overflow: visible;
@@ -797,6 +797,6 @@ nav a.home-link:hover {
 
 @media (max-width: 768px) {
   .theme-toggle svg {
-    height: 1.4rem;
+    height: 1.12rem;
   }
 }
