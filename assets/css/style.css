@@ -707,3 +707,67 @@ nav a.nav-art[aria-current="page"] {
     height: 1.52rem;
   }
 }
+
+/* Home link: on hover (or keyboard focus) the name is swapped for word
+   art that cycles through bouffont presets, one frame every --frame. The
+   frames come from /assets/home-art.svg; @keyframes home-cycle is written
+   in the header so its step matches the frame count. */
+.home-link {
+  --frame: 300ms;
+  position: relative;
+  display: inline-block;
+  text-decoration: none;
+}
+
+.home-frames {
+  display: none;
+  position: absolute;
+  left: 0;
+  top: 50%;
+  height: 2.3rem;
+  transform: translateY(-50%);
+  pointer-events: none;
+}
+
+.home-frames svg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: auto;
+  overflow: visible;
+  visibility: hidden;
+}
+
+.home-link:hover .home-text,
+.home-link:focus-visible .home-text {
+  visibility: hidden;
+}
+
+.home-link:hover .home-frames,
+.home-link:focus-visible .home-frames {
+  display: block;
+}
+
+.home-link:hover .home-frames svg,
+.home-link:focus-visible .home-frames svg {
+  animation: home-cycle calc(var(--n) * var(--frame)) step-end infinite;
+  animation-delay: calc(var(--i) * var(--frame));
+}
+
+nav a.home-link:hover {
+  text-decoration: none;
+}
+
+/* Reduced motion: show the first frame only */
+@media (prefers-reduced-motion: reduce) {
+  .home-link:hover .home-frames svg,
+  .home-link:focus-visible .home-frames svg {
+    animation: none;
+  }
+
+  .home-link:hover .home-frames svg:first-child,
+  .home-link:focus-visible .home-frames svg:first-child {
+    visibility: visible;
+  }
+}

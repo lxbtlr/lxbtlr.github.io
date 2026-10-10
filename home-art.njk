@@ -1,0 +1,9 @@
+---
+permalink: /assets/home-art.svg
+eleventyExcludeFromCollections: true
+---
+<svg xmlns="http://www.w3.org/2000/svg">
+{%- for frame in homeArt %}
+<symbol id="home-{{ frame.preset }}" viewBox="{{ frame.viewBox }}">{{ frame.body | safe }}</symbol>
+{%- endfor %}
+</svg>

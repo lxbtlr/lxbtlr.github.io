@@ -2,9 +2,15 @@
   <nav>
     <ul>
       <li>
-        <a href="/">
-          <strong>{{ site.name }}</strong>
+        <a href="/" class="home-link" aria-label="{{ site.name }}, home">
+          <strong class="home-text">{{ site.name }}</strong>
+          <span class="home-frames" aria-hidden="true" style="--n: {{ homeArt.length }}">
+            {%- for frame in homeArt %}
+            <svg viewBox="{{ frame.viewBox }}" style="--i: {{ loop.index0 }}" focusable="false"><use href="/assets/home-art.svg#home-{{ frame.preset }}"/></svg>
+            {%- endfor %}
+          </span>
         </a>
+        <style>@keyframes home-cycle { 0% { visibility: visible; } {{ 100 / homeArt.length }}%, 100% { visibility: hidden; } }</style>
       </li>
     </ul>
     <ul>
