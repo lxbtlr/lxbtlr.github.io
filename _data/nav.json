@@ -1,5 +1,5 @@
 [
   { "name": "projects", "url": "/projects/", "preset": "block", "seed": "projects" },
-  { "name": "blog", "url": "/posts/", "preset": "bubble", "seed": "blog" },
-  { "name": "about me", "url": "/cv/", "preset": "throwup", "seed": "about" }
+  { "name": "blog", "url": "/posts/", "preset": "block", "seed": "blog" },
+  { "name": "about me", "url": "/cv/", "preset": "block", "seed": "about" }
 ]
