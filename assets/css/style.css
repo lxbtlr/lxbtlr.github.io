@@ -875,3 +875,12 @@ nav a.home-link:hover {
 .post svg:not([fill]) {
   fill: #000;
 }
+
+/* Some exports (e.g. draw.io "adaptive" SVGs) switch their own colors via
+   light-dark() when the page is dark, which the invert above would undo.
+   Pin post SVGs to their light rendering so the filter is the only dark
+   mode; #keep / keep-colors SVGs are left free to adapt themselves. */
+.post img[src*=".svg"]:not([src$="#keep"]),
+.post svg:not(.keep-colors):not(.keep-colors svg) {
+  color-scheme: light;
+}
