@@ -859,28 +859,30 @@ nav a.home-link:hover {
   border-radius: var(--pico-border-radius);
 }
 
-/* Dark mode for SVG diagrams in posts (files and inline markup): invert
-   lightness so black lines/text turn white and white turns black, then
-   rotate hue back so colors keep roughly their hue (greens stay green).
-   Opt out per image with "#keep" on the src (![a](/x.svg#keep)) or the
-   keep-colors class on an inline <svg> or its figure. */
-:root[data-theme="dark"] .post img[src*=".svg"]:not([src$="#keep"]),
-:root[data-theme="dark"] .post svg:not(.keep-colors):not(.keep-colors svg) {
-  filter: invert(1) hue-rotate(180deg);
+/* Dark mode for SVG diagrams in posts. By default SVGs are assumed to
+   adapt themselves (e.g. draw.io "adaptive" exports using light-dark()):
+   they inherit the page's color-scheme and switch their own colors.
+
+   SVGs without that support can opt into a CSS swap instead: "#invert" on
+   the src (![a](/x.svg#invert)) or class="invert" on an inline <svg> (or a
+   wrapper). In dark mode they get invert(1) hue-rotate(180deg), which turns
+   black lines/text white and white black while colors keep roughly their
+   hue. They are pinned to their light rendering first so an SVG that does
+   adapt isn't flipped twice, and Pico's currentColor default fill is reset
+   to plain black for the same reason. */
+.post img[src$="#invert"],
+.post svg.invert,
+.post .invert svg {
+  color-scheme: light;
 }
 
-/* Pico gives inline SVGs without a fill attribute fill: currentColor, which
-   already follows the theme and would get inverted twice above. Reset post
-   SVGs to the plain SVG default (black) so they behave like SVG files. */
-.post svg:not([fill]) {
+.post svg.invert:not([fill]),
+.post .invert svg:not([fill]) {
   fill: #000;
 }
 
-/* Some exports (e.g. draw.io "adaptive" SVGs) switch their own colors via
-   light-dark() when the page is dark, which the invert above would undo.
-   Pin post SVGs to their light rendering so the filter is the only dark
-   mode; #keep / keep-colors SVGs are left free to adapt themselves. */
-.post img[src*=".svg"]:not([src$="#keep"]),
-.post svg:not(.keep-colors):not(.keep-colors svg) {
-  color-scheme: light;
+:root[data-theme="dark"] .post img[src$="#invert"],
+:root[data-theme="dark"] .post svg.invert,
+:root[data-theme="dark"] .post .invert svg {
+  filter: invert(1) hue-rotate(180deg);
 }

@@ -63,7 +63,7 @@ sidenote gutter:
 ![Third](/assets/images/<file3>.jpg)
 {% endgallery %}
 
-SVG diagrams (files or inline <svg>) swap black and white automatically in
-dark mode. Keep an SVG's original colors with "#keep" on the src
-(![diagram](/assets/images/<file>.svg#keep)) or class="keep-colors" on an
-inline <svg>.
+SVG diagrams are expected to handle dark mode themselves (draw.io: export
+as SVG with adaptive colors). For an SVG that doesn't, add "#invert" to the
+src (![diagram](/assets/images/<file>.svg#invert)) or class="invert" to an
+inline <svg>: dark mode then swaps its black and white.
