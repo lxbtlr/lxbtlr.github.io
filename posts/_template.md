@@ -58,7 +58,7 @@ per image, two columns on phones). Caption optional; add "wide" to span the
 sidenote gutter:
 
 {% gallery "Optional caption" %}
-![First](/assets/images/<file1>.jpg)
+![First](/assets/images/<file1>.jpg "Optional per-image caption")
 ![Second](/assets/images/<file2>.jpg)
 ![Third](/assets/images/<file3>.jpg)
 {% endgallery %}

@@ -886,3 +886,14 @@ nav a.home-link:hover {
 :root[data-theme="dark"] .post .invert svg {
   filter: invert(1) hue-rotate(180deg);
 }
+
+/* Gallery tiles with their own caption (markdown image title) */
+.gallery-item {
+  margin: 0;
+}
+
+.gallery-item figcaption {
+  margin-top: 0.35rem;
+  font-size: 0.8rem;
+  line-height: 1.35;
+}

@@ -108,17 +108,28 @@ module.exports = function(eleventyConfig) {
   });
 
   // Photo gallery: markdown images inside are laid out side by side as
-  // equal, cropped tiles, one column per image. Optional caption, and
-  // "wide" to bleed into the sidenote gutter like <figure class="wide">.
-  //   {% gallery %}![a](/a.jpg) ![b](/b.jpg) ![c](/c.svg){% endgallery %}
-  // Inline <svg> markup works as a tile too.
+  // equal, cropped tiles, one column per image. Optional caption for the
+  // whole gallery, and "wide" to bleed into the sidenote gutter like
+  // <figure class="wide">. A markdown image title becomes that image's
+  // own caption under its tile:
+  //   {% gallery %}![a](/a.jpg "First") ![b](/b.jpg) ![c](/c.svg){% endgallery %}
   //   {% gallery "Caption", "wide" %}...{% endgallery %}
+  // Inline <svg> markup works as a tile too.
+  const escapeHtml = (s) => s.replace(/&/g, "&amp;").replace(/</g, "&lt;").replace(/>/g, "&gt;").replace(/"/g, "&quot;");
   eleventyConfig.addPairedShortcode("gallery", function(content, caption, wide) {
     // One column per markdown image or inline <svg>.
     const cols = (content.match(/!\[|<svg[\s>]/g) || []).length || 1;
+    // Each markdown image becomes its own figure so it can carry a caption.
+    const items = content.trim().replace(
+      /!\[([^\]]*)\]\(\s*(\S+?)(?:\s+"([^"]*)")?\s*\)/g,
+      (m, alt, src, title) =>
+        `<figure class="gallery-item"><img src="${src}" alt="${escapeHtml(alt)}">` +
+        (title ? `<figcaption>${escapeHtml(title)}</figcaption>` : "") +
+        `</figure>`
+    );
     const cls = wide === "wide" ? "gallery wide" : "gallery";
     const cap = caption ? `\n<figcaption>${caption}</figcaption>` : "";
-    return `<figure class="${cls}" style="--cols: ${cols}">\n<div class="gallery-grid">\n\n${content.trim()}\n\n</div>${cap}\n</figure>`;
+    return `<figure class="${cls}" style="--cols: ${cols}">\n<div class="gallery-grid">\n\n${items}\n\n</div>${cap}\n</figure>`;
   });
 
   // Sidenotes
