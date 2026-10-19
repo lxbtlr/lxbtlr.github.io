@@ -800,3 +800,34 @@ nav a.home-link:hover {
     height: 1.12rem;
   }
 }
+
+/* Photo gallery ({% gallery %} shortcode): one row of equal tiles, one
+   column per image (--cols, set by the shortcode). Markdown wraps the
+   images in <p>; display: contents lets them sit in the grid directly.
+   Two columns on phones. */
+.gallery-grid {
+  display: grid;
+  grid-template-columns: repeat(var(--cols, 3), 1fr);
+  gap: 0.5rem;
+}
+
+.gallery-grid > p {
+  display: contents;
+}
+
+.post .gallery-grid img,
+.gallery-grid img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  aspect-ratio: 4 / 3;
+  object-fit: cover;
+  margin: 0;
+  border-radius: var(--pico-border-radius);
+}
+
+@media (max-width: 768px) {
+  .gallery-grid {
+    grid-template-columns: repeat(min(var(--cols, 3), 2), 1fr);
+  }
+}

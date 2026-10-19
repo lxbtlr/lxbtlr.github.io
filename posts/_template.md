@@ -52,3 +52,13 @@ Boxed, shaded sections (title optional; markdown works inside):
 {% box "Optional title" %}
 Text, lists, `code`, and links all render inside the box.
 {% endbox %}
+
+Photo galleries put images side by side as equal, cropped tiles (one column
+per image, two columns on phones). Caption optional; add "wide" to span the
+sidenote gutter:
+
+{% gallery "Optional caption" %}
+![First](/assets/images/<file1>.jpg)
+![Second](/assets/images/<file2>.jpg)
+![Third](/assets/images/<file3>.jpg)
+{% endgallery %}

@@ -107,6 +107,18 @@ module.exports = function(eleventyConfig) {
     return `<div class="box">\n${heading}\n${content}\n\n</div>`;
   });
 
+  // Photo gallery: markdown images inside are laid out side by side as
+  // equal, cropped tiles, one column per image. Optional caption, and
+  // "wide" to bleed into the sidenote gutter like <figure class="wide">.
+  //   {% gallery %}![a](/a.jpg) ![b](/b.jpg) ![c](/c.jpg){% endgallery %}
+  //   {% gallery "Caption", "wide" %}...{% endgallery %}
+  eleventyConfig.addPairedShortcode("gallery", function(content, caption, wide) {
+    const cols = (content.match(/!\[/g) || []).length || 1;
+    const cls = wide === "wide" ? "gallery wide" : "gallery";
+    const cap = caption ? `\n<figcaption>${caption}</figcaption>` : "";
+    return `<figure class="${cls}" style="--cols: ${cols}">\n<div class="gallery-grid">\n\n${content.trim()}\n\n</div>${cap}\n</figure>`;
+  });
+
   // Sidenotes
   const sidenoteCounters = new Map();
   eleventyConfig.on('eleventy.before', () => {
