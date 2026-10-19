@@ -62,3 +62,8 @@ sidenote gutter:
 ![Second](/assets/images/<file2>.jpg)
 ![Third](/assets/images/<file3>.jpg)
 {% endgallery %}
+
+SVG diagrams (files or inline <svg>) swap black and white automatically in
+dark mode. Keep an SVG's original colors with "#keep" on the src
+(![diagram](/assets/images/<file>.svg#keep)) or class="keep-colors" on an
+inline <svg>.

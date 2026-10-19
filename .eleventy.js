@@ -110,10 +110,12 @@ module.exports = function(eleventyConfig) {
   // Photo gallery: markdown images inside are laid out side by side as
   // equal, cropped tiles, one column per image. Optional caption, and
   // "wide" to bleed into the sidenote gutter like <figure class="wide">.
-  //   {% gallery %}![a](/a.jpg) ![b](/b.jpg) ![c](/c.jpg){% endgallery %}
+  //   {% gallery %}![a](/a.jpg) ![b](/b.jpg) ![c](/c.svg){% endgallery %}
+  // Inline <svg> markup works as a tile too.
   //   {% gallery "Caption", "wide" %}...{% endgallery %}
   eleventyConfig.addPairedShortcode("gallery", function(content, caption, wide) {
-    const cols = (content.match(/!\[/g) || []).length || 1;
+    // One column per markdown image or inline <svg>.
+    const cols = (content.match(/!\[|<svg[\s>]/g) || []).length || 1;
     const cls = wide === "wide" ? "gallery wide" : "gallery";
     const cap = caption ? `\n<figcaption>${caption}</figcaption>` : "";
     return `<figure class="${cls}" style="--cols: ${cols}">\n<div class="gallery-grid">\n\n${content.trim()}\n\n</div>${cap}\n</figure>`;

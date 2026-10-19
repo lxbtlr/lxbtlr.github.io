@@ -831,3 +831,34 @@ nav a.home-link:hover {
     grid-template-columns: repeat(min(var(--cols, 3), 2), 1fr);
   }
 }
+
+/* SVGs in galleries (files or inline markup) are diagrams more often than
+   photos: show them whole, letterboxed in the tile, instead of cropping. */
+.gallery-grid img[src$=".svg"] {
+  object-fit: contain;
+}
+
+.gallery-grid > svg {
+  display: block;
+  width: 100%;
+  height: auto;
+  aspect-ratio: 4 / 3;
+  border-radius: var(--pico-border-radius);
+}
+
+/* Dark mode for SVG diagrams in posts (files and inline markup): invert
+   lightness so black lines/text turn white and white turns black, then
+   rotate hue back so colors keep roughly their hue (greens stay green).
+   Opt out per image with "#keep" on the src (![a](/x.svg#keep)) or the
+   keep-colors class on an inline <svg> or its figure. */
+:root[data-theme="dark"] .post img[src*=".svg"]:not([src$="#keep"]),
+:root[data-theme="dark"] .post svg:not(.keep-colors):not(.keep-colors svg) {
+  filter: invert(1) hue-rotate(180deg);
+}
+
+/* Pico gives inline SVGs without a fill attribute fill: currentColor, which
+   already follows the theme and would get inverted twice above. Reset post
+   SVGs to the plain SVG default (black) so they behave like SVG files. */
+.post svg:not([fill]) {
+  fill: #000;
+}
