@@ -805,10 +805,20 @@ nav a.home-link:hover {
    column per image (--cols, set by the shortcode). Markdown wraps the
    images in <p>; display: contents lets them sit in the grid directly.
    Two columns on phones. */
+:root {
+  /* Space between gallery tiles */
+  --gallery-gap: 0.5rem;
+}
+
+.gallery {
+  margin-block: 1.5rem;
+}
+
 .gallery-grid {
   display: grid;
   grid-template-columns: repeat(var(--cols, 3), 1fr);
-  gap: 0.5rem;
+  gap: var(--gallery-gap);
+  align-items: start;
 }
 
 .gallery-grid > p {
@@ -833,8 +843,12 @@ nav a.home-link:hover {
 }
 
 /* SVGs in galleries (files or inline markup) are diagrams more often than
-   photos: show them whole, letterboxed in the tile, instead of cropping. */
-.gallery-grid img[src$=".svg"] {
+   photos: show them whole at their own aspect ratio (no 4:3 crop or
+   letterbox), so a tall diagram fills its column instead of floating in
+   blank bands. */
+.gallery-grid img[src*=".svg"] {
+  aspect-ratio: auto;
+  height: auto;
   object-fit: contain;
 }
 
@@ -842,7 +856,6 @@ nav a.home-link:hover {
   display: block;
   width: 100%;
   height: auto;
-  aspect-ratio: 4 / 3;
   border-radius: var(--pico-border-radius);
 }
 
