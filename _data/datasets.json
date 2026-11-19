@@ -1,0 +1,9 @@
+{
+  "tpch": {
+    "title": "TPC-H engine corpus",
+    "dir": "data/tpch",
+    "url": "/data/tpch/",
+    "db": "corpus.sqlite",
+    "views": "views.json"
+  }
+}

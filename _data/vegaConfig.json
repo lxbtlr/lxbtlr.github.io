@@ -1,0 +1,46 @@
+{
+  "background": null,
+  "font": "\"Atkinson Hyperlegible Next Variable\", \"Atkinson Hyperlegible Next\", system-ui, sans-serif",
+  "axis": {
+    "labelColor": "currentColor",
+    "titleColor": "currentColor",
+    "domainColor": "currentColor",
+    "tickColor": "currentColor",
+    "gridColor": "currentColor",
+    "gridOpacity": 0.15
+  },
+  "legend": {
+    "labelColor": "currentColor",
+    "titleColor": "currentColor"
+  },
+  "header": {
+    "labelColor": "currentColor",
+    "titleColor": "currentColor"
+  },
+  "title": {
+    "color": "currentColor",
+    "subtitleColor": "currentColor"
+  },
+  "view": {
+    "stroke": null
+  },
+  "text": {
+    "color": "currentColor"
+  },
+  "range": {
+    "category": [
+      "#66c2a5",
+      "#fc8d62",
+      "#8da0cb",
+      "#e78ac3",
+      "#a6d854",
+      "#ffd92f",
+      "#e5c494",
+      "#b3b3b3"
+    ]
+  },
+  "autosize": {
+    "type": "pad",
+    "resize": true
+  }
+}

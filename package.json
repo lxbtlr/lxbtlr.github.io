@@ -12,7 +12,11 @@
     "@fontsource-variable/atkinson-hyperlegible-mono": "^5.3.0",
     "@fontsource-variable/atkinson-hyperlegible-next": "^5.3.0",
     "@picocss/pico": "^2.1.1",
-    "bouffont": "^0.1.0"
+    "bouffont": "^0.1.0",
+    "sql.js": "^1.16.0",
+    "vega": "^6.4.0",
+    "vega-embed": "^7.3.0",
+    "vega-lite": "^6.5.0"
   },
   "devDependencies": {
     "@fontsource/atkinson-hyperlegible-next": "^5.3.0",

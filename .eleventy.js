@@ -42,7 +42,15 @@ module.exports = function(eleventyConfig) {
     "node_modules/@fontsource-variable/atkinson-hyperlegible-mono/index.css": "assets/fonts/atkinson-mono/index.css",
     "node_modules/@fontsource-variable/atkinson-hyperlegible-mono/files": "assets/fonts/atkinson-mono/files",
     "node_modules/@fontsource-variable/atkinson-hyperlegible-mono/LICENSE": "assets/fonts/atkinson-mono/LICENSE",
+    // Data viewer and plots: SQLite in the browser, Vega-Lite charts
+    "node_modules/sql.js/dist/sql-wasm.js": "assets/vendor/sql-wasm.js",
+    "node_modules/sql.js/dist/sql-wasm.wasm": "assets/vendor/sql-wasm.wasm",
+    "node_modules/vega/build/vega.min.js": "assets/vendor/vega.min.js",
+    "node_modules/vega-lite/build/vega-lite.min.js": "assets/vendor/vega-lite.min.js",
+    "node_modules/vega-embed/build/vega-embed.min.js": "assets/vendor/vega-embed.min.js",
   });
+  // Published database exports and their views, beside each viewer page
+  eleventyConfig.addPassthroughCopy("data/**/*.{sqlite,json}");
 
   // Head filter - get the first n items
   eleventyConfig.addFilter("head", function(array, n) {
@@ -130,6 +138,23 @@ module.exports = function(eleventyConfig) {
     const cls = wide === "wide" ? "gallery wide" : "gallery";
     const cap = caption ? `\n<figcaption>${caption}</figcaption>` : "";
     return `<figure class="${cls}" style="--cols: ${cols}">\n<div class="gallery-grid">\n\n${items}\n\n</div>${cap}\n</figure>`;
+  });
+
+  // Plots from a database export (lib/dbplot.js): live Vega-Lite chart with a
+  // static SVG fallback and a link into the data viewer.
+  //   {% dbplot "view name" %}   {% dbplot "view name", "Caption" %}
+  //   {% dbplotcustom "Caption" %} ```sql ...``` ```json ...``` {% enddbplotcustom %}
+  // An optional last argument picks the dataset from _data/datasets.json.
+  const dbplot = require("./lib/dbplot");
+  eleventyConfig.addAsyncShortcode("dbplot", dbplot.fromView);
+  eleventyConfig.addPairedAsyncShortcode("dbplotcustom", dbplot.fromBlocks);
+
+  // Margin block: floats into the sidenote gutter beside the text that
+  // follows it, and drops inline on narrow screens like a sidenote. Keep
+  // the content free of blank lines so markdown sees one HTML block.
+  //   {% aside %}{% dbplot "view" %}{% endaside %}
+  eleventyConfig.addPairedShortcode("aside", function(content) {
+    return `<aside class="margin-block">${content.trim()}</aside>`;
   });
 
   // Sidenotes

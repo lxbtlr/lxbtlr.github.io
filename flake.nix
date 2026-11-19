@@ -15,6 +15,8 @@
             nodejs_22
             bun
             gnumake
+            python3   # Thunderous-Pupil bin/build-views (make sync-tpch)
+            sqlite
           ];
           shellHook = ''
             echo "make serve  -> dev server on http://localhost:8080"

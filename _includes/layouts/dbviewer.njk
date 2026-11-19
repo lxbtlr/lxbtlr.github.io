@@ -1,0 +1,59 @@
+---
+layout: layouts/base.njk
+mainClass: wide
+---
+{#- SQL + Vega-Lite viewer for one dataset in _data/datasets.json. A viewer
+    page is front matter only:  layout: layouts/dbviewer.njk, dataset: <key>.
+    Logic lives in /assets/js/dbviewer.js (adapted from Thunderous-Pupil's
+    web/index.html); the share-link hash formats are unchanged. -#}
+{%- set ds = datasets[dataset] -%}
+<article class="dbv"
+  data-db="{{ ds.db }}"
+  data-views="{{ ds.views }}"
+  data-wasm="/assets/vendor/sql-wasm.wasm">
+
+  <hgroup>
+    <h2>{{ ds.title }}</h2>
+    <p id="status">loading database&hellip;</p>
+  </hgroup>
+
+  {{ content | safe }}
+
+  <div class="dbv-tabs" role="tablist">
+    <button id="tabTable" class="on" role="tab">Table</button>
+    <button id="tabChart" role="tab">Chart</button>
+    <button id="layout" class="hide" title="Chart tab layout">Layout: spec beside chart</button>
+  </div>
+
+  <div class="dbv-row"><span class="dbv-label" id="viewLabel">views</span><span id="views" class="dbv-views"></span></div>
+
+  <div id="editors"><textarea id="sql" spellcheck="false" aria-label="SQL query"></textarea></div>
+  <div class="dbv-row">
+    <button id="run" disabled>Run <small>(Ctrl/Cmd+Enter)</small></button>
+    <button id="csv" disabled>CSV</button>
+    <button id="svg" disabled class="hide">SVG</button>
+    <button id="jpeg" disabled class="hide" title="White background, 2x resolution">JPEG</button>
+    <button id="link" disabled>Copy link</button>
+    <span id="meta"></span>
+  </div>
+
+  <div id="paneTable"><div class="dbv-scroll">
+    <table><thead id="head"></thead><tbody id="body"></tbody></table>
+  </div></div>
+
+  <div id="paneChart" class="hide dbv-panes">
+    <div class="dbv-editor" id="specBlock">
+      <div class="dbv-label">Vega-Lite spec &mdash; query result injected as <code>values</code></div>
+      <textarea id="spec" spellcheck="false" aria-label="Vega-Lite spec"></textarea>
+      <div id="specerr"></div>
+    </div>
+    <div class="dbv-plot"><div id="chart"></div></div>
+  </div>
+</article>
+
+<script>window.SITE_VEGA_CONFIG = {{ vegaConfig | dump | safe }};</script>
+<script src="/assets/vendor/sql-wasm.js"></script>
+<script src="/assets/vendor/vega.min.js"></script>
+<script src="/assets/vendor/vega-lite.min.js"></script>
+<script src="/assets/vendor/vega-embed.min.js"></script>
+<script src="/assets/js/dbviewer.js"></script>
