@@ -1,26 +1,43 @@
 [
   {
+    "name": "Everything You Always Wanted to Know About Vectorized Query Processing But Were Told Otherwise",
+    "desc": "Compiled vs. vectorized query execution on modern x86 and ARM servers, and an improved vectorized engine that closes the gap.",
+    "url": "/projects/databases/",
+    "unlisted": true,
+    "role": "Lead researcher, with Peter Dinda and Andrew Crotty",
+    "skills": ["C++", "query execution engines", "SIMD (AVX, NEON)", "VTune and perf profiling", "micro-architecture analysis", "SQL"]
+  },
+  {
     "name": "Wimpy Nodes",
     "desc": "Cluster of Single Board Computers to achieve similar performance to brawny nodes",
     "url": "/projects/wimpynodes/",
-    "img": "/assets/images/wimpynodes_header.jpg"
+    "img": "/assets/images/wimpynodes_header.jpg",
+    "role": "Researcher",
+    "skills": ["cluster computing", "single-board computers", "distributed query processing", "performance and TCO analysis"]
   },
   {
     "name": "Diskos",
     "desc": "A student designed and built kinetic battery testbench.",
     "url": "/projects/diskos/",
-    "img": "/assets/images/diskos_header.jpg"
+    "img": "/assets/images/diskos_header.jpg",
+    "role": "Inverter co-designer, PM for P.I.E.",
+    "skills": ["power electronics", "400 W 60 V BLDC inverter design", "motor control", "electromechanical integration"]
   },
   {
     "name": "Formica",
     "desc": "Agent based model replicating Watmough and Edelstein-Keshet's ant trail network results.",
     "url": "/projects/formica/",
-    "img": "/assets/images/formica_header.jpg"
+    "img": "/assets/images/formica_header.jpg",
+    "hideOnCv": true,
+    "role": "Sole author, Scientific Computing course",
+    "skills": ["agent-based modeling", "simulation", "replicating published results"]
   },
   {
     "name": "Spectrum Coexistence",
     "desc": "Unlicensed access + microwave fixed links @ 6 GHz.",
     "url": "/projects/spectrum/",
-    "img": "/assets/images/spectrumx.jpg"
+    "img": "/assets/images/spectrumx.jpg",
+    "role": "Team member, SpectrumX (NSF) coexistence course",
+    "skills": ["RF interference geometry", "spectrum regulation (FCC)", "expert interviews", { "text": "technical presentation", "url": "https://www.youtube.com/watch?v=m-ummHur7ik" }]
   }
 ]
