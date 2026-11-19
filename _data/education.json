@@ -7,7 +7,13 @@
         "degree": "Ph.D.",
         "major": "Computer Science",
         "advisor": "Peter Dinda",
+        "advisorUrl": "http://www.pdinda.org/",
         "date": "2024–present"
+      },
+      {
+        "degree": "M.S.",
+        "major": "Computer Science",
+        "date": "2026"
       }
     ]
   },

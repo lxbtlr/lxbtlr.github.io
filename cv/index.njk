@@ -3,12 +3,12 @@ layout: layouts/base.njk
 title: about me
 ---
 
-<article>
+<article class="cv">
 
 <h1><center>{{ site.name }}</center></h1>
 
 <center>
-<a href="/files/Alex_Butler_RESUME.pdf" download="Alex_Butler_RESUME.pdf">Download</a>
+<a href="/files/Alex_Butler_RESUME.pdf" download="Alex_Butler_CV.pdf">Download C/V</a>
 </center>
 
 <br>
@@ -21,7 +21,7 @@ title: about me
 
   {% for degree in edu.degrees %}
     <br>
-    {{ degree.degree }} in {{ degree.major }}{%- if degree.advisor -%}, <i>Advised by {{ degree.advisor }}</i>{%- endif -%}. {{ degree.date }}.
+    {{ degree.degree }} in {{ degree.major }}{%- if degree.advisor -%}, <i>Advised by {% if degree.advisorUrl %}<a href="{{ degree.advisorUrl }}">{{ degree.advisor }}</a>{% else %}{{ degree.advisor }}{% endif %}</i>{%- endif -%}. {{ degree.date }}.
   {% endfor %}
 
   {% if not loop.last %}<hr />{% endif %}
@@ -40,6 +40,59 @@ title: about me
   </hgroup>
   {% if job.desc %}<p>{{ job.desc }}</p>{% endif %}
   {% if not loop.last %}<hr />{% endif %}
+{% endfor %}
+</article>
+
+<article>
+<h2>Publications</h2>
+{% for pub in publications | sort("year") | reverse %}
+  <hgroup>
+    <h5>{% set link = pub.url or pub.pdf %}{% if link %}<a href="{{ link }}">{{ pub.title }}</a>{% else %}{{ pub.title }}{% endif %}</h5>
+    <small>
+      {{ pub.authors | replace("Alexander Butler", "<strong>Alexander Butler</strong>") | safe }}.<br>
+      <i>{{ pub.venue }}</i>.
+    </small>
+  </hgroup>
+  {% if not loop.last %}<hr />{% endif %}
+{% else %}
+  <p>No publications yet.</p>
+{% endfor %}
+</article>
+
+<article>
+<h2>Projects</h2>
+{% for project in projects | rejectattr("unlisted") | rejectattr("hideOnCv") %}
+  <hgroup>
+    <h5><a href="{{ project.url }}">{{ project.name }}</a></h5>
+    <small>{{ project.desc }}</small>
+  </hgroup>
+  {#- role and skills come from _data/projects.json and show only here #}
+  {% if project.role or project.skills %}
+  <p class="project-meta">
+    {% if project.role %}<i>{{ project.role }}</i>{% endif %}
+    {#- a skill is a string, or { "text", "url" } to link it #}
+    {% if project.skills %}<br><small>
+      {%- for skill in project.skills -%}
+        {%- if skill.url %}<a href="{{ skill.url }}">{{ skill.text }}</a>{% else %}{{ skill }}{% endif -%}
+        {%- if not loop.last %} · {% endif -%}
+      {%- endfor -%}
+    </small>{% endif %}
+  </p>
+  {% endif %}
+  {% if not loop.last %}<hr />{% endif %}
+{% endfor %}
+</article>
+
+<article>
+<h2>Service</h2>
+{#- Entries come from _data/service.json: { "role", "org", "date" } #}
+{% for item in service %}
+  <hgroup>
+    <h5>{{ item.role }}</h5>
+    <small><i>{{ item.org }}</i>, {{ item.date }}.</small>
+  </hgroup>
+{% else %}
+  <p>TODO: add service entries to <code>_data/service.json</code>.</p>
 {% endfor %}
 </article>
 
