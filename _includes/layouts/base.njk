@@ -5,10 +5,14 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>{% if title %}{{ title }} - {% endif %}{{ site.name }}</title>
   <meta name="description" content="{{ description or metadata.description }}">
+  {%- if unlisted %}
+  <meta name="robots" content="noindex, nofollow">
+  {%- endif %}
 
   <!-- Apply saved light/dark theme before first paint -->
   <script>try{if(localStorage.getItem("theme")==="dark")document.documentElement.dataset.theme="dark"}catch(e){}</script>
   <script src="/assets/js/theme.js" defer></script>
+  <script src="/assets/js/sidenotes.js" defer></script>
 
   <!-- Fonts: Atkinson Hyperlegible Next + Mono for text, Paper Mono for code -->
   <link rel="stylesheet" href="/assets/fonts/paper-mono/index.css">
@@ -31,7 +35,7 @@
 
   {% include "components/header.njk" %}
 
-  <main>
+  <main{% if mainClass %} class="{{ mainClass }}"{% endif %}>
     {{ content | safe }}
   </main>
 
