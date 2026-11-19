@@ -135,9 +135,17 @@ main {
   margin-inline: auto;
 }
 
+/* In-page links (#id) stop below the sticky header (about 6.2rem tall)
+   instead of under it */
+html {
+  scroll-padding-top: 7rem;
+}
+
+/* Keep a 2rem margin on each side when the window is narrower than the
+   measure, so the header and text never touch the window edge. */
 @media (min-width: 768px) {
   main, .site-header nav {
-    max-width: var(--measure);
+    max-width: min(var(--measure), calc(100% - 4rem));
     margin-left: auto;
     margin-right: auto;
   }
@@ -202,6 +210,24 @@ h1 {
   line-height: 120%;
 }
 
+/* Office address: keep the muted look Pico gives an hgroup's last
+   child, now that the icon links follow it */
+.title-card h6:last-of-type {
+  --pico-color: var(--pico-muted-color);
+  font-size: 1rem;
+}
+
+/* GitHub and C/V icon links under the contact lines */
+.home-links {
+  display: flex;
+  gap: 1rem;
+  margin-top: 0.75rem;
+}
+
+.home-links a {
+  line-height: 0;
+}
+
 /* Keep <sup> from breaking link underlines into two segments. Pico
    already raises <sup> via `position: relative` rather than
    `vertical-align`, but browsers still paint text-decoration lines
@@ -216,6 +242,23 @@ sup {
   position: relative;
   top: -0.4em;
   font-size: 0.7em;
+}
+
+/* Selected text: the accent green behind page-colored text */
+::selection {
+  background: var(--green);
+  color: var(--paper);
+}
+
+/* A word in a page title set off like selected text (titleHtml) */
+/* The background is trimmed at the top so it does not paint over descenders
+   on the line above. */
+.title-hl {
+  background: linear-gradient(transparent 0.14em, var(--green) 0.14em calc(100% - 0.2em), transparent calc(100% - 0.2em));
+  color: var(--paper);
+  padding: 0 0.15em;
+  box-decoration-break: clone;
+  -webkit-box-decoration-break: clone;
 }
 
 /* Links: ink-colored text with a green underline */
@@ -305,6 +348,25 @@ button, input[type="submit"], input[type="button"], [role="button"] {
   text-align: left;
 }
 
+/* {% aside %}: a figure or block in the same gutter as sidenotes */
+.margin-block {
+  float: right;
+  clear: right;
+  width: calc(var(--sidenote-gutter) - 2.5rem);
+  margin-right: calc(-1 * var(--sidenote-gutter));
+  margin-bottom: 1rem;
+}
+
+.margin-block figure {
+  margin: 0;
+}
+
+/* Shrink a plot to the gutter when the gutter is narrower than the chart. */
+.margin-block .dbplot svg {
+  max-width: 100%;
+  height: auto;
+}
+
 .sidenote-wrapper > sup,
 .sidenote > sup {
   color: var(--pico-accent-color);
@@ -323,6 +385,26 @@ button, input[type="submit"], input[type="button"], [role="button"] {
     margin: 0.5rem 0;
     padding-left: 0.75rem;
     border-left: 2px solid var(--pico-accent-color);
+  }
+
+  /* Notes moved to the end of their paragraph by sidenotes.js */
+  .sidenote-stack {
+    margin: -0.5rem 0 var(--pico-typography-spacing-vertical);
+  }
+
+  li > .sidenote-stack,
+  td > .sidenote-stack {
+    margin: 0;
+  }
+
+  .sidenote-stack .sidenote {
+    margin: 0.4rem 0;
+  }
+
+  .margin-block {
+    float: none;
+    width: auto;
+    margin: 0 0 1.5rem;
   }
 }
 
@@ -353,6 +435,25 @@ button, input[type="submit"], input[type="button"], [role="button"] {
 
 .news-list dd {
   margin: 0;
+}
+
+/* Home page publications: author and venue lines wrap short of the full row,
+   PDF link icon sits at the right edge */
+.news-list dd.pub {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1rem;
+}
+
+.pub-line {
+  display: block;
+  max-width: 90%;
+}
+
+.pub-pdf {
+  flex: none;
+  line-height: 0;
 }
 
 /* Figures on project pages */
@@ -896,4 +997,340 @@ nav a.home-link:hover {
   margin-top: 0.35rem;
   font-size: 0.8rem;
   line-height: 1.35;
+}
+
+/* Wide pages (front matter `mainClass: wide`), e.g. the data viewer */
+@media (min-width: 768px) {
+  main.wide {
+    max-width: min(96rem, calc(100vw - 4rem));
+  }
+}
+
+/* ---------------------------------------------------------
+   Data viewer (_includes/layouts/dbviewer.njk). Layout rules
+   adapted from Thunderous-Pupil's web/index.html, recolored
+   with the site palette.
+--------------------------------------------------------- */
+/* Intro text keeps a reading width; the viewer below spans the page */
+.dbv-intro {
+  max-width: 42rem;
+}
+
+.dbv button {
+  width: auto;
+  margin: 0;
+  padding: 0.3rem 0.75rem;
+  font-size: 0.9rem;
+  background: transparent;
+  color: var(--ink);
+  border: 1px solid var(--rule);
+}
+
+.dbv button:hover:not(:disabled) {
+  border-color: var(--green);
+  color: var(--green);
+}
+
+.dbv button:disabled {
+  opacity: 0.4;
+}
+
+.dbv button.on {
+  border-color: var(--green);
+  color: var(--green);
+  font-weight: 600;
+}
+
+.dbv #status {
+  font-family: var(--font-family-mono-text);
+  font-size: 0.85rem;
+}
+
+.dbv #status.err,
+.dbv #specerr {
+  color: #c33b3b;
+}
+
+.dbv-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  align-items: center;
+  margin-bottom: 0.75rem;
+}
+
+.dbv-views {
+  display: contents;
+}
+
+.dbv-label,
+.dbv #meta {
+  color: var(--ink-muted);
+  font-size: 0.8rem;
+}
+
+.dbv-tabs {
+  display: flex;
+  gap: 0.5rem;
+  padding-bottom: 0.75rem;
+  margin-bottom: 0.75rem;
+  border-bottom: 1px solid var(--rule);
+}
+
+.dbv #layout {
+  margin-left: auto;
+}
+
+.dbv textarea {
+  font-family: var(--font-family-mono-text);
+  font-size: 0.8rem;
+  line-height: 1.5;
+  padding: 0.6rem;
+  margin-bottom: 0.5rem;
+  resize: vertical;
+}
+
+.dbv #sql { min-height: 9rem; }
+.dbv #spec { min-height: 15rem; }
+
+/* Results table: grows with its content, scrolls sideways when wide */
+.dbv-scroll {
+  overflow-x: auto;
+  border: 1px solid var(--rule);
+  border-radius: var(--pico-border-radius);
+}
+
+.dbv table {
+  margin: 0;
+  font-family: var(--font-family-mono-text);
+  font-size: 0.8rem;
+}
+
+.dbv th,
+.dbv td {
+  padding: 0.3rem 0.6rem;
+  white-space: nowrap;
+  background: transparent;
+}
+
+.dbv th {
+  position: sticky;
+  top: 0;
+  z-index: 1;
+  background: var(--paper);
+  font-weight: 600;
+  cursor: pointer;
+  user-select: none;
+}
+
+.dbv th:hover { color: var(--green); }
+.dbv td.num { font-variant-numeric: tabular-nums; }
+.dbv tbody tr:hover td { background: color-mix(in srgb, var(--ink) 6%, transparent); }
+
+/* Spec editor beside the chart, stacking when there is no room; the
+   flex-basis values are the breakpoint. */
+.dbv-panes {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  align-items: flex-start;
+}
+
+.dbv-panes > .dbv-editor { flex: 1 1 22rem; min-width: 0; max-width: 34rem; }
+.dbv-panes > .dbv-plot   { flex: 999 1 32rem; min-width: 0; }
+
+/* Scroll rather than scale. vega-embed makes its container inline-block,
+   which would grow the box to the chart and scroll the whole page; the id
+   pins it back to a full-width block. */
+.dbv #chart {
+  display: block;
+  width: 100%;
+  overflow-x: auto;
+  padding: 0.75rem;
+  border: 1px solid var(--rule);
+  border-radius: var(--pico-border-radius);
+}
+
+/* "Split" layout: SQL and spec side by side, chart full width below */
+.dbv #editors { display: flex; flex-wrap: wrap; gap: 1rem; align-items: stretch; }
+.dbv #editors > * { flex: 1 1 24rem; min-width: 0; }
+.dbv #editors > .dbv-editor { display: flex; flex-direction: column; max-width: none; }
+.dbv #editors > .dbv-editor textarea { flex: 1 1 auto; }
+.dbv.split #sql, .dbv.split #spec { min-height: 16rem; }
+.dbv.split .dbv-panes > .dbv-plot { flex-basis: 100%; }
+
+.dbv .hide,
+.dbv button.hide { display: none; }
+
+/* Plots in posts ({% dbplot %}): static SVG, swapped for the live chart */
+.dbplot .dbplot-chart {
+  overflow-x: auto;
+  color: var(--ink);
+}
+
+/* Plot colors are ColorBrewer Set2 (the specs and _data/vegaConfig.json).
+   In dark mode each one is swapped for its ColorBrewer Dark2 partner, so
+   the theme toggle recolors static and live charts without a re-render. */
+:root[data-theme="dark"] :is(.dbplot, .dbv) [fill="#66c2a5"] { fill: #1b9e77; }
+:root[data-theme="dark"] :is(.dbplot, .dbv) [stroke="#66c2a5"] { stroke: #1b9e77; }
+:root[data-theme="dark"] :is(.dbplot, .dbv) [fill="#fc8d62"] { fill: #d95f02; }
+:root[data-theme="dark"] :is(.dbplot, .dbv) [stroke="#fc8d62"] { stroke: #d95f02; }
+:root[data-theme="dark"] :is(.dbplot, .dbv) [fill="#8da0cb"] { fill: #7570b3; }
+:root[data-theme="dark"] :is(.dbplot, .dbv) [stroke="#8da0cb"] { stroke: #7570b3; }
+:root[data-theme="dark"] :is(.dbplot, .dbv) [fill="#e78ac3"] { fill: #e7298a; }
+:root[data-theme="dark"] :is(.dbplot, .dbv) [stroke="#e78ac3"] { stroke: #e7298a; }
+:root[data-theme="dark"] :is(.dbplot, .dbv) [fill="#a6d854"] { fill: #66a61e; }
+:root[data-theme="dark"] :is(.dbplot, .dbv) [stroke="#a6d854"] { stroke: #66a61e; }
+:root[data-theme="dark"] :is(.dbplot, .dbv) [fill="#ffd92f"] { fill: #e6ab02; }
+:root[data-theme="dark"] :is(.dbplot, .dbv) [stroke="#ffd92f"] { stroke: #e6ab02; }
+:root[data-theme="dark"] :is(.dbplot, .dbv) [fill="#e5c494"] { fill: #a6761d; }
+:root[data-theme="dark"] :is(.dbplot, .dbv) [stroke="#e5c494"] { stroke: #a6761d; }
+:root[data-theme="dark"] :is(.dbplot, .dbv) [fill="#b3b3b3"] { fill: #666666; }
+:root[data-theme="dark"] :is(.dbplot, .dbv) [stroke="#b3b3b3"] { stroke: #666666; }
+
+/* Shrink a chart wider than the column to fit, rather than scroll it */
+.dbplot svg {
+  max-width: 100%;
+  height: auto;
+}
+
+.dbplot figcaption {
+  margin-top: 0.35rem;
+  font-size: 0.8rem;
+}
+
+.dbplot-empty {
+  color: var(--ink-muted);
+}
+
+/* Vega tooltip, in site colors. It is an HTML table, so let long values wrap. */
+#vg-tooltip-element {
+  font-family: var(--pico-font-family-sans-serif) !important;
+  color: var(--ink) !important;
+  background: var(--paper) !important;
+  border: 1px solid var(--rule) !important;
+  box-shadow: none !important;
+}
+
+#vg-tooltip-element table { margin: 0; font: inherit; }
+#vg-tooltip-element td { white-space: normal; background: transparent; color: inherit; }
+#vg-tooltip-element table tr td.value {
+  max-width: 22rem !important;
+  max-height: none !important;
+  overflow-wrap: anywhere;
+}
+
+/* Vega-Lite parameter controls (dropdowns, sliders) in plots and the
+   viewer: compact, not Pico's full-width form fields */
+.vega-bindings {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.25rem 1.25rem;
+  margin-top: 0.5rem;
+  font-size: 0.8rem;
+}
+
+.vega-bind label {
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+  margin: 0;
+}
+
+.vega-bind select,
+.vega-bind input:not([type="checkbox"], [type="radio"]) {
+  width: auto;
+  height: auto;
+  margin: 0;
+  padding: 0.15rem 1.8rem 0.15rem 0.4rem;
+  font-size: 0.8rem;
+  background-position: center right 0.4rem;
+}
+
+.vega-bind input[type="range"] {
+  padding: 0;
+}
+
+/* Radio groups in Vega controls: options in a row, compact */
+.vega-bind-radio {
+  display: inline-flex;
+  flex-wrap: wrap;
+  gap: 0.15rem 0.75rem;
+}
+
+.vega-bind-radio label {
+  margin: 0;
+}
+
+.vega-bind input[type="radio"] {
+  width: 0.9rem;
+  height: 0.9rem;
+  margin: 0 0.25rem 0 0;
+}
+
+/* In posts and project write-ups, a live plot's controls sit in the
+   sidenote gutter beside the chart, stacked; below the sidenote
+   breakpoint they stay under it. The figure is the positioning box, so
+   the controls escape the chart's horizontal scroll. */
+@media (min-width: 62rem) {
+  .post .dbplot {
+    position: relative;
+  }
+
+  /* vega-embed makes its container relative, which would trap the
+     controls inside the chart's scroll box */
+  .post .dbplot .vega-embed {
+    position: static;
+  }
+
+  .post .dbplot .vega-bindings {
+    position: absolute;
+    top: 0;
+    left: calc(100% + 2.5rem);
+    width: calc(var(--sidenote-gutter) - 2.5rem);
+    flex-direction: column;
+    gap: 0.6rem;
+    margin: 0;
+  }
+
+  .post .dbplot .vega-bind label {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.15rem;
+  }
+
+  .post .dbplot .vega-bind-name {
+    color: var(--pico-muted-color);
+  }
+}
+
+/* Role and skills under each project on the about me page */
+.cv hgroup:has(+ .project-meta) {
+  margin-bottom: 0;
+}
+
+.project-meta {
+  margin-top: 0.15rem;
+}
+
+.project-meta small {
+  color: var(--pico-muted-color);
+}
+
+/* About me page: a slightly narrower column than the site measure */
+.cv {
+  max-width: 46rem;
+  margin-inline: auto;
+}
+
+/* Project titles on the about me page: plain ink with a thin ink underline,
+   turning green on hover */
+.cv h5 a {
+  color: var(--ink);
+  text-decoration-color: currentColor;
+  text-decoration-thickness: 1px;
+}
+
+.cv h5 a:hover {
+  text-decoration-color: var(--pico-accent-color);
 }
