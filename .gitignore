@@ -2,3 +2,7 @@ _site
 node_modules
 .direnv
 result
+.cache
+
+# Published TPC-H subset: rebuilt from data/tpch/runs.txt (make corpus-tpch)
+data/tpch/corpus.sqlite

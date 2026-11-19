@@ -1,0 +1,241 @@
+machine,sf,query,query_label,build,build_short,build_sub,build_order,ms,ghz,cycles_per_tuple,instr_per_tuple,sum_of_categories_ms,l2_per_tuple,brmisp_per_tuple,lineitem_tuples
+burrata,1,1,Q1,Typer,T,baseline · compiled,1,67.1,3,33.5,71.2,67.1,0.056,0.015,6001215
+burrata,1,1,Q1,Typer@HEAD,T@H,HEAD · compiled,2,67.4,3.02,33.9,71.2,67.3,0.056,0.015,6001215
+burrata,1,1,Q1,Tectorwise,TW,baseline · vectorised,3,144.5,2.99,72.1,151.9,144.5,0.103,0.021,6001215
+burrata,1,1,Q1,VW:cmake_defaults,VW,HEAD · no options,4,112.7,3.01,56.5,124.1,112.6,0.101,0.019,6001215
+burrata,1,1,Q1,VW:jd_all_pc,JD,HEAD · best safe config,5,70.4,2.99,35.1,91.3,70.4,0.082,0.01,6001215
+burrata,1,3,Q3,Typer,T,baseline · compiled,1,83.4,2.89,40.2,30.2,83.5,0.233,0.669,6001215
+burrata,1,3,Q3,Typer@HEAD,T@H,HEAD · compiled,2,71.3,3.02,35.9,30.2,71.4,0.234,0.405,6001215
+burrata,1,3,Q3,Tectorwise,TW,baseline · vectorised,3,60.7,3.01,30.5,46.1,60.8,0.24,0.099,6001215
+burrata,1,3,Q3,VW:cmake_defaults,VW,HEAD · no options,4,54.4,3,27.2,34.3,54.4,0.238,0.092,6001215
+burrata,1,3,Q3,VW:jd_all_pc,JD,HEAD · best safe config,5,40.1,3.01,20.1,35.2,40.1,0.147,0.054,6001215
+burrata,1,5,Q5,Typer,T,baseline · compiled,1,60.7,3.09,31.3,30.4,60.7,0.233,0.119,6001215
+burrata,1,5,Q5,Typer@HEAD,T@H,HEAD · compiled,2,59.9,3.1,31,30.2,59.8,0.234,0.119,6001215
+burrata,1,5,Q5,Tectorwise,TW,baseline · vectorised,3,65.2,2.99,32.5,36.8,65.2,0.218,0.082,6001215
+burrata,1,5,Q5,VW:cmake_defaults,VW,HEAD · no options,4,64.8,3,32.3,36.7,64.7,0.22,0.082,6001215
+burrata,1,5,Q5,VW:jd_all_pc,JD,HEAD · best safe config,5,38.8,3.02,19.5,39.4,38.8,0.097,0.069,6001215
+burrata,1,6,Q6,Typer,T,baseline · compiled,1,18,3.01,9,15,18,0.027,0.019,6001215
+burrata,1,6,Q6,Typer@HEAD,T@H,HEAD · compiled,2,18,3.02,9,15,18,0.026,0.019,6001215
+burrata,1,6,Q6,Tectorwise,TW,baseline · vectorised,3,16.8,3,8.4,13.1,16.8,0.12,0.006,6001215
+burrata,1,6,Q6,VW:cmake_defaults,VW,HEAD · no options,4,17.1,2.96,8.4,13.1,17.1,0.119,0.006,6001215
+burrata,1,6,Q6,VW:jd_all_pc,JD,HEAD · best safe config,5,17,2.93,8.3,13.1,17,0.119,0.006,6001215
+burrata,1,9,Q9,Typer,T,baseline · compiled,1,196.5,2.97,97.4,65.7,196.6,1.035,0.443,6001215
+burrata,1,9,Q9,Typer@HEAD,T@H,HEAD · compiled,2,192.9,2.99,96.3,65.5,192.9,1.03,0.445,6001215
+burrata,1,9,Q9,Tectorwise,TW,baseline · vectorised,3,178.9,3.01,89.7,85.6,178.9,0.943,0.491,6001215
+burrata,1,9,Q9,VW:cmake_defaults,VW,HEAD · no options,4,175.7,3,88,86.1,175.7,0.934,0.415,6001215
+burrata,1,9,Q9,VW:jd_all_pc,JD,HEAD · best safe config,5,127.2,2.98,63.2,88.7,127.2,0.724,0.301,6001215
+burrata,1,18,Q18,Typer,T,baseline · compiled,1,144.3,2.97,71.3,116,144.3,0.461,0.343,6001215
+burrata,1,18,Q18,Typer@HEAD,T@H,HEAD · compiled,2,143.8,3.02,72.3,116,143.8,0.46,0.342,6001215
+burrata,1,18,Q18,Tectorwise,TW,baseline · vectorised,3,252.4,2.98,125.5,213.5,252.4,0.499,0.826,6001215
+burrata,1,18,Q18,VW:cmake_defaults,VW,HEAD · no options,4,224.4,3.01,112.4,195.6,224.4,0.492,0.503,6001215
+burrata,1,18,Q18,VW:jd_all_pc,JD,HEAD · best safe config,5,132.5,3.01,66.4,129.7,132.5,0.49,0.046,6001215
+burrata,5,1,Q1,Typer,T,baseline · compiled,1,341.5,2.93,33.3,71.1,341.5,0.072,0.015,29999795
+burrata,5,1,Q1,Typer@HEAD,T@H,HEAD · compiled,2,342.1,2.98,34,71.2,342.1,0.071,0.015,29999795
+burrata,5,1,Q1,Tectorwise,TW,baseline · vectorised,3,724.5,3,72.3,151.8,724.5,0.102,0.02,29999795
+burrata,5,1,Q1,VW:cmake_defaults,VW,HEAD · no options,4,563.7,3.01,56.5,124,563.7,0.096,0.019,29999795
+burrata,5,1,Q1,VW:jd_all_pc,JD,HEAD · best safe config,5,348.5,3.01,35,91.3,348.5,0.082,0.01,29999795
+burrata,5,3,Q3,Typer,T,baseline · compiled,1,467.7,3.11,48.4,29.4,467.7,0.331,0.669,29999795
+burrata,5,3,Q3,Typer@HEAD,T@H,HEAD · compiled,2,430.2,2.99,42.9,29.5,430.2,0.343,0.396,29999795
+burrata,5,3,Q3,Tectorwise,TW,baseline · vectorised,3,352.4,3,35.3,46.9,352.4,0.351,0.109,29999795
+burrata,5,3,Q3,VW:cmake_defaults,VW,HEAD · no options,4,314,3.01,31.5,33.9,313.9,0.352,0.104,29999795
+burrata,5,3,Q3,VW:jd_all_pc,JD,HEAD · best safe config,5,245.5,3,24.5,34.6,245.4,0.292,0.053,29999795
+burrata,5,5,Q5,Typer,T,baseline · compiled,1,367.5,3.01,36.9,29.7,367.6,0.353,0.106,29999795
+burrata,5,5,Q5,Typer@HEAD,T@H,HEAD · compiled,2,373.1,2.95,36.7,29.6,373.1,0.353,0.106,29999795
+burrata,5,5,Q5,Tectorwise,TW,baseline · vectorised,3,377,3,37.7,36.7,377,0.357,0.086,29999795
+burrata,5,5,Q5,VW:cmake_defaults,VW,HEAD · no options,4,376.1,3.01,37.7,36.6,376,0.357,0.087,29999795
+burrata,5,5,Q5,VW:jd_all_pc,JD,HEAD · best safe config,5,250.4,2.98,24.9,38.9,250.4,0.186,0.065,29999795
+burrata,5,6,Q6,Typer,T,baseline · compiled,1,93.3,2.96,9.2,15,93.2,0.03,0.019,29999795
+burrata,5,6,Q6,Typer@HEAD,T@H,HEAD · compiled,2,93.2,3,9.3,15,93.1,0.031,0.019,29999795
+burrata,5,6,Q6,Tectorwise,TW,baseline · vectorised,3,86.1,2.99,8.6,13.1,86.1,0.121,0.006,29999795
+burrata,5,6,Q6,VW:cmake_defaults,VW,HEAD · no options,4,83.6,2.99,8.3,13.1,83.6,0.121,0.006,29999795
+burrata,5,6,Q6,VW:jd_all_pc,JD,HEAD · best safe config,5,85.8,2.93,8.4,13.1,85.8,0.119,0.006,29999795
+burrata,5,9,Q9,Typer,T,baseline · compiled,1,1115.6,2.97,110.5,65.4,1115.5,1.613,0.341,29999795
+burrata,5,9,Q9,Typer@HEAD,T@H,HEAD · compiled,2,1115.5,3.01,111.8,65.4,1115.5,1.611,0.343,29999795
+burrata,5,9,Q9,Tectorwise,TW,baseline · vectorised,3,1046.6,2.98,104,85.2,1046.5,1.579,0.42,29999795
+burrata,5,9,Q9,VW:cmake_defaults,VW,HEAD · no options,4,1028.6,3.01,103.2,85.8,1028.5,1.576,0.341,29999795
+burrata,5,9,Q9,VW:jd_all_pc,JD,HEAD · best safe config,5,726.9,3,72.8,88.5,726.9,1.01,0.234,29999795
+burrata,5,18,Q18,Typer,T,baseline · compiled,1,829.1,3,82.9,113.8,829.1,0.547,0.335,29999795
+burrata,5,18,Q18,Typer@HEAD,T@H,HEAD · compiled,2,834.6,2.99,83.1,113.9,834.6,0.55,0.334,29999795
+burrata,5,18,Q18,Tectorwise,TW,baseline · vectorised,3,1326.4,3,132.6,211.9,1326.3,0.6,0.848,29999795
+burrata,5,18,Q18,VW:cmake_defaults,VW,HEAD · no options,4,1204.7,3,120.5,194.2,1204.7,0.594,0.529,29999795
+burrata,5,18,Q18,VW:jd_all_pc,JD,HEAD · best safe config,5,775.2,3,77.6,128,775.2,0.577,0.06,29999795
+roquefort,1,1,Q1,Typer,T,baseline · compiled,1,42,3.87,27.1,68.2,42.1,0.013,0.024,6001215
+roquefort,1,1,Q1,Typer@HEAD,T@H,HEAD · compiled,2,42.6,3.91,27.7,68.2,42.5,0.012,0.023,6001215
+roquefort,1,1,Q1,Tectorwise,TW,baseline · vectorised,3,81.4,3.89,52.8,156.9,81.5,0.035,0.04,6001215
+roquefort,1,1,Q1,VW:cmake_defaults,VW,HEAD · no options,4,68,3.87,43.8,129,68.1,0.035,0.037,6001215
+roquefort,1,1,Q1,VW:jd_all_pc,JD,HEAD · best safe config,5,45.6,3.88,29.5,88.8,45.7,0.023,0.015,6001215
+roquefort,1,3,Q3,Typer,T,baseline · compiled,1,36.6,3.81,23.3,31.8,36.6,0.309,0.372,6001215
+roquefort,1,3,Q3,Typer@HEAD,T@H,HEAD · compiled,2,36.5,3.86,23.5,31.9,36.4,0.31,0.368,6001215
+roquefort,1,3,Q3,Tectorwise,TW,baseline · vectorised,3,33.5,3.89,21.7,50.8,33.6,0.318,0.127,6001215
+roquefort,1,3,Q3,VW:cmake_defaults,VW,HEAD · no options,4,28.6,3.84,18.3,41.9,28.6,0.32,0.119,6001215
+roquefort,1,3,Q3,VW:jd_all_pc,JD,HEAD · best safe config,5,23.5,3.87,15.1,37.6,23.5,0.223,0.051,6001215
+roquefort,1,5,Q5,Typer,T,baseline · compiled,1,37.1,3.72,23,32.7,37.1,0.316,0.269,6001215
+roquefort,1,5,Q5,Typer@HEAD,T@H,HEAD · compiled,2,36.8,3.77,23.1,32.7,36.8,0.321,0.275,6001215
+roquefort,1,5,Q5,Tectorwise,TW,baseline · vectorised,3,30.5,3.88,19.8,45.3,30.5,0.315,0.105,6001215
+roquefort,1,5,Q5,VW:cmake_defaults,VW,HEAD · no options,4,31.2,3.79,19.7,45.3,31.2,0.316,0.103,6001215
+roquefort,1,5,Q5,VW:jd_all_pc,JD,HEAD · best safe config,5,24.7,3.79,15.6,39.8,24.7,0.126,0.062,6001215
+roquefort,1,6,Q6,Typer,T,baseline · compiled,1,18.6,3.66,11.3,14.7,18.7,0.037,0.136,6001215
+roquefort,1,6,Q6,Typer@HEAD,T@H,HEAD · compiled,2,18.8,3.7,11.6,14.7,18.6,0.037,0.136,6001215
+roquefort,1,6,Q6,Tectorwise,TW,baseline · vectorised,3,13.6,3.82,8.7,15.8,13.6,0.091,0.011,6001215
+roquefort,1,6,Q6,VW:cmake_defaults,VW,HEAD · no options,4,13.8,3.87,8.9,15.8,13.9,0.094,0.011,6001215
+roquefort,1,6,Q6,VW:jd_all_pc,JD,HEAD · best safe config,5,13.5,3.92,8.8,15.8,13.4,0.092,0.011,6001215
+roquefort,1,9,Q9,Typer,T,baseline · compiled,1,102.4,3.97,67.7,68.7,102.4,1.422,0.514,6001215
+roquefort,1,9,Q9,Typer@HEAD,T@H,HEAD · compiled,2,104.9,3.87,67.7,68.6,104.9,1.411,0.514,6001215
+roquefort,1,9,Q9,Tectorwise,TW,baseline · vectorised,3,95.6,3.89,61.9,101,95.6,1.332,0.543,6001215
+roquefort,1,9,Q9,VW:cmake_defaults,VW,HEAD · no options,4,93.6,3.87,60.3,101.9,93.6,1.335,0.479,6001215
+roquefort,1,9,Q9,VW:jd_all_pc,JD,HEAD · best safe config,5,76.3,3.84,48.8,90.7,76.3,0.915,0.251,6001215
+roquefort,1,18,Q18,Typer,T,baseline · compiled,1,85.1,3.88,55,101.7,85.1,0.519,0.43,6001215
+roquefort,1,18,Q18,Typer@HEAD,T@H,HEAD · compiled,2,83.8,3.87,54,101.4,83.8,0.518,0.43,6001215
+roquefort,1,18,Q18,Tectorwise,TW,baseline · vectorised,3,151.1,3.9,98.3,224.7,151.2,0.477,0.891,6001215
+roquefort,1,18,Q18,VW:cmake_defaults,VW,HEAD · no options,4,130,3.84,83.2,212.1,129.9,0.466,0.578,6001215
+roquefort,1,18,Q18,VW:jd_all_pc,JD,HEAD · best safe config,5,74.3,3.85,47.6,131.2,74.3,0.382,0.105,6001215
+roquefort,5,1,Q1,Typer,T,baseline · compiled,1,211.2,3.85,27.1,68.2,211.3,0.014,0.024,29999795
+roquefort,5,1,Q1,Typer@HEAD,T@H,HEAD · compiled,2,216.1,3.85,27.7,68.2,216.1,0.013,0.023,29999795
+roquefort,5,1,Q1,Tectorwise,TW,baseline · vectorised,3,409.7,3.85,52.6,156.8,409.6,0.033,0.039,29999795
+roquefort,5,1,Q1,VW:cmake_defaults,VW,HEAD · no options,4,334,3.9,43.4,129,334,0.034,0.035,29999795
+roquefort,5,1,Q1,VW:jd_all_pc,JD,HEAD · best safe config,5,225,3.9,29.2,88.8,225.1,0.022,0.014,29999795
+roquefort,5,3,Q3,Typer,T,baseline · compiled,1,211,3.84,27,31.3,211,0.36,0.357,29999795
+roquefort,5,3,Q3,Typer@HEAD,T@H,HEAD · compiled,2,213.1,3.85,27.3,31.3,213,0.36,0.356,29999795
+roquefort,5,3,Q3,Tectorwise,TW,baseline · vectorised,3,191.4,3.84,24.5,51.4,191.3,0.386,0.128,29999795
+roquefort,5,3,Q3,VW:cmake_defaults,VW,HEAD · no options,4,158.5,3.86,20.4,41.6,158.5,0.387,0.121,29999795
+roquefort,5,3,Q3,VW:jd_all_pc,JD,HEAD · best safe config,5,125.2,3.96,16.5,37,125.2,0.359,0.041,29999795
+roquefort,5,5,Q5,Typer,T,baseline · compiled,1,200.8,3.81,25.5,32.2,200.9,0.388,0.253,29999795
+roquefort,5,5,Q5,Typer@HEAD,T@H,HEAD · compiled,2,199.3,3.82,25.4,32.2,199.4,0.387,0.254,29999795
+roquefort,5,5,Q5,Tectorwise,TW,baseline · vectorised,3,173.2,3.78,21.9,45.3,173.3,0.393,0.106,29999795
+roquefort,5,5,Q5,VW:cmake_defaults,VW,HEAD · no options,4,169.6,3.89,22,45.3,169.7,0.393,0.107,29999795
+roquefort,5,5,Q5,VW:jd_all_pc,JD,HEAD · best safe config,5,144.9,3.93,19,39.5,144.8,0.28,0.056,29999795
+roquefort,5,6,Q6,Typer,T,baseline · compiled,1,102.1,3.79,12.9,14.7,102.1,0.038,0.137,29999795
+roquefort,5,6,Q6,Typer@HEAD,T@H,HEAD · compiled,2,97.9,3.97,12.9,14.7,97.9,0.038,0.137,29999795
+roquefort,5,6,Q6,Tectorwise,TW,baseline · vectorised,3,72.6,3.86,9.4,15.8,72.7,0.086,0.011,29999795
+roquefort,5,6,Q6,VW:cmake_defaults,VW,HEAD · no options,4,70.3,3.87,9.1,15.8,70.2,0.089,0.011,29999795
+roquefort,5,6,Q6,VW:jd_all_pc,JD,HEAD · best safe config,5,71.5,3.9,9.3,15.8,71.6,0.088,0.011,29999795
+roquefort,5,9,Q9,Typer,T,baseline · compiled,1,622.2,3.86,80.2,68.5,622.1,1.831,0.43,29999795
+roquefort,5,9,Q9,Typer@HEAD,T@H,HEAD · compiled,2,623.7,3.86,80.3,68.4,623.8,1.83,0.422,29999795
+roquefort,5,9,Q9,Tectorwise,TW,baseline · vectorised,3,557.4,3.88,72.1,100.3,557.4,1.763,0.479,29999795
+roquefort,5,9,Q9,VW:cmake_defaults,VW,HEAD · no options,4,568.9,3.81,72.3,101.3,568.8,1.764,0.416,29999795
+roquefort,5,9,Q9,VW:jd_all_pc,JD,HEAD · best safe config,5,428.8,3.88,55.5,90.1,428.8,1.402,0.182,29999795
+roquefort,5,18,Q18,Typer,T,baseline · compiled,1,483.8,3.89,62.7,99.5,483.8,0.498,0.397,29999795
+roquefort,5,18,Q18,Typer@HEAD,T@H,HEAD · compiled,2,480.4,3.89,62.3,99.3,480.4,0.498,0.395,29999795
+roquefort,5,18,Q18,Tectorwise,TW,baseline · vectorised,3,816,3.87,105.2,223.4,815.9,0.505,0.889,29999795
+roquefort,5,18,Q18,VW:cmake_defaults,VW,HEAD · no options,4,699.7,3.9,90.9,210.9,699.6,0.497,0.577,29999795
+roquefort,5,18,Q18,VW:jd_all_pc,JD,HEAD · best safe config,5,388,3.86,49.9,129.7,387.9,0.4,0.096,29999795
+manchego,1,1,Q1,Typer,T,baseline · compiled,1,31.7,3.68,19.4,68.2,31.7,,,6001215
+manchego,1,1,Q1,Typer@HEAD,T@H,HEAD · compiled,2,31.8,3.59,19,68.2,31.8,,,6001215
+manchego,1,1,Q1,Tectorwise,TW,baseline · vectorised,3,77.7,3.6,46.5,156.9,77.7,,,6001215
+manchego,1,1,Q1,VW:cmake_defaults,VW,HEAD · no options,4,69.4,3.6,41.6,129,69.4,,,6001215
+manchego,1,1,Q1,VW:jd_all_pc,JD,HEAD · best safe config,5,38,3.61,22.9,72.5,37.9,,,6001215
+manchego,1,3,Q3,Typer,T,baseline · compiled,1,46.5,3.57,27.7,31.8,46.6,,,6001215
+manchego,1,3,Q3,Typer@HEAD,T@H,HEAD · compiled,2,46.1,3.61,27.7,31.8,46.1,,,6001215
+manchego,1,3,Q3,Tectorwise,TW,baseline · vectorised,3,40,3.62,24.1,50.7,40,,,6001215
+manchego,1,3,Q3,VW:cmake_defaults,VW,HEAD · no options,4,35.5,3.6,21.3,41.7,35.5,,,6001215
+manchego,1,3,Q3,VW:jd_all_pc,JD,HEAD · best safe config,5,20.8,3.62,12.5,19.1,20.8,,,6001215
+manchego,1,5,Q5,Typer,T,baseline · compiled,1,40.3,3.62,24.3,32.7,40.3,,,6001215
+manchego,1,5,Q5,Typer@HEAD,T@H,HEAD · compiled,2,41,3.57,24.4,32.6,41,,,6001215
+manchego,1,5,Q5,Tectorwise,TW,baseline · vectorised,3,31.4,3.63,19,45.3,31.4,,,6001215
+manchego,1,5,Q5,VW:cmake_defaults,VW,HEAD · no options,4,32,3.59,19.1,45.3,31.8,,,6001215
+manchego,1,5,Q5,VW:jd_all_pc,JD,HEAD · best safe config,5,21.1,3.64,12.8,23,21.2,,,6001215
+manchego,1,6,Q6,Typer,T,baseline · compiled,1,15.3,3.59,9.2,17.1,15.3,,,6001215
+manchego,1,6,Q6,Typer@HEAD,T@H,HEAD · compiled,2,15.4,3.59,9.2,17.1,15.5,,,6001215
+manchego,1,6,Q6,Tectorwise,TW,baseline · vectorised,3,13.1,3.83,8.3,15.8,13.1,,,6001215
+manchego,1,6,Q6,VW:cmake_defaults,VW,HEAD · no options,4,13,3.59,7.8,15.8,13.1,,,6001215
+manchego,1,6,Q6,VW:jd_all_pc,JD,HEAD · best safe config,5,11.3,3.59,6.7,8.4,11.3,,,6001215
+manchego,1,9,Q9,Typer,T,baseline · compiled,1,122.2,3.65,74.3,68,122.2,,,6001215
+manchego,1,9,Q9,Typer@HEAD,T@H,HEAD · compiled,2,121.8,3.6,73.1,68,121.8,,,6001215
+manchego,1,9,Q9,Tectorwise,TW,baseline · vectorised,3,101.7,3.6,60.9,100.4,101.7,,,6001215
+manchego,1,9,Q9,VW:cmake_defaults,VW,HEAD · no options,4,116.6,2.94,57.1,101.3,116.6,,,6001215
+manchego,1,9,Q9,VW:jd_all_pc,JD,HEAD · best safe config,5,77.8,3.61,46.8,74.2,77.7,,,6001215
+manchego,1,18,Q18,Typer,T,baseline · compiled,1,87.7,3.59,52.5,100.7,87.7,,,6001215
+manchego,1,18,Q18,Typer@HEAD,T@H,HEAD · compiled,2,86.6,3.58,51.6,100.5,86.6,,,6001215
+manchego,1,18,Q18,Tectorwise,TW,baseline · vectorised,3,162.3,3.61,97.5,225.8,162.2,,,6001215
+manchego,1,18,Q18,VW:cmake_defaults,VW,HEAD · no options,4,132.3,3.6,79.2,212.8,132.2,,,6001215
+manchego,1,18,Q18,VW:jd_all_pc,JD,HEAD · best safe config,5,69.8,3.61,42,117.9,69.9,,,6001215
+manchego,5,1,Q1,Typer,T,baseline · compiled,1,151.9,3.59,18.2,68.2,152,,,29999795
+manchego,5,1,Q1,Typer@HEAD,T@H,HEAD · compiled,2,152.6,3.59,18.2,68.2,152.7,,,29999795
+manchego,5,1,Q1,Tectorwise,TW,baseline · vectorised,3,386.7,3.59,46.3,156.8,386.7,,,29999795
+manchego,5,1,Q1,VW:cmake_defaults,VW,HEAD · no options,4,344.9,3.6,41.4,129,344.9,,,29999795
+manchego,5,1,Q1,VW:jd_all_pc,JD,HEAD · best safe config,5,186.7,3.58,22.2,72.5,186.8,,,29999795
+manchego,5,3,Q3,Typer,T,baseline · compiled,1,261.3,3.57,31.1,31.1,261.2,,,29999795
+manchego,5,3,Q3,Typer@HEAD,T@H,HEAD · compiled,2,259.7,3.6,31.1,31.1,259.8,,,29999795
+manchego,5,3,Q3,Tectorwise,TW,baseline · vectorised,3,229.4,3.63,27.7,51.3,229.4,,,29999795
+manchego,5,3,Q3,VW:cmake_defaults,VW,HEAD · no options,4,205.2,3.6,24.6,41.4,205.2,,,29999795
+manchego,5,3,Q3,VW:jd_all_pc,JD,HEAD · best safe config,5,134,3.59,16.1,18.6,134,,,29999795
+manchego,5,5,Q5,Typer,T,baseline · compiled,1,244.3,3.6,29.3,32.1,244.2,,,29999795
+manchego,5,5,Q5,Typer@HEAD,T@H,HEAD · compiled,2,246.1,3.59,29.5,32.2,246.1,,,29999795
+manchego,5,5,Q5,Tectorwise,TW,baseline · vectorised,3,198.7,3.59,23.8,45.2,198.7,,,29999795
+manchego,5,5,Q5,VW:cmake_defaults,VW,HEAD · no options,4,198.9,3.6,23.9,45.2,198.8,,,29999795
+manchego,5,5,Q5,VW:jd_all_pc,JD,HEAD · best safe config,5,117.4,3.6,14.1,22.6,117.4,,,29999795
+manchego,5,6,Q6,Typer,T,baseline · compiled,1,72.4,3.58,8.6,17.1,72.4,,,29999795
+manchego,5,6,Q6,Typer@HEAD,T@H,HEAD · compiled,2,73.1,3.59,8.7,17.1,73,,,29999795
+manchego,5,6,Q6,Tectorwise,TW,baseline · vectorised,3,65.1,3.6,7.8,15.8,65.1,,,29999795
+manchego,5,6,Q6,VW:cmake_defaults,VW,HEAD · no options,4,65,3.6,7.8,15.8,65.1,,,29999795
+manchego,5,6,Q6,VW:jd_all_pc,JD,HEAD · best safe config,5,56,3.6,6.7,8.4,55.9,,,29999795
+manchego,5,9,Q9,Typer,T,baseline · compiled,1,733.9,3.59,87.8,67.9,733.9,,,29999795
+manchego,5,9,Q9,Typer@HEAD,T@H,HEAD · compiled,2,727.4,3.59,87.1,67.7,727.3,,,29999795
+manchego,5,9,Q9,Tectorwise,TW,baseline · vectorised,3,592,3.6,71,99.8,592,,,29999795
+manchego,5,9,Q9,VW:cmake_defaults,VW,HEAD · no options,4,583.3,3.59,69.9,100.7,583.3,,,29999795
+manchego,5,9,Q9,VW:jd_all_pc,JD,HEAD · best safe config,5,417.9,3.6,50.1,73.6,417.9,,,29999795
+manchego,5,18,Q18,Typer,T,baseline · compiled,1,484.1,3.6,58.1,99,484,,,29999795
+manchego,5,18,Q18,Typer@HEAD,T@H,HEAD · compiled,2,475.7,3.61,57.2,98.7,475.7,,,29999795
+manchego,5,18,Q18,Tectorwise,TW,baseline · vectorised,3,857.2,3.61,103.2,224.5,857.2,,,29999795
+manchego,5,18,Q18,VW:cmake_defaults,VW,HEAD · no options,4,715.4,3.59,85.6,211.6,715.4,,,29999795
+manchego,5,18,Q18,VW:jd_all_pc,JD,HEAD · best safe config,5,387.3,3.62,46.8,116.5,387.3,,,29999795
+dubliner,1,1,Q1,Typer,T,baseline · compiled,1,61.7,2.74,28.2,68.2,61.8,,,6001215
+dubliner,1,1,Q1,Typer@HEAD,T@H,HEAD · compiled,2,60.4,2.79,28.1,68.2,60.5,,,6001215
+dubliner,1,1,Q1,Tectorwise,TW,baseline · vectorised,3,119.2,2.79,55.5,156.9,119.3,,,6001215
+dubliner,1,1,Q1,VW:cmake_defaults,VW,HEAD · no options,4,102.4,2.79,47.7,129,102.4,,,6001215
+dubliner,1,1,Q1,VW:jd_all_pc,JD,HEAD · best safe config,5,72.1,2.5,30,72.5,72.1,,,6001215
+dubliner,1,3,Q3,Typer,T,baseline · compiled,1,64.7,2.79,30.1,31.9,64.7,,,6001215
+dubliner,1,3,Q3,Typer@HEAD,T@H,HEAD · compiled,2,66.3,2.79,30.9,32,66.3,,,6001215
+dubliner,1,3,Q3,Tectorwise,TW,baseline · vectorised,3,55.7,2.8,25.9,50.7,55.6,,,6001215
+dubliner,1,3,Q3,VW:cmake_defaults,VW,HEAD · no options,4,48.1,2.8,22.4,41.7,48.1,,,6001215
+dubliner,1,3,Q3,VW:jd_all_pc,JD,HEAD · best safe config,5,37.9,2.51,15.9,18.3,37.9,,,6001215
+dubliner,1,5,Q5,Typer,T,baseline · compiled,1,59.1,2.81,27.7,32.6,59.1,,,6001215
+dubliner,1,5,Q5,Typer@HEAD,T@H,HEAD · compiled,2,60.2,2.81,28.2,32.8,60.2,,,6001215
+dubliner,1,5,Q5,Tectorwise,TW,baseline · vectorised,3,46.8,2.76,21.6,45.3,46.9,,,6001215
+dubliner,1,5,Q5,VW:cmake_defaults,VW,HEAD · no options,4,48.6,2.83,23,45.3,48.5,,,6001215
+dubliner,1,5,Q5,VW:jd_all_pc,JD,HEAD · best safe config,5,38.3,2.53,16.2,22.6,38.3,,,6001215
+dubliner,1,6,Q6,Typer,T,baseline · compiled,1,19,2.76,8.7,17.1,18.9,,,6001215
+dubliner,1,6,Q6,Typer@HEAD,T@H,HEAD · compiled,2,19,2.75,8.7,17.1,19,,,6001215
+dubliner,1,6,Q6,Tectorwise,TW,baseline · vectorised,3,18.6,2.72,8.5,15.8,18.7,,,6001215
+dubliner,1,6,Q6,VW:cmake_defaults,VW,HEAD · no options,4,18.7,2.75,8.6,15.8,18.7,,,6001215
+dubliner,1,6,Q6,VW:jd_all_pc,JD,HEAD · best safe config,5,15.9,2.84,7.5,8.4,15.9,,,6001215
+dubliner,1,9,Q9,Typer,T,baseline · compiled,1,168.4,2.79,78.3,68.2,168.4,,,6001215
+dubliner,1,9,Q9,Typer@HEAD,T@H,HEAD · compiled,2,167.2,2.78,77.3,68.2,167.2,,,6001215
+dubliner,1,9,Q9,Tectorwise,TW,baseline · vectorised,3,142.2,2.79,66.2,100.6,142.2,,,6001215
+dubliner,1,9,Q9,VW:cmake_defaults,VW,HEAD · no options,4,143.8,2.81,67.4,101.2,143.8,,,6001215
+dubliner,1,9,Q9,VW:jd_all_pc,JD,HEAD · best safe config,5,131.8,2.53,55.6,73.6,131.8,,,6001215
+dubliner,1,18,Q18,Typer,T,baseline · compiled,1,141.6,2.8,66.1,101.1,141.7,,,6001215
+dubliner,1,18,Q18,Typer@HEAD,T@H,HEAD · compiled,2,143.2,2.8,66.8,100.9,143.3,,,6001215
+dubliner,1,18,Q18,Tectorwise,TW,baseline · vectorised,3,235.5,2.8,109.8,224.7,235.5,,,6001215
+dubliner,1,18,Q18,VW:cmake_defaults,VW,HEAD · no options,4,210.9,2.79,98.2,212,211,,,6001215
+dubliner,1,18,Q18,VW:jd_all_pc,JD,HEAD · best safe config,5,118.7,2.65,52.5,118.8,118.8,,,6001215
+dubliner,5,1,Q1,Typer,T,baseline · compiled,1,308.6,2.76,28.4,68.2,308.7,,,29999795
+dubliner,5,1,Q1,Typer@HEAD,T@H,HEAD · compiled,2,304.4,2.77,28.1,68.2,304.4,,,29999795
+dubliner,5,1,Q1,Tectorwise,TW,baseline · vectorised,3,595.7,2.79,55.5,156.8,595.7,,,29999795
+dubliner,5,1,Q1,VW:cmake_defaults,VW,HEAD · no options,4,509.7,2.81,47.7,129,509.8,,,29999795
+dubliner,5,1,Q1,VW:jd_all_pc,JD,HEAD · best safe config,5,358.1,2.49,29.8,72.5,358.2,,,29999795
+dubliner,5,3,Q3,Typer,T,baseline · compiled,1,525.9,2.84,49.7,44.7,526,,,29999795
+dubliner,5,3,Q3,Typer@HEAD,T@H,HEAD · compiled,2,358.3,2.8,33.4,31.2,358.3,,,29999795
+dubliner,5,3,Q3,Tectorwise,TW,baseline · vectorised,3,312.8,2.8,29.2,51.3,312.9,,,29999795
+dubliner,5,3,Q3,VW:cmake_defaults,VW,HEAD · no options,4,270.6,2.81,25.4,41.4,270.7,,,29999795
+dubliner,5,3,Q3,VW:jd_all_pc,JD,HEAD · best safe config,5,211.2,2.53,17.8,18.1,211.2,,,29999795
+dubliner,5,5,Q5,Typer,T,baseline · compiled,1,333.5,2.79,31,32.2,333.5,,,29999795
+dubliner,5,5,Q5,Typer@HEAD,T@H,HEAD · compiled,2,332.1,2.79,30.9,32.1,332.1,,,29999795
+dubliner,5,5,Q5,Tectorwise,TW,baseline · vectorised,3,261.4,2.79,24.3,45.3,261.3,,,29999795
+dubliner,5,5,Q5,VW:cmake_defaults,VW,HEAD · no options,4,271,2.8,25.3,45.2,271.1,,,29999795
+dubliner,5,5,Q5,VW:jd_all_pc,JD,HEAD · best safe config,5,204.8,2.64,18.1,22.4,204.7,,,29999795
+dubliner,5,6,Q6,Typer,T,baseline · compiled,1,94.9,2.8,8.9,17.1,95,,,29999795
+dubliner,5,6,Q6,Typer@HEAD,T@H,HEAD · compiled,2,94.5,2.8,8.8,17.1,94.5,,,29999795
+dubliner,5,6,Q6,Tectorwise,TW,baseline · vectorised,3,93,2.8,8.7,15.8,92.9,,,29999795
+dubliner,5,6,Q6,VW:cmake_defaults,VW,HEAD · no options,4,93,2.81,8.7,15.8,92.9,,,29999795
+dubliner,5,6,Q6,VW:jd_all_pc,JD,HEAD · best safe config,5,78.8,2.79,7.3,8.4,78.8,,,29999795
+dubliner,5,9,Q9,Typer,T,baseline · compiled,1,1534.8,2.42,124,94.5,1534.7,,,29999795
+dubliner,5,9,Q9,Typer@HEAD,T@H,HEAD · compiled,2,952.3,2.79,88.6,67.9,952.1,,,29999795
+dubliner,5,9,Q9,Tectorwise,TW,baseline · vectorised,3,836.1,2.78,77.6,99.9,836.1,,,29999795
+dubliner,5,9,Q9,VW:cmake_defaults,VW,HEAD · no options,4,838.5,2.8,78.3,100.5,838.5,,,29999795
+dubliner,5,9,Q9,VW:jd_all_pc,JD,HEAD · best safe config,5,696.6,2.54,58.9,73.3,696.6,,,29999795
+dubliner,5,18,Q18,Typer,T,baseline · compiled,1,1270.5,2.65,112.1,137.9,1270.4,,,29999795
+dubliner,5,18,Q18,Typer@HEAD,T@H,HEAD · compiled,2,765.7,2.79,71.1,98.9,765.8,,,29999795
+dubliner,5,18,Q18,Tectorwise,TW,baseline · vectorised,3,1246.6,2.79,116.1,223.3,1246.6,,,29999795
+dubliner,5,18,Q18,VW:cmake_defaults,VW,HEAD · no options,4,1121.6,2.8,104.6,211.2,1121.6,,,29999795
+dubliner,5,18,Q18,VW:jd_all_pc,JD,HEAD · best safe config,5,645.1,2.67,57.4,118.3,645.1,,,29999795

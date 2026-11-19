@@ -1,0 +1,16 @@
+# Views from Thunderous-Pupil's web/views/ that this site leaves out, one
+# name per line (the H1 of the view's markdown file). Applied by
+# `make sync-tpch` when it copies views.json here.
+h vs v
+win rate / build
+win rate / query
+win rate long
+duel win rate
+balanced panel
+imbalance
+crossover by sf
+coverage
+orphan cells
+noisy
+3. thread sweep by query (speedup)
+ablation scatter

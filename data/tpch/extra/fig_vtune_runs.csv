@@ -1,0 +1,96 @@
+machine,sf,query,query_label,build,build_short,build_sub,build_order,ms,ghz,cycles_per_tuple,instr_per_tuple,retiring_ms,stall_ms,stall_pct_of_runtime,sum_of_categories_ms,lineitem_tuples,collector,mux_reliability_min
+dubliner,1,1,Q1,Typer,T,baseline · compiled,1,62.8,2.78,29.1,68.2,36.9,26,41.401,62.9,6001215,Event-based sampling driver,0.994
+dubliner,1,1,Q1,Typer@HEAD,T@H,HEAD · compiled,2,67.9,2.78,31.4,68.2,36.9,31,45.655,67.9,6001215,Event-based sampling driver,0.994
+dubliner,1,1,Q1,Tectorwise,TW,baseline · vectorised,3,133.1,2.78,61.6,156.9,79.5,53.6,40.27,133.1,6001215,Event-based sampling driver,0.994
+dubliner,1,1,Q1,VW:cmake_defaults,VW,HEAD · no options,4,110.8,2.78,51.3,129,64.3,46.5,41.968,110.8,6001215,Event-based sampling driver,0.994
+dubliner,1,1,Q1,VW:jd_all_pc,JD,HEAD · best safe config,5,79.7,2.48,32.9,72.5,45.6,34.2,42.911,79.8,6001215,Event-based sampling driver,0.994
+dubliner,1,3,Q3,Typer,T,baseline · compiled,1,119.6,2.77,55.2,48.8,25.8,93.6,78.261,119.4,6001215,Event-based sampling driver,0.994
+dubliner,1,3,Q3,Typer@HEAD,T@H,HEAD · compiled,2,95.6,2.78,44.2,38.6,20.2,75.5,78.975,95.7,6001215,Event-based sampling driver,0.994
+dubliner,1,3,Q3,Tectorwise,TW,baseline · vectorised,3,86.8,2.77,40.1,59.1,29.7,57.3,66.014,87,6001215,Event-based sampling driver,0.994
+dubliner,1,3,Q3,VW:cmake_defaults,VW,HEAD · no options,4,56.8,2.77,26.2,41.7,22,34.8,61.268,56.8,6001215,Event-based sampling driver,0.994
+dubliner,1,3,Q3,VW:jd_all_pc,JD,HEAD · best safe config,5,48.3,2.5,20.1,18.6,12.6,35.8,74.12,48.4,6001215,Event-based sampling driver,0.994
+dubliner,1,5,Q5,Typer,T,baseline · compiled,1,81.7,2.77,37.8,39.7,21.4,60.3,73.807,81.7,6001215,Event-based sampling driver,0.994
+dubliner,1,5,Q5,Typer@HEAD,T@H,HEAD · compiled,2,66.9,2.78,31,32.5,16.7,50.1,74.888,66.8,6001215,Event-based sampling driver,0.994
+dubliner,1,5,Q5,Tectorwise,TW,baseline · vectorised,3,67.2,2.78,31.1,49.5,25.3,41.9,62.351,67.2,6001215,Event-based sampling driver,0.994
+dubliner,1,5,Q5,VW:cmake_defaults,VW,HEAD · no options,4,54.7,2.78,25.3,45.3,22.9,32,58.501,54.9,6001215,Event-based sampling driver,0.994
+dubliner,1,5,Q5,VW:jd_all_pc,JD,HEAD · best safe config,5,43.5,2.5,18.1,22.6,15.2,28.6,65.747,43.8,6001215,Event-based sampling driver,0.994
+dubliner,1,6,Q6,Typer,T,baseline · compiled,1,26.8,2.77,12.4,17.5,8.9,17.9,66.791,26.8,6001215,Event-based sampling driver,0.994
+dubliner,1,6,Q6,Typer@HEAD,T@H,HEAD · compiled,2,25.7,2.77,11.9,17.1,8.7,16.9,65.759,25.6,6001215,Event-based sampling driver,0.994
+dubliner,1,6,Q6,Tectorwise,TW,baseline · vectorised,3,24.8,2.78,11.5,15.8,8.7,16.1,64.919,24.8,6001215,Event-based sampling driver,0.994
+dubliner,1,6,Q6,VW:cmake_defaults,VW,HEAD · no options,4,23.5,2.77,10.9,15.8,8.6,14.9,63.404,23.5,6001215,Event-based sampling driver,0.994
+dubliner,1,6,Q6,VW:jd_all_pc,JD,HEAD · best safe config,5,21.2,2.77,9.8,8.4,4.6,16.5,77.83,21.1,6001215,Event-based sampling driver,0.994
+dubliner,1,9,Q9,Typer,T,baseline · compiled,1,408.4,2.76,187.9,173.8,94.8,313.7,76.812,408.5,6001215,Event-based sampling driver,0.994
+dubliner,1,9,Q9,Typer@HEAD,T@H,HEAD · compiled,2,371.2,2.78,171.7,145.7,79.1,292.5,78.798,371.6,6001215,Event-based sampling driver,0.994
+dubliner,1,9,Q9,Tectorwise,TW,baseline · vectorised,3,297.8,2.77,137.6,157.8,82.6,215.6,72.398,298.2,6001215,Event-based sampling driver,0.994
+dubliner,1,9,Q9,VW:cmake_defaults,VW,HEAD · no options,4,158.1,2.78,73.2,101.1,53.3,105.1,66.477,158.4,6001215,Event-based sampling driver,0.994
+dubliner,1,9,Q9,VW:jd_all_pc,JD,HEAD · best safe config,5,144.6,2.51,60.5,73.5,46,98.7,68.257,144.7,6001215,Event-based sampling driver,0.994
+dubliner,1,18,Q18,Typer,T,baseline · compiled,1,401,2.77,185.2,216.2,107.9,293.1,73.092,401,6001215,Event-based sampling driver,0.994
+dubliner,1,18,Q18,Typer@HEAD,T@H,HEAD · compiled,2,379.8,2.77,175.4,210.5,111.3,268.6,70.721,379.9,6001215,Event-based sampling driver,0.994
+dubliner,1,18,Q18,Tectorwise,TW,baseline · vectorised,3,463.6,2.77,214.3,320.5,154.4,309.7,66.803,464.1,6001215,Event-based sampling driver,0.994
+dubliner,1,18,Q18,VW:cmake_defaults,VW,HEAD · no options,4,297,2.77,137.3,246.2,125.4,171.7,57.811,297.1,6001215,Event-based sampling driver,0.994
+dubliner,1,18,Q18,VW:jd_all_pc,JD,HEAD · best safe config,5,121.5,2.64,53.4,116.1,61.7,59.9,49.3,121.6,6001215,Event-based sampling driver,0.994
+dubliner,5,1,Q1,Typer,T,baseline · compiled,1,306.7,2.78,28.4,68.2,184,122.7,40.007,306.7,29999795,Event-based sampling driver,0.996
+dubliner,5,1,Q1,Typer@HEAD,T@H,HEAD · compiled,2,306.4,2.78,28.4,68.2,184.4,122,39.817,306.4,29999795,Event-based sampling driver,0.996
+dubliner,5,1,Q1,Tectorwise,TW,baseline · vectorised,3,630.9,2.78,58.4,156.8,398.5,233,36.931,631.5,29999795,Event-based sampling driver,0.996
+dubliner,5,1,Q1,VW:cmake_defaults,VW,HEAD · no options,4,519.7,2.78,48.1,129,321.2,198,38.099,519.2,29999795,Event-based sampling driver,0.996
+dubliner,5,1,Q1,VW:jd_all_pc,JD,HEAD · best safe config,5,362.7,2.48,30,72.5,230.7,132.1,36.421,362.8,29999795,Event-based sampling driver,0.996
+manchego,1,1,Q1,Typer,T,baseline · compiled,1,33.3,3.57,19.8,68.2,19.2,14.1,42.342,33.3,6001215,Event-based sampling driver,0.993
+manchego,1,1,Q1,Typer@HEAD,T@H,HEAD · compiled,2,33.5,3.56,19.9,68.2,19.6,13.9,41.493,33.5,6001215,Event-based sampling driver,0.993
+manchego,1,1,Q1,Tectorwise,TW,baseline · vectorised,3,80.3,3.57,47.8,156.9,41.2,39.2,48.817,80.4,6001215,Event-based sampling driver,0.993
+manchego,1,1,Q1,VW:cmake_defaults,VW,HEAD · no options,4,70.7,3.57,42,129,33.4,37.3,52.758,70.7,6001215,Event-based sampling driver,0.993
+manchego,1,1,Q1,VW:jd_all_pc,JD,HEAD · best safe config,5,39.2,3.57,23.3,72.5,21.1,18.1,46.173,39.2,6001215,Event-based sampling driver,0.993
+manchego,1,3,Q3,Typer,T,baseline · compiled,1,46.7,3.57,27.8,31.8,8.3,38.7,82.869,47,6001215,Event-based sampling driver,0.993
+manchego,1,3,Q3,Typer@HEAD,T@H,HEAD · compiled,2,46.8,3.57,27.9,31.7,8.2,38.9,83.12,47.1,6001215,Event-based sampling driver,0.993
+manchego,1,3,Q3,Tectorwise,TW,baseline · vectorised,3,40.7,3.57,24.2,50.7,13.2,27.4,67.322,40.6,6001215,Event-based sampling driver,0.993
+manchego,1,3,Q3,VW:cmake_defaults,VW,HEAD · no options,4,41.4,3.57,24.6,41.7,15.4,26.1,63.043,41.5,6001215,Event-based sampling driver,0.993
+manchego,1,3,Q3,VW:jd_all_pc,JD,HEAD · best safe config,5,21.3,3.57,12.7,19.1,5.6,15.7,73.709,21.3,6001215,Event-based sampling driver,0.993
+manchego,1,5,Q5,Typer,T,baseline · compiled,1,40.8,3.57,24.3,32.5,8.8,32.3,79.167,41.1,6001215,Event-based sampling driver,0.993
+manchego,1,5,Q5,Typer@HEAD,T@H,HEAD · compiled,2,40.7,3.58,24.3,32.5,8.6,32.3,79.361,40.9,6001215,Event-based sampling driver,0.993
+manchego,1,5,Q5,Tectorwise,TW,baseline · vectorised,3,32,3.56,19,45.3,11.8,20.2,63.125,32,6001215,Event-based sampling driver,0.993
+manchego,1,5,Q5,VW:cmake_defaults,VW,HEAD · no options,4,31.8,3.57,18.9,45.3,11.7,20.1,63.208,31.8,6001215,Event-based sampling driver,0.993
+manchego,1,5,Q5,VW:jd_all_pc,JD,HEAD · best safe config,5,21.5,3.57,12.8,22.9,6.6,15,69.767,21.6,6001215,Event-based sampling driver,0.993
+manchego,1,6,Q6,Typer,T,baseline · compiled,1,15.7,3.57,9.3,17.1,4.5,11.3,71.975,15.8,6001215,Event-based sampling driver,0.993
+manchego,1,6,Q6,Typer@HEAD,T@H,HEAD · compiled,2,15.9,3.56,9.4,17.1,4.5,11.4,71.698,15.9,6001215,Event-based sampling driver,0.993
+manchego,1,6,Q6,Tectorwise,TW,baseline · vectorised,3,13.5,3.56,8,15.8,4.4,9.1,67.407,13.5,6001215,Event-based sampling driver,0.993
+manchego,1,6,Q6,VW:cmake_defaults,VW,HEAD · no options,4,13.5,3.57,8,15.8,4.5,9,66.667,13.5,6001215,Event-based sampling driver,0.993
+manchego,1,6,Q6,VW:jd_all_pc,JD,HEAD · best safe config,5,11.7,3.58,7,8.4,2.5,9.3,79.487,11.8,6001215,Event-based sampling driver,0.993
+manchego,1,9,Q9,Typer,T,baseline · compiled,1,124.4,3.57,74,68,19,105.5,84.807,124.5,6001215,Event-based sampling driver,0.993
+manchego,1,9,Q9,Typer@HEAD,T@H,HEAD · compiled,2,123.9,3.58,73.8,67.9,19,105.1,84.826,124.1,6001215,Event-based sampling driver,0.993
+manchego,1,9,Q9,Tectorwise,TW,baseline · vectorised,3,102.6,3.57,61.1,100.4,26.6,76.3,74.366,102.9,6001215,Event-based sampling driver,0.993
+manchego,1,9,Q9,VW:cmake_defaults,VW,HEAD · no options,4,100.8,3.57,60,101.3,26.8,74.3,73.71,101.1,6001215,Event-based sampling driver,0.993
+manchego,1,9,Q9,VW:jd_all_pc,JD,HEAD · best safe config,5,79.1,3.57,47.1,74.1,20.5,58.8,74.336,79.3,6001215,Event-based sampling driver,0.993
+manchego,1,18,Q18,Typer,T,baseline · compiled,1,88.6,3.57,52.7,100.7,26.8,61.8,69.752,88.6,6001215,Event-based sampling driver,0.993
+manchego,1,18,Q18,Typer@HEAD,T@H,HEAD · compiled,2,106.6,3.57,63.4,100.5,35.6,71,66.604,106.6,6001215,Event-based sampling driver,0.993
+manchego,1,18,Q18,Tectorwise,TW,baseline · vectorised,3,160.8,3.57,95.7,225.7,57.1,103.7,64.49,160.8,6001215,Event-based sampling driver,0.993
+manchego,1,18,Q18,VW:cmake_defaults,VW,HEAD · no options,4,133.4,3.57,79.3,212.9,55.4,78.3,58.696,133.7,6001215,Event-based sampling driver,0.993
+manchego,1,18,Q18,VW:jd_all_pc,JD,HEAD · best safe config,5,71,3.57,42.2,117.7,30.4,40.6,57.183,71,6001215,Event-based sampling driver,0.993
+manchego,5,1,Q1,Typer,T,baseline · compiled,1,159.6,3.56,19,68.2,95.7,64,40.1,159.7,29999795,Event-based sampling driver,0.997
+manchego,5,1,Q1,Typer@HEAD,T@H,HEAD · compiled,2,158.9,3.56,18.9,68.2,97.1,62.1,39.081,159.2,29999795,Event-based sampling driver,0.997
+manchego,5,1,Q1,Tectorwise,TW,baseline · vectorised,3,395.5,3.57,47.1,156.8,203.5,192.4,48.647,395.9,29999795,Event-based sampling driver,0.997
+manchego,5,1,Q1,VW:cmake_defaults,VW,HEAD · no options,4,350.1,3.57,41.7,129,167,183.2,52.328,350.2,29999795,Event-based sampling driver,0.997
+manchego,5,1,Q1,VW:jd_all_pc,JD,HEAD · best safe config,5,191.6,3.56,22.8,72.5,105.6,86,44.885,191.6,29999795,Event-based sampling driver,0.997
+manchego,5,3,Q3,Typer,T,baseline · compiled,1,262.6,3.57,31.3,31.1,40.4,223.3,85.034,263.7,29999795,Event-based sampling driver,0.997
+manchego,5,3,Q3,Typer@HEAD,T@H,HEAD · compiled,2,262.2,3.57,31.2,31.2,40.4,223.2,85.126,263.6,29999795,Event-based sampling driver,0.997
+manchego,5,3,Q3,Tectorwise,TW,baseline · vectorised,3,232.7,3.57,27.7,51.3,66.6,166,71.336,232.6,29999795,Event-based sampling driver,0.997
+manchego,5,3,Q3,VW:cmake_defaults,VW,HEAD · no options,4,207.2,3.57,24.6,41.4,55.1,152.3,73.504,207.4,29999795,Event-based sampling driver,0.997
+manchego,5,3,Q3,VW:jd_all_pc,JD,HEAD · best safe config,5,135.9,3.57,16.2,18.6,27.2,108.7,79.985,135.9,29999795,Event-based sampling driver,0.997
+manchego,5,5,Q5,Typer,T,baseline · compiled,1,247.5,3.57,29.5,32.1,42.8,205.4,82.99,248.2,29999795,Event-based sampling driver,0.997
+manchego,5,5,Q5,Typer@HEAD,T@H,HEAD · compiled,2,248,3.57,29.5,32.1,42.7,206.3,83.185,249,29999795,Event-based sampling driver,0.997
+manchego,5,5,Q5,Tectorwise,TW,baseline · vectorised,3,200.8,3.57,23.9,45.3,58.5,142.7,71.066,201.2,29999795,Event-based sampling driver,0.997
+manchego,5,5,Q5,VW:cmake_defaults,VW,HEAD · no options,4,201.4,3.57,23.9,45.3,58.4,143.4,71.202,201.8,29999795,Event-based sampling driver,0.997
+manchego,5,5,Q5,VW:jd_all_pc,JD,HEAD · best safe config,5,118.9,3.57,14.1,22.6,32.3,86.7,72.918,119,29999795,Event-based sampling driver,0.997
+manchego,5,6,Q6,Typer,T,baseline · compiled,1,73.7,3.56,8.8,17.1,22.6,51.3,69.607,73.9,29999795,Event-based sampling driver,0.997
+manchego,5,6,Q6,Typer@HEAD,T@H,HEAD · compiled,2,75,3.56,8.9,17.1,22.6,52.6,70.133,75.2,29999795,Event-based sampling driver,0.997
+manchego,5,6,Q6,Tectorwise,TW,baseline · vectorised,3,69.6,3.57,8.3,15.8,22.1,47.5,68.247,69.6,29999795,Event-based sampling driver,0.997
+manchego,5,6,Q6,VW:cmake_defaults,VW,HEAD · no options,4,66.3,3.57,7.9,15.8,22.3,44.1,66.516,66.4,29999795,Event-based sampling driver,0.997
+manchego,5,6,Q6,VW:jd_all_pc,JD,HEAD · best safe config,5,56.9,3.57,6.8,8.4,11.9,45,79.086,56.9,29999795,Event-based sampling driver,0.997
+manchego,5,9,Q9,Typer,T,baseline · compiled,1,740.3,3.57,88.1,67.9,94.8,646.2,87.289,741,29999795,Event-based sampling driver,0.997
+manchego,5,9,Q9,Typer@HEAD,T@H,HEAD · compiled,2,737.8,3.57,87.8,67.7,95.2,643.4,87.205,738.6,29999795,Event-based sampling driver,0.997
+manchego,5,9,Q9,Tectorwise,TW,baseline · vectorised,3,708.2,3.57,84.3,99.8,190.7,517.5,73.073,708.2,29999795,Event-based sampling driver,0.997
+manchego,5,9,Q9,VW:cmake_defaults,VW,HEAD · no options,4,590.9,3.57,70.3,100.8,133.5,458.5,77.594,592,29999795,Event-based sampling driver,0.997
+manchego,5,9,Q9,VW:jd_all_pc,JD,HEAD · best safe config,5,424.1,3.57,50.4,73.6,101.8,322.3,75.996,424.1,29999795,Event-based sampling driver,0.997
+manchego,5,18,Q18,Typer,T,baseline · compiled,1,543,3.57,64.6,98.9,152,391,72.007,543,29999795,Event-based sampling driver,0.997
+manchego,5,18,Q18,Typer@HEAD,T@H,HEAD · compiled,2,483.2,3.57,57.5,98.6,132.4,350.8,72.599,483.2,29999795,Event-based sampling driver,0.997
+manchego,5,18,Q18,Tectorwise,TW,baseline · vectorised,3,856.5,3.57,101.9,224.5,283.5,573,66.9,856.5,29999795,Event-based sampling driver,0.997
+manchego,5,18,Q18,VW:cmake_defaults,VW,HEAD · no options,4,722.3,3.57,85.9,211.8,274.9,446.6,61.83,721.5,29999795,Event-based sampling driver,0.997
+manchego,5,18,Q18,VW:jd_all_pc,JD,HEAD · best safe config,5,392.9,3.57,46.7,116.5,150.3,242.5,61.721,392.8,29999795,Event-based sampling driver,0.997

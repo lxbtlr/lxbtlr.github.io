@@ -28,6 +28,13 @@ jobs:
       - name: Install dependencies
         run: bun install --frozen-lockfile
 
+      # data/tpch/corpus.sqlite is not tracked: cut it from the live corpus,
+      # keeping exactly the runs listed in data/tpch/runs.txt.
+      - name: Build TPC-H database
+        run: |
+          sudo apt-get update -q && sudo apt-get install -yq sqlite3
+          make corpus-tpch
+
       - name: Build Eleventy site
         run: bun run eleventy
 

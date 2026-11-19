@@ -1,0 +1,301 @@
+sf,query,query_label,build,build_short,build_sub,build_order,category,category_key,category_order,vtune_share_pct,perf_share_pct,diff_pts,outside_2pt_band,jitter,vtune_ms,perf_ms,vtune_cpt,perf_cpt,cpt_ratio_perf_over_vtune
+1,1,Q1,Tectorwise,TW,baseline · vectorised,3,Retiring,ret,1,51,52,1,false,-2,78.2,77.7,47.46,46.53,0.98
+1,1,Q1,Tectorwise,TW,baseline · vectorised,3,Front-end,fe,2,4.5,3.5,-1,false,-2,78.2,77.7,47.46,46.53,0.98
+1,1,Q1,Tectorwise,TW,baseline · vectorised,3,Bad spec.,bs,3,0.8,0.9,0.1,false,-2,78.2,77.7,47.46,46.53,0.98
+1,1,Q1,Tectorwise,TW,baseline · vectorised,3,Memory bound,mem,4,16.8,16.1,-0.7,false,-2,78.2,77.7,47.46,46.53,0.98
+1,1,Q1,Tectorwise,TW,baseline · vectorised,3,Core bound,core,5,26.9,27.6,0.7,false,-2,78.2,77.7,47.46,46.53,0.98
+1,1,Q1,Typer,T,baseline · compiled,1,Retiring,ret,1,57.6,58.5,0.9,false,-1,31.8,31.7,19.8,19.44,0.982
+1,1,Q1,Typer,T,baseline · compiled,1,Front-end,fe,2,3.3,3.1,-0.2,false,-1,31.8,31.7,19.8,19.44,0.982
+1,1,Q1,Typer,T,baseline · compiled,1,Bad spec.,bs,3,1.8,1.9,0.1,false,-1,31.8,31.7,19.8,19.44,0.982
+1,1,Q1,Typer,T,baseline · compiled,1,Memory bound,mem,4,6,4.7,-1.3,false,-1,31.8,31.7,19.8,19.44,0.982
+1,1,Q1,Typer,T,baseline · compiled,1,Core bound,core,5,31.3,31.9,0.6,false,-1,31.8,31.7,19.8,19.44,0.982
+1,1,Q1,Typer@HEAD,T@H,HEAD · compiled,2,Retiring,ret,1,58.4,60.7,2.3,true,0,32.3,31.8,19.84,18.99,0.957
+1,1,Q1,Typer@HEAD,T@H,HEAD · compiled,2,Front-end,fe,2,2.3,2.3,0,false,0,32.3,31.8,19.84,18.99,0.957
+1,1,Q1,Typer@HEAD,T@H,HEAD · compiled,2,Bad spec.,bs,3,1.9,2,0.1,false,0,32.3,31.8,19.84,18.99,0.957
+1,1,Q1,Typer@HEAD,T@H,HEAD · compiled,2,Memory bound,mem,4,6,2.7,-3.3,true,0,32.3,31.8,19.84,18.99,0.957
+1,1,Q1,Typer@HEAD,T@H,HEAD · compiled,2,Core bound,core,5,31.5,32.3,0.8,false,0,32.3,31.8,19.84,18.99,0.957
+1,1,Q1,VW:cmake_defaults,VW,HEAD · no options,4,Retiring,ret,1,47.3,47.7,0.4,false,1,69.6,69.4,42.05,41.62,0.99
+1,1,Q1,VW:cmake_defaults,VW,HEAD · no options,4,Front-end,fe,2,4,4,0,false,1,69.6,69.4,42.05,41.62,0.99
+1,1,Q1,VW:cmake_defaults,VW,HEAD · no options,4,Bad spec.,bs,3,1.1,1.1,0,false,1,69.6,69.4,42.05,41.62,0.99
+1,1,Q1,VW:cmake_defaults,VW,HEAD · no options,4,Memory bound,mem,4,18.7,17.8,-0.9,false,1,69.6,69.4,42.05,41.62,0.99
+1,1,Q1,VW:cmake_defaults,VW,HEAD · no options,4,Core bound,core,5,28.9,29.4,0.5,false,1,69.6,69.4,42.05,41.62,0.99
+1,1,Q1,VW:jd_all_pc,JD,HEAD · best safe config,5,Retiring,ret,1,53.8,54.8,1,false,2,38.2,38,23.38,22.86,0.978
+1,1,Q1,VW:jd_all_pc,JD,HEAD · best safe config,5,Front-end,fe,2,6.1,5.6,-0.5,false,2,38.2,38,23.38,22.86,0.978
+1,1,Q1,VW:jd_all_pc,JD,HEAD · best safe config,5,Bad spec.,bs,3,1.1,1.1,0,false,2,38.2,38,23.38,22.86,0.978
+1,1,Q1,VW:jd_all_pc,JD,HEAD · best safe config,5,Memory bound,mem,4,28.5,27.7,-0.8,false,2,38.2,38,23.38,22.86,0.978
+1,1,Q1,VW:jd_all_pc,JD,HEAD · best safe config,5,Core bound,core,5,10.5,10.9,0.4,false,2,38.2,38,23.38,22.86,0.978
+1,3,Q3,Tectorwise,TW,baseline · vectorised,3,Retiring,ret,1,32.4,32.5,0.1,false,-2,40.2,40,24.25,24.14,0.995
+1,3,Q3,Tectorwise,TW,baseline · vectorised,3,Front-end,fe,2,14,14.1,0.1,false,-2,40.2,40,24.25,24.14,0.995
+1,3,Q3,Tectorwise,TW,baseline · vectorised,3,Bad spec.,bs,3,11.4,11.2,-0.2,false,-2,40.2,40,24.25,24.14,0.995
+1,3,Q3,Tectorwise,TW,baseline · vectorised,3,Memory bound,mem,4,29.4,29.3,-0.1,false,-2,40.2,40,24.25,24.14,0.995
+1,3,Q3,Tectorwise,TW,baseline · vectorised,3,Core bound,core,5,12.8,12.9,0.1,false,-2,40.2,40,24.25,24.14,0.995
+1,3,Q3,Typer,T,baseline · compiled,1,Retiring,ret,1,17.6,17.8,0.2,false,-1,46.3,46.5,27.9,27.68,0.992
+1,3,Q3,Typer,T,baseline · compiled,1,Front-end,fe,2,7.7,8.2,0.5,false,-1,46.3,46.5,27.9,27.68,0.992
+1,3,Q3,Typer,T,baseline · compiled,1,Bad spec.,bs,3,35.1,35,-0.1,false,-1,46.3,46.5,27.9,27.68,0.992
+1,3,Q3,Typer,T,baseline · compiled,1,Memory bound,mem,4,21.1,20.1,-1,false,-1,46.3,46.5,27.9,27.68,0.992
+1,3,Q3,Typer,T,baseline · compiled,1,Core bound,core,5,18.5,18.9,0.4,false,-1,46.3,46.5,27.9,27.68,0.992
+1,3,Q3,Typer@HEAD,T@H,HEAD · compiled,2,Retiring,ret,1,17.6,17.7,0.1,false,0,46.6,46.1,27.96,27.73,0.992
+1,3,Q3,Typer@HEAD,T@H,HEAD · compiled,2,Front-end,fe,2,7.7,8.2,0.5,false,0,46.6,46.1,27.96,27.73,0.992
+1,3,Q3,Typer@HEAD,T@H,HEAD · compiled,2,Bad spec.,bs,3,35.1,35,-0.1,false,0,46.6,46.1,27.96,27.73,0.992
+1,3,Q3,Typer@HEAD,T@H,HEAD · compiled,2,Memory bound,mem,4,21.2,20.4,-0.8,false,0,46.6,46.1,27.96,27.73,0.992
+1,3,Q3,Typer@HEAD,T@H,HEAD · compiled,2,Core bound,core,5,18.5,18.7,0.2,false,0,46.6,46.1,27.96,27.73,0.992
+1,3,Q3,VW:cmake_defaults,VW,HEAD · no options,4,Retiring,ret,1,30.8,31,0.2,false,1,35.5,35.5,21.43,21.3,0.994
+1,3,Q3,VW:cmake_defaults,VW,HEAD · no options,4,Front-end,fe,2,12.5,12.7,0.2,false,1,35.5,35.5,21.43,21.3,0.994
+1,3,Q3,VW:cmake_defaults,VW,HEAD · no options,4,Bad spec.,bs,3,12,12,0,false,1,35.5,35.5,21.43,21.3,0.994
+1,3,Q3,VW:cmake_defaults,VW,HEAD · no options,4,Memory bound,mem,4,31.4,31,-0.4,false,1,35.5,35.5,21.43,21.3,0.994
+1,3,Q3,VW:cmake_defaults,VW,HEAD · no options,4,Core bound,core,5,13.2,13.3,0.1,false,1,35.5,35.5,21.43,21.3,0.994
+1,3,Q3,VW:jd_all_pc,JD,HEAD · best safe config,5,Retiring,ret,1,26.2,26.2,0,false,2,20.7,20.8,12.66,12.54,0.991
+1,3,Q3,VW:jd_all_pc,JD,HEAD · best safe config,5,Front-end,fe,2,6.2,6.1,-0.1,false,2,20.7,20.8,12.66,12.54,0.991
+1,3,Q3,VW:jd_all_pc,JD,HEAD · best safe config,5,Bad spec.,bs,3,10.5,10.5,0,false,2,20.7,20.8,12.66,12.54,0.991
+1,3,Q3,VW:jd_all_pc,JD,HEAD · best safe config,5,Memory bound,mem,4,35.9,35.6,-0.3,false,2,20.7,20.8,12.66,12.54,0.991
+1,3,Q3,VW:jd_all_pc,JD,HEAD · best safe config,5,Core bound,core,5,21.2,21.6,0.4,false,2,20.7,20.8,12.66,12.54,0.991
+1,5,Q5,Tectorwise,TW,baseline · vectorised,3,Retiring,ret,1,37,36.6,-0.4,false,-2,31.3,31.4,18.83,19.02,1.01
+1,5,Q5,Tectorwise,TW,baseline · vectorised,3,Front-end,fe,2,11.6,11.2,-0.4,false,-2,31.3,31.4,18.83,19.02,1.01
+1,5,Q5,Tectorwise,TW,baseline · vectorised,3,Bad spec.,bs,3,12.7,12.5,-0.2,false,-2,31.3,31.4,18.83,19.02,1.01
+1,5,Q5,Tectorwise,TW,baseline · vectorised,3,Memory bound,mem,4,24.5,24.9,0.4,false,-2,31.3,31.4,18.83,19.02,1.01
+1,5,Q5,Tectorwise,TW,baseline · vectorised,3,Core bound,core,5,14.3,14.9,0.6,false,-2,31.3,31.4,18.83,19.02,1.01
+1,5,Q5,Typer,T,baseline · compiled,1,Retiring,ret,1,21.3,21.3,0,false,-1,40.7,40.3,24.34,24.3,0.998
+1,5,Q5,Typer,T,baseline · compiled,1,Front-end,fe,2,16.2,16.5,0.3,false,-1,40.7,40.3,24.34,24.3,0.998
+1,5,Q5,Typer,T,baseline · compiled,1,Bad spec.,bs,3,23.4,23,-0.4,false,-1,40.7,40.3,24.34,24.3,0.998
+1,5,Q5,Typer,T,baseline · compiled,1,Memory bound,mem,4,18.1,18.1,0,false,-1,40.7,40.3,24.34,24.3,0.998
+1,5,Q5,Typer,T,baseline · compiled,1,Core bound,core,5,20.9,21.1,0.2,false,-1,40.7,40.3,24.34,24.3,0.998
+1,5,Q5,Typer@HEAD,T@H,HEAD · compiled,2,Retiring,ret,1,21.1,21,-0.1,false,0,40.7,41,24.68,24.44,0.99
+1,5,Q5,Typer@HEAD,T@H,HEAD · compiled,2,Front-end,fe,2,18.8,19.2,0.4,false,0,40.7,41,24.68,24.44,0.99
+1,5,Q5,Typer@HEAD,T@H,HEAD · compiled,2,Bad spec.,bs,3,21.7,21.8,0.1,false,0,40.7,41,24.68,24.44,0.99
+1,5,Q5,Typer@HEAD,T@H,HEAD · compiled,2,Memory bound,mem,4,18.1,18.1,0,false,0,40.7,41,24.68,24.44,0.99
+1,5,Q5,Typer@HEAD,T@H,HEAD · compiled,2,Core bound,core,5,20.3,19.9,-0.4,false,0,40.7,41,24.68,24.44,0.99
+1,5,Q5,VW:cmake_defaults,VW,HEAD · no options,4,Retiring,ret,1,36.6,36.4,-0.2,false,1,31.3,32,19.02,19.1,1.004
+1,5,Q5,VW:cmake_defaults,VW,HEAD · no options,4,Front-end,fe,2,11.1,10.9,-0.2,false,1,31.3,32,19.02,19.1,1.004
+1,5,Q5,VW:cmake_defaults,VW,HEAD · no options,4,Bad spec.,bs,3,12.5,12.4,-0.1,false,1,31.3,32,19.02,19.1,1.004
+1,5,Q5,VW:cmake_defaults,VW,HEAD · no options,4,Memory bound,mem,4,25.2,25.5,0.3,false,1,31.3,32,19.02,19.1,1.004
+1,5,Q5,VW:cmake_defaults,VW,HEAD · no options,4,Core bound,core,5,14.6,14.9,0.3,false,1,31.3,32,19.02,19.1,1.004
+1,5,Q5,VW:jd_all_pc,JD,HEAD · best safe config,5,Retiring,ret,1,30.6,30.5,-0.1,false,2,24.9,21.1,12.75,12.81,1.005
+1,5,Q5,VW:jd_all_pc,JD,HEAD · best safe config,5,Front-end,fe,2,8.3,8.4,0.1,false,2,24.9,21.1,12.75,12.81,1.005
+1,5,Q5,VW:jd_all_pc,JD,HEAD · best safe config,5,Bad spec.,bs,3,15.5,15.4,-0.1,false,2,24.9,21.1,12.75,12.81,1.005
+1,5,Q5,VW:jd_all_pc,JD,HEAD · best safe config,5,Memory bound,mem,4,28.4,28.4,0,false,2,24.9,21.1,12.75,12.81,1.005
+1,5,Q5,VW:jd_all_pc,JD,HEAD · best safe config,5,Core bound,core,5,17.2,17.3,0.1,false,2,24.9,21.1,12.75,12.81,1.005
+1,6,Q6,Tectorwise,TW,baseline · vectorised,3,Retiring,ret,1,32.3,31.5,-0.8,false,-2,15,13.1,8.16,8.33,1.021
+1,6,Q6,Tectorwise,TW,baseline · vectorised,3,Front-end,fe,2,11.6,11.3,-0.3,false,-2,15,13.1,8.16,8.33,1.021
+1,6,Q6,Tectorwise,TW,baseline · vectorised,3,Bad spec.,bs,3,0.9,1.1,0.2,false,-2,15,13.1,8.16,8.33,1.021
+1,6,Q6,Tectorwise,TW,baseline · vectorised,3,Memory bound,mem,4,45.3,45.6,0.3,false,-2,15,13.1,8.16,8.33,1.021
+1,6,Q6,Tectorwise,TW,baseline · vectorised,3,Core bound,core,5,9.9,10.5,0.6,false,-2,15,13.1,8.16,8.33,1.021
+1,6,Q6,Typer,T,baseline · compiled,1,Retiring,ret,1,28.8,29.2,0.4,false,-1,15.3,15.3,9.32,9.18,0.985
+1,6,Q6,Typer,T,baseline · compiled,1,Front-end,fe,2,8.1,7.9,-0.2,false,-1,15.3,15.3,9.32,9.18,0.985
+1,6,Q6,Typer,T,baseline · compiled,1,Bad spec.,bs,3,13.8,13.3,-0.5,false,-1,15.3,15.3,9.32,9.18,0.985
+1,6,Q6,Typer,T,baseline · compiled,1,Memory bound,mem,4,38.6,39,0.4,false,-1,15.3,15.3,9.32,9.18,0.985
+1,6,Q6,Typer,T,baseline · compiled,1,Core bound,core,5,10.6,10.7,0.1,false,-1,15.3,15.3,9.32,9.18,0.985
+1,6,Q6,Typer@HEAD,T@H,HEAD · compiled,2,Retiring,ret,1,28.9,29,0.1,false,0,17.3,15.4,9.52,9.24,0.971
+1,6,Q6,Typer@HEAD,T@H,HEAD · compiled,2,Front-end,fe,2,9.8,9.2,-0.6,false,0,17.3,15.4,9.52,9.24,0.971
+1,6,Q6,Typer@HEAD,T@H,HEAD · compiled,2,Bad spec.,bs,3,12.2,12.3,0.1,false,0,17.3,15.4,9.52,9.24,0.971
+1,6,Q6,Typer@HEAD,T@H,HEAD · compiled,2,Memory bound,mem,4,38.7,38.7,0,false,0,17.3,15.4,9.52,9.24,0.971
+1,6,Q6,Typer@HEAD,T@H,HEAD · compiled,2,Core bound,core,5,10.4,10.8,0.4,false,0,17.3,15.4,9.52,9.24,0.971
+1,6,Q6,VW:cmake_defaults,VW,HEAD · no options,4,Retiring,ret,1,32.3,33.6,1.3,false,1,13,13,8.15,7.8,0.957
+1,6,Q6,VW:cmake_defaults,VW,HEAD · no options,4,Front-end,fe,2,11.6,12,0.4,false,1,13,13,8.15,7.8,0.957
+1,6,Q6,VW:cmake_defaults,VW,HEAD · no options,4,Bad spec.,bs,3,1,1,0,false,1,13,13,8.15,7.8,0.957
+1,6,Q6,VW:cmake_defaults,VW,HEAD · no options,4,Memory bound,mem,4,45.2,43.5,-1.7,false,1,13,13,8.15,7.8,0.957
+1,6,Q6,VW:cmake_defaults,VW,HEAD · no options,4,Core bound,core,5,9.9,9.9,0,false,1,13,13,8.15,7.8,0.957
+1,6,Q6,VW:jd_all_pc,JD,HEAD · best safe config,5,Retiring,ret,1,20,20.9,0.9,false,2,11.3,11.3,7.09,6.74,0.951
+1,6,Q6,VW:jd_all_pc,JD,HEAD · best safe config,5,Front-end,fe,2,6.2,6.4,0.2,false,2,11.3,11.3,7.09,6.74,0.951
+1,6,Q6,VW:jd_all_pc,JD,HEAD · best safe config,5,Bad spec.,bs,3,1,0.9,-0.1,false,2,11.3,11.3,7.09,6.74,0.951
+1,6,Q6,VW:jd_all_pc,JD,HEAD · best safe config,5,Memory bound,mem,4,56.5,55.2,-1.3,false,2,11.3,11.3,7.09,6.74,0.951
+1,6,Q6,VW:jd_all_pc,JD,HEAD · best safe config,5,Core bound,core,5,16.3,16.6,0.3,false,2,11.3,11.3,7.09,6.74,0.951
+1,9,Q9,Tectorwise,TW,baseline · vectorised,3,Retiring,ret,1,25.9,25.9,0,false,-2,101.8,101.7,61.07,60.93,0.998
+1,9,Q9,Tectorwise,TW,baseline · vectorised,3,Front-end,fe,2,12.9,13,0.1,false,-2,101.8,101.7,61.07,60.93,0.998
+1,9,Q9,Tectorwise,TW,baseline · vectorised,3,Bad spec.,bs,3,24.1,24.1,0,false,-2,101.8,101.7,61.07,60.93,0.998
+1,9,Q9,Tectorwise,TW,baseline · vectorised,3,Memory bound,mem,4,24.8,24.6,-0.2,false,-2,101.8,101.7,61.07,60.93,0.998
+1,9,Q9,Tectorwise,TW,baseline · vectorised,3,Core bound,core,5,12.4,12.4,0,false,-2,101.8,101.7,61.07,60.93,0.998
+1,9,Q9,Typer,T,baseline · compiled,1,Retiring,ret,1,15.3,15.2,-0.1,false,-1,139.9,122.2,73.74,74.35,1.008
+1,9,Q9,Typer,T,baseline · compiled,1,Front-end,fe,2,7.7,8,0.3,false,-1,139.9,122.2,73.74,74.35,1.008
+1,9,Q9,Typer,T,baseline · compiled,1,Bad spec.,bs,3,20.1,19.8,-0.3,false,-1,139.9,122.2,73.74,74.35,1.008
+1,9,Q9,Typer,T,baseline · compiled,1,Memory bound,mem,4,34.4,34.9,0.5,false,-1,139.9,122.2,73.74,74.35,1.008
+1,9,Q9,Typer,T,baseline · compiled,1,Core bound,core,5,22.5,22.2,-0.3,false,-1,139.9,122.2,73.74,74.35,1.008
+1,9,Q9,Typer@HEAD,T@H,HEAD · compiled,2,Retiring,ret,1,15.4,15.5,0.1,false,0,121.7,121.8,74.01,73.14,0.988
+1,9,Q9,Typer@HEAD,T@H,HEAD · compiled,2,Front-end,fe,2,8.3,8.7,0.4,false,0,121.7,121.8,74.01,73.14,0.988
+1,9,Q9,Typer@HEAD,T@H,HEAD · compiled,2,Bad spec.,bs,3,20.4,20.4,0,false,0,121.7,121.8,74.01,73.14,0.988
+1,9,Q9,Typer@HEAD,T@H,HEAD · compiled,2,Memory bound,mem,4,33.7,33,-0.7,false,0,121.7,121.8,74.01,73.14,0.988
+1,9,Q9,Typer@HEAD,T@H,HEAD · compiled,2,Core bound,core,5,22.2,22.5,0.3,false,0,121.7,121.8,74.01,73.14,0.988
+1,9,Q9,VW:cmake_defaults,VW,HEAD · no options,4,Retiring,ret,1,26.6,27.9,1.3,false,1,99.9,116.6,59.9,57.05,0.952
+1,9,Q9,VW:cmake_defaults,VW,HEAD · no options,4,Front-end,fe,2,13,19,6,true,1,99.9,116.6,59.9,57.05,0.952
+1,9,Q9,VW:cmake_defaults,VW,HEAD · no options,4,Bad spec.,bs,3,22.4,21.3,-1.1,false,1,99.9,116.6,59.9,57.05,0.952
+1,9,Q9,VW:cmake_defaults,VW,HEAD · no options,4,Memory bound,mem,4,25.6,22.1,-3.5,true,1,99.9,116.6,59.9,57.05,0.952
+1,9,Q9,VW:cmake_defaults,VW,HEAD · no options,4,Core bound,core,5,12.4,9.7,-2.7,true,1,99.9,116.6,59.9,57.05,0.952
+1,9,Q9,VW:jd_all_pc,JD,HEAD · best safe config,5,Retiring,ret,1,26,26,0,false,2,78.1,77.8,46.69,46.78,1.002
+1,9,Q9,VW:jd_all_pc,JD,HEAD · best safe config,5,Front-end,fe,2,9.8,9.9,0.1,false,2,78.1,77.8,46.69,46.78,1.002
+1,9,Q9,VW:jd_all_pc,JD,HEAD · best safe config,5,Bad spec.,bs,3,13.3,13.1,-0.2,false,2,78.1,77.8,46.69,46.78,1.002
+1,9,Q9,VW:jd_all_pc,JD,HEAD · best safe config,5,Memory bound,mem,4,34.2,34.4,0.2,false,2,78.1,77.8,46.69,46.78,1.002
+1,9,Q9,VW:jd_all_pc,JD,HEAD · best safe config,5,Core bound,core,5,16.7,16.6,-0.1,false,2,78.1,77.8,46.69,46.78,1.002
+1,18,Q18,Tectorwise,TW,baseline · vectorised,3,Retiring,ret,1,35.4,34.8,-0.6,false,-2,161.7,162.3,95.79,97.49,1.018
+1,18,Q18,Tectorwise,TW,baseline · vectorised,3,Front-end,fe,2,13.4,14.3,0.9,false,-2,161.7,162.3,95.79,97.49,1.018
+1,18,Q18,Tectorwise,TW,baseline · vectorised,3,Bad spec.,bs,3,23.5,24.8,1.3,false,-2,161.7,162.3,95.79,97.49,1.018
+1,18,Q18,Tectorwise,TW,baseline · vectorised,3,Memory bound,mem,4,12.8,12.2,-0.6,false,-2,161.7,162.3,95.79,97.49,1.018
+1,18,Q18,Tectorwise,TW,baseline · vectorised,3,Core bound,core,5,14.9,13.9,-1,false,-2,161.7,162.3,95.79,97.49,1.018
+1,18,Q18,Typer,T,baseline · compiled,1,Retiring,ret,1,30.3,30.4,0.1,false,-1,88,87.7,52.65,52.45,0.996
+1,18,Q18,Typer,T,baseline · compiled,1,Front-end,fe,2,9.4,10.2,0.8,false,-1,88,87.7,52.65,52.45,0.996
+1,18,Q18,Typer,T,baseline · compiled,1,Bad spec.,bs,3,26.2,26,-0.2,false,-1,88,87.7,52.65,52.45,0.996
+1,18,Q18,Typer,T,baseline · compiled,1,Memory bound,mem,4,18.2,17.9,-0.3,false,-1,88,87.7,52.65,52.45,0.996
+1,18,Q18,Typer,T,baseline · compiled,1,Core bound,core,5,15.8,15.5,-0.3,false,-1,88,87.7,52.65,52.45,0.996
+1,18,Q18,Typer@HEAD,T@H,HEAD · compiled,2,Retiring,ret,1,30.8,31.1,0.3,false,0,86.4,86.6,52.14,51.61,0.99
+1,18,Q18,Typer@HEAD,T@H,HEAD · compiled,2,Front-end,fe,2,9.5,9.8,0.3,false,0,86.4,86.6,52.14,51.61,0.99
+1,18,Q18,Typer@HEAD,T@H,HEAD · compiled,2,Bad spec.,bs,3,25.9,25.7,-0.2,false,0,86.4,86.6,52.14,51.61,0.99
+1,18,Q18,Typer@HEAD,T@H,HEAD · compiled,2,Memory bound,mem,4,18.7,18.5,-0.2,false,0,86.4,86.6,52.14,51.61,0.99
+1,18,Q18,Typer@HEAD,T@H,HEAD · compiled,2,Core bound,core,5,15,14.8,-0.2,false,0,86.4,86.6,52.14,51.61,0.99
+1,18,Q18,VW:cmake_defaults,VW,HEAD · no options,4,Retiring,ret,1,41.4,41.4,0,false,1,134.9,132.3,79.46,79.25,0.997
+1,18,Q18,VW:cmake_defaults,VW,HEAD · no options,4,Front-end,fe,2,11,11.9,0.9,false,1,134.9,132.3,79.46,79.25,0.997
+1,18,Q18,VW:cmake_defaults,VW,HEAD · no options,4,Bad spec.,bs,3,22.5,22.1,-0.4,false,1,134.9,132.3,79.46,79.25,0.997
+1,18,Q18,VW:cmake_defaults,VW,HEAD · no options,4,Memory bound,mem,4,13.8,13.6,-0.2,false,1,134.9,132.3,79.46,79.25,0.997
+1,18,Q18,VW:cmake_defaults,VW,HEAD · no options,4,Core bound,core,5,11.3,11.1,-0.2,false,1,134.9,132.3,79.46,79.25,0.997
+1,18,Q18,VW:jd_all_pc,JD,HEAD · best safe config,5,Retiring,ret,1,43,43.1,0.1,false,2,69.7,69.8,41.98,41.97,1
+1,18,Q18,VW:jd_all_pc,JD,HEAD · best safe config,5,Front-end,fe,2,5.3,5.9,0.6,false,2,69.7,69.8,41.98,41.97,1
+1,18,Q18,VW:jd_all_pc,JD,HEAD · best safe config,5,Bad spec.,bs,3,3.5,3.4,-0.1,false,2,69.7,69.8,41.98,41.97,1
+1,18,Q18,VW:jd_all_pc,JD,HEAD · best safe config,5,Memory bound,mem,4,35.4,35,-0.4,false,2,69.7,69.8,41.98,41.97,1
+1,18,Q18,VW:jd_all_pc,JD,HEAD · best safe config,5,Core bound,core,5,12.8,12.6,-0.2,false,2,69.7,69.8,41.98,41.97,1
+5,1,Q1,Tectorwise,TW,baseline · vectorised,3,Retiring,ret,1,51.5,52.2,0.7,false,-2,385.9,386.7,47.06,46.31,0.984
+5,1,Q1,Tectorwise,TW,baseline · vectorised,3,Front-end,fe,2,4.4,3.4,-1,false,-2,385.9,386.7,47.06,46.31,0.984
+5,1,Q1,Tectorwise,TW,baseline · vectorised,3,Bad spec.,bs,3,0.8,0.9,0.1,false,-2,385.9,386.7,47.06,46.31,0.984
+5,1,Q1,Tectorwise,TW,baseline · vectorised,3,Memory bound,mem,4,16.4,16,-0.4,false,-2,385.9,386.7,47.06,46.31,0.984
+5,1,Q1,Tectorwise,TW,baseline · vectorised,3,Core bound,core,5,27,27.5,0.5,false,-2,385.9,386.7,47.06,46.31,0.984
+5,1,Q1,Typer,T,baseline · compiled,1,Retiring,ret,1,60,62.4,2.4,true,-1,154.7,151.9,18.95,18.19,0.96
+5,1,Q1,Typer,T,baseline · compiled,1,Front-end,fe,2,3.1,3.2,0.1,false,-1,154.7,151.9,18.95,18.19,0.96
+5,1,Q1,Typer,T,baseline · compiled,1,Bad spec.,bs,3,1.9,2.1,0.2,false,-1,154.7,151.9,18.95,18.19,0.96
+5,1,Q1,Typer,T,baseline · compiled,1,Memory bound,mem,4,3.7,1,-2.7,true,-1,154.7,151.9,18.95,18.19,0.96
+5,1,Q1,Typer,T,baseline · compiled,1,Core bound,core,5,31.3,31.4,0.1,false,-1,154.7,151.9,18.95,18.19,0.96
+5,1,Q1,Typer@HEAD,T@H,HEAD · compiled,2,Retiring,ret,1,61.1,63.2,2.1,true,0,154.2,152.6,18.87,18.24,0.967
+5,1,Q1,Typer@HEAD,T@H,HEAD · compiled,2,Front-end,fe,2,2.2,2.2,0,false,0,154.2,152.6,18.87,18.24,0.967
+5,1,Q1,Typer@HEAD,T@H,HEAD · compiled,2,Bad spec.,bs,3,2,2.1,0.1,false,0,154.2,152.6,18.87,18.24,0.967
+5,1,Q1,Typer@HEAD,T@H,HEAD · compiled,2,Memory bound,mem,4,3.2,1,-2.2,true,0,154.2,152.6,18.87,18.24,0.967
+5,1,Q1,Typer@HEAD,T@H,HEAD · compiled,2,Core bound,core,5,31.5,31.6,0.1,false,0,154.2,152.6,18.87,18.24,0.967
+5,1,Q1,VW:cmake_defaults,VW,HEAD · no options,4,Retiring,ret,1,47.7,48,0.3,false,1,344.9,344.9,41.68,41.37,0.993
+5,1,Q1,VW:cmake_defaults,VW,HEAD · no options,4,Front-end,fe,2,3.8,3.6,-0.2,false,1,344.9,344.9,41.68,41.37,0.993
+5,1,Q1,VW:cmake_defaults,VW,HEAD · no options,4,Bad spec.,bs,3,1.1,1.2,0.1,false,1,344.9,344.9,41.68,41.37,0.993
+5,1,Q1,VW:cmake_defaults,VW,HEAD · no options,4,Memory bound,mem,4,18.4,17.7,-0.7,false,1,344.9,344.9,41.68,41.37,0.993
+5,1,Q1,VW:cmake_defaults,VW,HEAD · no options,4,Core bound,core,5,29,29.5,0.5,false,1,344.9,344.9,41.68,41.37,0.993
+5,1,Q1,VW:jd_all_pc,JD,HEAD · best safe config,5,Retiring,ret,1,55.1,56.3,1.2,false,2,187,186.7,22.76,22.25,0.978
+5,1,Q1,VW:jd_all_pc,JD,HEAD · best safe config,5,Front-end,fe,2,6,5.5,-0.5,false,2,187,186.7,22.76,22.25,0.978
+5,1,Q1,VW:jd_all_pc,JD,HEAD · best safe config,5,Bad spec.,bs,3,1,1.1,0.1,false,2,187,186.7,22.76,22.25,0.978
+5,1,Q1,VW:jd_all_pc,JD,HEAD · best safe config,5,Memory bound,mem,4,27.4,26.6,-0.8,false,2,187,186.7,22.76,22.25,0.978
+5,1,Q1,VW:jd_all_pc,JD,HEAD · best safe config,5,Core bound,core,5,10.5,10.6,0.1,false,2,187,186.7,22.76,22.25,0.978
+5,3,Q3,Tectorwise,TW,baseline · vectorised,3,Retiring,ret,1,28.6,28.5,-0.1,false,-2,229.6,229.4,27.68,27.72,1.001
+5,3,Q3,Tectorwise,TW,baseline · vectorised,3,Front-end,fe,2,13.3,13.4,0.1,false,-2,229.6,229.4,27.68,27.72,1.001
+5,3,Q3,Tectorwise,TW,baseline · vectorised,3,Bad spec.,bs,3,12.2,12,-0.2,false,-2,229.6,229.4,27.68,27.72,1.001
+5,3,Q3,Tectorwise,TW,baseline · vectorised,3,Memory bound,mem,4,33.1,33.3,0.2,false,-2,229.6,229.4,27.68,27.72,1.001
+5,3,Q3,Tectorwise,TW,baseline · vectorised,3,Core bound,core,5,12.7,12.9,0.2,false,-2,229.6,229.4,27.68,27.72,1.001
+5,3,Q3,Typer,T,baseline · compiled,1,Retiring,ret,1,15.4,15.4,0,false,-1,260.4,261.3,31.25,31.13,0.996
+5,3,Q3,Typer,T,baseline · compiled,1,Front-end,fe,2,6.5,6.9,0.4,false,-1,260.4,261.3,31.25,31.13,0.996
+5,3,Q3,Typer,T,baseline · compiled,1,Bad spec.,bs,3,32.9,32.5,-0.4,false,-1,260.4,261.3,31.25,31.13,0.996
+5,3,Q3,Typer,T,baseline · compiled,1,Memory bound,mem,4,26,25.8,-0.2,false,-1,260.4,261.3,31.25,31.13,0.996
+5,3,Q3,Typer,T,baseline · compiled,1,Core bound,core,5,19.2,19.4,0.2,false,-1,260.4,261.3,31.25,31.13,0.996
+5,3,Q3,Typer@HEAD,T@H,HEAD · compiled,2,Retiring,ret,1,15.4,15.4,0,false,0,259,259.7,31.21,31.13,0.997
+5,3,Q3,Typer@HEAD,T@H,HEAD · compiled,2,Front-end,fe,2,6.5,6.9,0.4,false,0,259,259.7,31.21,31.13,0.997
+5,3,Q3,Typer@HEAD,T@H,HEAD · compiled,2,Bad spec.,bs,3,32.9,32.5,-0.4,false,0,259,259.7,31.21,31.13,0.997
+5,3,Q3,Typer@HEAD,T@H,HEAD · compiled,2,Memory bound,mem,4,25.9,25.9,0,false,0,259,259.7,31.21,31.13,0.997
+5,3,Q3,Typer@HEAD,T@H,HEAD · compiled,2,Core bound,core,5,19.3,19.3,0,false,0,259,259.7,31.21,31.13,0.997
+5,3,Q3,VW:cmake_defaults,VW,HEAD · no options,4,Retiring,ret,1,26.6,26.7,0.1,false,1,205.4,205.2,24.64,24.6,0.998
+5,3,Q3,VW:cmake_defaults,VW,HEAD · no options,4,Front-end,fe,2,11.9,12.1,0.2,false,1,205.4,205.2,24.64,24.6,0.998
+5,3,Q3,VW:cmake_defaults,VW,HEAD · no options,4,Bad spec.,bs,3,12.9,12.8,-0.1,false,1,205.4,205.2,24.64,24.6,0.998
+5,3,Q3,VW:cmake_defaults,VW,HEAD · no options,4,Memory bound,mem,4,35.5,35.4,-0.1,false,1,205.4,205.2,24.64,24.6,0.998
+5,3,Q3,VW:cmake_defaults,VW,HEAD · no options,4,Core bound,core,5,13.1,13.1,0,false,1,205.4,205.2,24.64,24.6,0.998
+5,3,Q3,VW:jd_all_pc,JD,HEAD · best safe config,5,Retiring,ret,1,20,20,0,false,2,133.5,134,16.16,16.05,0.993
+5,3,Q3,VW:jd_all_pc,JD,HEAD · best safe config,5,Front-end,fe,2,4.4,4.3,-0.1,false,2,133.5,134,16.16,16.05,0.993
+5,3,Q3,VW:jd_all_pc,JD,HEAD · best safe config,5,Bad spec.,bs,3,8.7,8.7,0,false,2,133.5,134,16.16,16.05,0.993
+5,3,Q3,VW:jd_all_pc,JD,HEAD · best safe config,5,Memory bound,mem,4,44.7,44.7,0,false,2,133.5,134,16.16,16.05,0.993
+5,3,Q3,VW:jd_all_pc,JD,HEAD · best safe config,5,Core bound,core,5,22.1,22.3,0.2,false,2,133.5,134,16.16,16.05,0.993
+5,5,Q5,Tectorwise,TW,baseline · vectorised,3,Retiring,ret,1,29.1,29.2,0.1,false,-2,198.4,198.7,23.86,23.78,0.997
+5,5,Q5,Tectorwise,TW,baseline · vectorised,3,Front-end,fe,2,9.1,9.2,0.1,false,-2,198.4,198.7,23.86,23.78,0.997
+5,5,Q5,Tectorwise,TW,baseline · vectorised,3,Bad spec.,bs,3,11.8,11.7,-0.1,false,-2,198.4,198.7,23.86,23.78,0.997
+5,5,Q5,Tectorwise,TW,baseline · vectorised,3,Memory bound,mem,4,33.3,33.2,-0.1,false,-2,198.4,198.7,23.86,23.78,0.997
+5,5,Q5,Tectorwise,TW,baseline · vectorised,3,Core bound,core,5,16.6,16.7,0.1,false,-2,198.4,198.7,23.86,23.78,0.997
+5,5,Q5,Typer,T,baseline · compiled,1,Retiring,ret,1,17.3,17.4,0.1,false,-1,245.2,244.3,29.46,29.3,0.995
+5,5,Q5,Typer,T,baseline · compiled,1,Front-end,fe,2,12.5,12.8,0.3,false,-1,245.2,244.3,29.46,29.3,0.995
+5,5,Q5,Typer,T,baseline · compiled,1,Bad spec.,bs,3,18,17.8,-0.2,false,-1,245.2,244.3,29.46,29.3,0.995
+5,5,Q5,Typer,T,baseline · compiled,1,Memory bound,mem,4,29.6,29.4,-0.2,false,-1,245.2,244.3,29.46,29.3,0.995
+5,5,Q5,Typer,T,baseline · compiled,1,Core bound,core,5,22.6,22.7,0.1,false,-1,245.2,244.3,29.46,29.3,0.995
+5,5,Q5,Typer@HEAD,T@H,HEAD · compiled,2,Retiring,ret,1,17.2,17.3,0.1,false,0,246.3,246.1,29.52,29.47,0.998
+5,5,Q5,Typer@HEAD,T@H,HEAD · compiled,2,Front-end,fe,2,14.5,14.8,0.3,false,0,246.3,246.1,29.52,29.47,0.998
+5,5,Q5,Typer@HEAD,T@H,HEAD · compiled,2,Bad spec.,bs,3,16.8,16.7,-0.1,false,0,246.3,246.1,29.52,29.47,0.998
+5,5,Q5,Typer@HEAD,T@H,HEAD · compiled,2,Memory bound,mem,4,29.3,29,-0.3,false,0,246.3,246.1,29.52,29.47,0.998
+5,5,Q5,Typer@HEAD,T@H,HEAD · compiled,2,Core bound,core,5,22.1,22.2,0.1,false,0,246.3,246.1,29.52,29.47,0.998
+5,5,Q5,VW:cmake_defaults,VW,HEAD · no options,4,Retiring,ret,1,29,29.1,0.1,false,1,198.9,198.9,23.94,23.87,0.997
+5,5,Q5,VW:cmake_defaults,VW,HEAD · no options,4,Front-end,fe,2,9,8.9,-0.1,false,1,198.9,198.9,23.94,23.87,0.997
+5,5,Q5,VW:cmake_defaults,VW,HEAD · no options,4,Bad spec.,bs,3,11.7,11.6,-0.1,false,1,198.9,198.9,23.94,23.87,0.997
+5,5,Q5,VW:cmake_defaults,VW,HEAD · no options,4,Memory bound,mem,4,33.8,33.8,0,false,1,198.9,198.9,23.94,23.87,0.997
+5,5,Q5,VW:cmake_defaults,VW,HEAD · no options,4,Core bound,core,5,16.6,16.6,0,false,1,198.9,198.9,23.94,23.87,0.997
+5,5,Q5,VW:jd_all_pc,JD,HEAD · best safe config,5,Retiring,ret,1,27.2,27.3,0.1,false,2,117.4,117.4,14.14,14.09,0.996
+5,5,Q5,VW:jd_all_pc,JD,HEAD · best safe config,5,Front-end,fe,2,6.9,6.9,0,false,2,117.4,117.4,14.14,14.09,0.996
+5,5,Q5,VW:jd_all_pc,JD,HEAD · best safe config,5,Bad spec.,bs,3,14.1,14.1,0,false,2,117.4,117.4,14.14,14.09,0.996
+5,5,Q5,VW:jd_all_pc,JD,HEAD · best safe config,5,Memory bound,mem,4,33.2,32.9,-0.3,false,2,117.4,117.4,14.14,14.09,0.996
+5,5,Q5,VW:jd_all_pc,JD,HEAD · best safe config,5,Core bound,core,5,18.6,18.8,0.2,false,2,117.4,117.4,14.14,14.09,0.996
+5,6,Q6,Tectorwise,TW,baseline · vectorised,3,Retiring,ret,1,31.8,33.6,1.8,false,-2,64.9,65.1,8.28,7.81,0.943
+5,6,Q6,Tectorwise,TW,baseline · vectorised,3,Front-end,fe,2,11.3,11.8,0.5,false,-2,64.9,65.1,8.28,7.81,0.943
+5,6,Q6,Tectorwise,TW,baseline · vectorised,3,Bad spec.,bs,3,1.1,1,-0.1,false,-2,64.9,65.1,8.28,7.81,0.943
+5,6,Q6,Tectorwise,TW,baseline · vectorised,3,Memory bound,mem,4,45.6,43.9,-1.7,false,-2,64.9,65.1,8.28,7.81,0.943
+5,6,Q6,Tectorwise,TW,baseline · vectorised,3,Core bound,core,5,10.2,9.7,-0.5,false,-2,64.9,65.1,8.28,7.81,0.943
+5,6,Q6,Typer,T,baseline · compiled,1,Retiring,ret,1,30.7,31,0.3,false,-1,73.1,72.4,8.75,8.64,0.987
+5,6,Q6,Typer,T,baseline · compiled,1,Front-end,fe,2,9.1,8.4,-0.7,false,-1,73.1,72.4,8.75,8.64,0.987
+5,6,Q6,Typer,T,baseline · compiled,1,Bad spec.,bs,3,15.2,13.9,-1.3,false,-1,73.1,72.4,8.75,8.64,0.987
+5,6,Q6,Typer,T,baseline · compiled,1,Memory bound,mem,4,34.6,36.2,1.6,false,-1,73.1,72.4,8.75,8.64,0.987
+5,6,Q6,Typer,T,baseline · compiled,1,Core bound,core,5,10.4,10.3,-0.1,false,-1,73.1,72.4,8.75,8.64,0.987
+5,6,Q6,Typer@HEAD,T@H,HEAD · compiled,2,Retiring,ret,1,30.2,30.7,0.5,false,0,83,73.1,8.91,8.74,0.981
+5,6,Q6,Typer@HEAD,T@H,HEAD · compiled,2,Front-end,fe,2,9.2,9.5,0.3,false,0,83,73.1,8.91,8.74,0.981
+5,6,Q6,Typer@HEAD,T@H,HEAD · compiled,2,Bad spec.,bs,3,12.6,12.6,0,false,0,83,73.1,8.91,8.74,0.981
+5,6,Q6,Typer@HEAD,T@H,HEAD · compiled,2,Memory bound,mem,4,37.6,36.7,-0.9,false,0,83,73.1,8.91,8.74,0.981
+5,6,Q6,Typer@HEAD,T@H,HEAD · compiled,2,Core bound,core,5,10.4,10.4,0,false,0,83,73.1,8.91,8.74,0.981
+5,6,Q6,VW:cmake_defaults,VW,HEAD · no options,4,Retiring,ret,1,33.6,33.7,0.1,false,1,65,65,7.89,7.8,0.989
+5,6,Q6,VW:cmake_defaults,VW,HEAD · no options,4,Front-end,fe,2,11.8,11.8,0,false,1,65,65,7.89,7.8,0.989
+5,6,Q6,VW:cmake_defaults,VW,HEAD · no options,4,Bad spec.,bs,3,1,1,0,false,1,65,65,7.89,7.8,0.989
+5,6,Q6,VW:cmake_defaults,VW,HEAD · no options,4,Memory bound,mem,4,44,43.9,-0.1,false,1,65,65,7.89,7.8,0.989
+5,6,Q6,VW:cmake_defaults,VW,HEAD · no options,4,Core bound,core,5,9.6,9.7,0.1,false,1,65,65,7.89,7.8,0.989
+5,6,Q6,VW:jd_all_pc,JD,HEAD · best safe config,5,Retiring,ret,1,20.9,21,0.1,false,2,55.9,56,6.76,6.71,0.993
+5,6,Q6,VW:jd_all_pc,JD,HEAD · best safe config,5,Front-end,fe,2,6.3,6.3,0,false,2,55.9,56,6.76,6.71,0.993
+5,6,Q6,VW:jd_all_pc,JD,HEAD · best safe config,5,Bad spec.,bs,3,1,1,0,false,2,55.9,56,6.76,6.71,0.993
+5,6,Q6,VW:jd_all_pc,JD,HEAD · best safe config,5,Memory bound,mem,4,55.6,55.4,-0.2,false,2,55.9,56,6.76,6.71,0.993
+5,6,Q6,VW:jd_all_pc,JD,HEAD · best safe config,5,Core bound,core,5,16.2,16.3,0.1,false,2,55.9,56,6.76,6.71,0.993
+5,9,Q9,Tectorwise,TW,baseline · vectorised,3,Retiring,ret,1,26.9,22.1,-4.8,true,-2,701.9,592,84.26,70.99,0.843
+5,9,Q9,Tectorwise,TW,baseline · vectorised,3,Front-end,fe,2,26.1,9.2,-16.9,true,-2,701.9,592,84.26,70.99,0.843
+5,9,Q9,Tectorwise,TW,baseline · vectorised,3,Bad spec.,bs,3,18,18.7,0.7,false,-2,701.9,592,84.26,70.99,0.843
+5,9,Q9,Tectorwise,TW,baseline · vectorised,3,Memory bound,mem,4,23.7,36.5,12.8,true,-2,701.9,592,84.26,70.99,0.843
+5,9,Q9,Tectorwise,TW,baseline · vectorised,3,Core bound,core,5,5.2,13.5,8.3,true,-2,701.9,592,84.26,70.99,0.843
+5,9,Q9,Typer,T,baseline · compiled,1,Retiring,ret,1,12.8,12.8,0,false,-1,733.9,733.9,88.14,87.84,0.997
+5,9,Q9,Typer,T,baseline · compiled,1,Front-end,fe,2,4.5,4.7,0.2,false,-1,733.9,733.9,88.14,87.84,0.997
+5,9,Q9,Typer,T,baseline · compiled,1,Bad spec.,bs,3,12.4,12.2,-0.2,false,-1,733.9,733.9,88.14,87.84,0.997
+5,9,Q9,Typer,T,baseline · compiled,1,Memory bound,mem,4,48.4,48.3,-0.1,false,-1,733.9,733.9,88.14,87.84,0.997
+5,9,Q9,Typer,T,baseline · compiled,1,Core bound,core,5,21.9,21.9,0,false,-1,733.9,733.9,88.14,87.84,0.997
+5,9,Q9,Typer@HEAD,T@H,HEAD · compiled,2,Retiring,ret,1,12.9,12.9,0,false,0,729.5,727.4,87.83,87.14,0.992
+5,9,Q9,Typer@HEAD,T@H,HEAD · compiled,2,Front-end,fe,2,5,5.1,0.1,false,0,729.5,727.4,87.83,87.14,0.992
+5,9,Q9,Typer@HEAD,T@H,HEAD · compiled,2,Bad spec.,bs,3,12.8,12.6,-0.2,false,0,729.5,727.4,87.83,87.14,0.992
+5,9,Q9,Typer@HEAD,T@H,HEAD · compiled,2,Memory bound,mem,4,47.6,47.5,-0.1,false,0,729.5,727.4,87.83,87.14,0.992
+5,9,Q9,Typer@HEAD,T@H,HEAD · compiled,2,Core bound,core,5,21.7,21.8,0.1,false,0,729.5,727.4,87.83,87.14,0.992
+5,9,Q9,VW:cmake_defaults,VW,HEAD · no options,4,Retiring,ret,1,22.6,22.7,0.1,false,1,583.5,583.3,70.27,69.86,0.994
+5,9,Q9,VW:cmake_defaults,VW,HEAD · no options,4,Front-end,fe,2,9.5,9.1,-0.4,false,1,583.5,583.3,70.27,69.86,0.994
+5,9,Q9,VW:cmake_defaults,VW,HEAD · no options,4,Bad spec.,bs,3,17.1,17.3,0.2,false,1,583.5,583.3,70.27,69.86,0.994
+5,9,Q9,VW:cmake_defaults,VW,HEAD · no options,4,Memory bound,mem,4,37.4,37.4,0,false,1,583.5,583.3,70.27,69.86,0.994
+5,9,Q9,VW:cmake_defaults,VW,HEAD · no options,4,Core bound,core,5,13.4,13.6,0.2,false,1,583.5,583.3,70.27,69.86,0.994
+5,9,Q9,VW:jd_all_pc,JD,HEAD · best safe config,5,Retiring,ret,1,24,24.1,0.1,false,2,417.9,417.9,50.41,50.09,0.994
+5,9,Q9,VW:jd_all_pc,JD,HEAD · best safe config,5,Front-end,fe,2,7.7,7.7,0,false,2,417.9,417.9,50.41,50.09,0.994
+5,9,Q9,VW:jd_all_pc,JD,HEAD · best safe config,5,Bad spec.,bs,3,8.4,8.3,-0.1,false,2,417.9,417.9,50.41,50.09,0.994
+5,9,Q9,VW:jd_all_pc,JD,HEAD · best safe config,5,Memory bound,mem,4,42.6,42.7,0.1,false,2,417.9,417.9,50.41,50.09,0.994
+5,9,Q9,VW:jd_all_pc,JD,HEAD · best safe config,5,Core bound,core,5,17.3,17.2,-0.1,false,2,417.9,417.9,50.41,50.09,0.994
+5,18,Q18,Tectorwise,TW,baseline · vectorised,3,Retiring,ret,1,33.1,32.7,-0.4,false,-2,859.3,857.2,101.95,103.15,1.012
+5,18,Q18,Tectorwise,TW,baseline · vectorised,3,Front-end,fe,2,12.6,13.5,0.9,false,-2,859.3,857.2,101.95,103.15,1.012
+5,18,Q18,Tectorwise,TW,baseline · vectorised,3,Bad spec.,bs,3,22.8,24.3,1.5,false,-2,859.3,857.2,101.95,103.15,1.012
+5,18,Q18,Tectorwise,TW,baseline · vectorised,3,Memory bound,mem,4,16.9,16.1,-0.8,false,-2,859.3,857.2,101.95,103.15,1.012
+5,18,Q18,Tectorwise,TW,baseline · vectorised,3,Core bound,core,5,14.6,13.3,-1.3,false,-2,859.3,857.2,101.95,103.15,1.012
+5,18,Q18,Typer,T,baseline · compiled,1,Retiring,ret,1,28,27,-1,false,-1,610.9,484.1,64.63,58.08,0.899
+5,18,Q18,Typer,T,baseline · compiled,1,Front-end,fe,2,15.2,8.9,-6.3,true,-1,610.9,484.1,64.63,58.08,0.899
+5,18,Q18,Typer,T,baseline · compiled,1,Bad spec.,bs,3,21.1,22.6,1.5,false,-1,610.9,484.1,64.63,58.08,0.899
+5,18,Q18,Typer,T,baseline · compiled,1,Memory bound,mem,4,24.9,27.1,2.2,true,-1,610.9,484.1,64.63,58.08,0.899
+5,18,Q18,Typer,T,baseline · compiled,1,Core bound,core,5,10.9,14.5,3.6,true,-1,610.9,484.1,64.63,58.08,0.899
+5,18,Q18,Typer@HEAD,T@H,HEAD · compiled,2,Retiring,ret,1,27.4,27.6,0.2,false,0,477.7,475.7,57.51,57.17,0.994
+5,18,Q18,Typer@HEAD,T@H,HEAD · compiled,2,Front-end,fe,2,7.9,8.3,0.4,false,0,477.7,475.7,57.51,57.17,0.994
+5,18,Q18,Typer@HEAD,T@H,HEAD · compiled,2,Bad spec.,bs,3,22.7,22.6,-0.1,false,0,477.7,475.7,57.51,57.17,0.994
+5,18,Q18,Typer@HEAD,T@H,HEAD · compiled,2,Memory bound,mem,4,27.9,27.4,-0.5,false,0,477.7,475.7,57.51,57.17,0.994
+5,18,Q18,Typer@HEAD,T@H,HEAD · compiled,2,Core bound,core,5,14.1,14.1,0,false,0,477.7,475.7,57.51,57.17,0.994
+5,18,Q18,VW:cmake_defaults,VW,HEAD · no options,4,Retiring,ret,1,38.1,38.1,0,false,1,715.4,715.4,85.95,85.61,0.996
+5,18,Q18,VW:cmake_defaults,VW,HEAD · no options,4,Front-end,fe,2,9.8,11.2,1.4,false,1,715.4,715.4,85.95,85.61,0.996
+5,18,Q18,VW:cmake_defaults,VW,HEAD · no options,4,Bad spec.,bs,3,22,21.6,-0.4,false,1,715.4,715.4,85.95,85.61,0.996
+5,18,Q18,VW:cmake_defaults,VW,HEAD · no options,4,Memory bound,mem,4,18.7,18.3,-0.4,false,1,715.4,715.4,85.95,85.61,0.996
+5,18,Q18,VW:cmake_defaults,VW,HEAD · no options,4,Core bound,core,5,11.4,10.8,-0.6,false,1,715.4,715.4,85.95,85.61,0.996
+5,18,Q18,VW:jd_all_pc,JD,HEAD · best safe config,5,Retiring,ret,1,38.3,38.2,-0.1,false,2,388.1,387.3,46.71,46.76,1.001
+5,18,Q18,VW:jd_all_pc,JD,HEAD · best safe config,5,Front-end,fe,2,4.9,5.5,0.6,false,2,388.1,387.3,46.71,46.76,1.001
+5,18,Q18,VW:jd_all_pc,JD,HEAD · best safe config,5,Bad spec.,bs,3,4,3.8,-0.2,false,2,388.1,387.3,46.71,46.76,1.001
+5,18,Q18,VW:jd_all_pc,JD,HEAD · best safe config,5,Memory bound,mem,4,41.1,40.6,-0.5,false,2,388.1,387.3,46.71,46.76,1.001
+5,18,Q18,VW:jd_all_pc,JD,HEAD · best safe config,5,Core bound,core,5,11.8,11.8,0,false,2,388.1,387.3,46.71,46.76,1.001
