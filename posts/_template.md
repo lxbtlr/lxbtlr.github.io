@@ -67,3 +67,21 @@ SVG diagrams are expected to handle dark mode themselves (draw.io: export
 as SVG with adaptive colors). For an SVG that doesn't, add "#invert" to the
 src (![diagram](/assets/images/<file>.svg#invert)) or class="invert" to an
 inline <svg>: dark mode then swaps its black and white.
+
+Plots from a database export (see README, "Data viewer and plots"). A chart
+view by name, with an optional caption; readers get the live chart and a
+link that opens its SQL and spec in the data viewer:
+
+{% dbplot "2. bars: best mean time in sf", "Optional caption" %}
+
+Or your own query and Vega-Lite spec, in the same two fenced blocks as a
+view file:
+
+{% dbplotcustom "Optional caption" %}
+```sql
+SELECT ...
+```
+```json
+{ "mark": "bar", "encoding": { ... } }
+```
+{% enddbplotcustom %}
