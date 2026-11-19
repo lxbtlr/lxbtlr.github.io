@@ -1,10 +1,9 @@
 ---
-layout: layouts/page.njk
+layout: layouts/listing.njk
 title: Blog
+description: <a href="/feed.xml">Follow the feed.</a>
 eleventyExcludeFromCollections: true
 ---
-
-<p><center><a href="/feed.xml">Follow the feed.</a></center></p>
 
 {% set posts = collections.posts | reverse %}
 
@@ -20,5 +19,5 @@ eleventyExcludeFromCollections: true
   {% endfor %}
 </dl>
 {% else %}
-<p><center>No posts yet.</center></p>
+<p>No posts yet.</p>
 {% endif %}

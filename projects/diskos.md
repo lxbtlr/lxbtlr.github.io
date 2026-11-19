@@ -1,6 +1,7 @@
 ---
-layout: layouts/page.njk
+layout: layouts/project-post.njk
 title: Diskos
+date: 2021-03-01
 description: A student designed and built kinetic battery testbench
 ---
 
@@ -9,10 +10,10 @@ description: A student designed and built kinetic battery testbench
   <figcaption>A 9 kg flywheel capable of storing .74 Wh of energy. Designed and manufactured entirely by our team!</figcaption>
 </figure>
 
-For our final project in Principles of Integrated Engineering (colloquially, PIE), my team designed and manufactured a 9 kg flywheel capable of storing .74 Wh of energy.
+For my final project in Principles of Integrated Engineering (colloquially, PIE), my team designed and manufactured a 9 kg flywheel capable of storing .74 Wh of energy.
 The goal for this project was to learn more about kinetic battery optimization and provide learning experiences in mechanical, electrical, and computing engineering integration.
 
-I worked with another student on the design of a custom 400W 60V inverter for the BLDC motor. We were unable to finish our motor controller in the short timeframe we had for this project but learned a lot in the process of designing it.
+I worked with another student on the design of a custom 400W 60V inverter for the BLDC motor. We were unable to finish our motor controller in the short time-frame we had for this project but learned a lot in the process of designing it.
 
 To learn more watch our making-of video below and check out our [project site](https://olincollege.github.io/pie-2021-03/Diskos/), where you can find all of our documentation!
 

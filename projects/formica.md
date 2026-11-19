@@ -1,5 +1,5 @@
 ---
-layout: layouts/page.njk
+layout: layouts/project-post.njk
 title: Formica
 description: Agent based model to replicate the results of Watmough and Edelstein-Keshet's 1995 paper
 ---

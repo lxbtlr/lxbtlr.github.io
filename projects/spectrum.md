@@ -1,5 +1,5 @@
 ---
-layout: layouts/page.njk
+layout: layouts/project-post.njk
 title: Spectrum Coexistence
 description: Unlicensed Access + Microwave Fixed Links @ 6 GHz
 ---

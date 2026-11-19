@@ -11,7 +11,7 @@
 #          "url": "/projects/<slug>/",
 #          "img": "/assets/images/<slug>_header.jpg"
 #        }
-layout: layouts/page.njk
+layout: layouts/project-post.njk
 title: Project Name
 description: One-line summary of the project
 ---

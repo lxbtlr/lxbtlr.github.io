@@ -1,0 +1,22 @@
+---
+layout: layouts/base.njk
+---
+{#- Project write-up styled like a blog post (narrow column, sidenote
+    gutter). The description stands in for the post date. -#}
+<article class="post">
+
+  <hgroup>
+    <h1>{% if titleHtml %}{{ titleHtml | safe }}{% else %}{{ title }}{% endif %}</h1>
+    <p>
+      {% if descriptionHtml %}{{ descriptionHtml | safe }}{% else %}{{ description }}{% endif %}
+      {%- if draft %} &middot; <mark>draft</mark>{% endif %}
+    </p>
+  </hgroup>
+
+  {{ content | safe }}
+
+  <hr />
+
+  <p><a href="/projects/">&larr; All projects</a></p>
+
+</article>

@@ -1,13 +1,11 @@
 ---
-layout: layouts/page.njk
+layout: layouts/listing.njk
 title: Projects
 ---
 
-<br>
-
 <div class="project-list">
 
-  {% for project in projects %}
+  {% for project in projects | rejectattr("unlisted") %}
 
   <article class="project-row">
     {% if project.img %}

@@ -5,7 +5,7 @@ layout: layouts/base.njk
 
   <center>
     <h1>
-      {{ title }}
+      {% if titleHtml %}{{ titleHtml | safe }}{% else %}{{ title }}{% endif %}
     </h1>
   </center>
 

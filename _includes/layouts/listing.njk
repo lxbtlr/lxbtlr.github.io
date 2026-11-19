@@ -1,0 +1,17 @@
+---
+layout: layouts/base.njk
+---
+{#- Index pages (blog, projects) in the same column as a post, so the text
+    does not shift when moving from a listing into a post. -#}
+<article class="post">
+
+  <hgroup>
+    <h1>{{ title }}</h1>
+    {%- if description %}
+    <p>{{ description | safe }}</p>
+    {%- endif %}
+  </hgroup>
+
+  {{ content | safe }}
+
+</article>
