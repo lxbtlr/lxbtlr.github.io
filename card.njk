@@ -8,4 +8,4 @@ eleventyExcludeFromCollections: true
 <p>Architecture-aware optimizations for parallel systems: synchronization primitives, efficient computing clusters, and performance engineering for database execution engines. B.S. ECE, Olin College. IBM Z intern 2021&ndash;2025.
 <h2>News</h2>
 <ul>{% for item in news | sort("date") | reverse | head(3) %}<li>{{ item.date | dateFormat("MMM yyyy") }}: {{ item.text }}{% endfor %}</ul>
-<p><a href="/">Home</a> &middot; <a href="https://github.com/{{ site.github }}">GitHub</a> &middot; <a href="/files/Alex_Butler_RESUME.pdf">C/V</a>
+<p><a href="/">Home</a> &middot; <a href="https://github.com/{{ site.github }}">GitHub</a> &middot; <a href="{{ site.cvPdf }}">C/V</a>

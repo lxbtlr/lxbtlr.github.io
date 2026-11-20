@@ -24,10 +24,10 @@ all: build
 deps:
 	bun install
 
-build: deps
+build: deps cv
 	$(ELEVENTY)
 
-serve: deps
+serve: deps cv
 	$(ELEVENTY) --serve
 
 sync-tpch:
@@ -72,7 +72,13 @@ corpus-tpch: $(if $(NOFETCH),,$(if $(filter $(CACHE)/corpus-full.sqlite,$(FULL))
 extra-tpch:
 	@if ls $(TPCH)/extra/*.csv >/dev/null 2>&1; then node lib/import-csv.js $(TPCH)/corpus.sqlite $(TPCH)/extra/*.csv; fi
 
+# CV PDF from the about me data (cv/cv.typ reads _data/*.json); not tracked.
+cv: files/Alex_Butler_CV.pdf
+
+files/Alex_Butler_CV.pdf: cv/cv.typ $(wildcard cv/fonts/*) $(wildcard _data/*.json)
+	typst compile --root . --font-path cv/fonts cv/cv.typ $@
+
 clean:
 	rm -rf _site
 
-.PHONY: all deps build serve sync-tpch fetch-tpch subset-tpch corpus-tpch extra-tpch clean
+.PHONY: all deps build serve cv sync-tpch fetch-tpch subset-tpch corpus-tpch extra-tpch clean

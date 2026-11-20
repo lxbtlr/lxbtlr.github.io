@@ -35,6 +35,13 @@ jobs:
           sudo apt-get update -q && sudo apt-get install -yq sqlite3
           make corpus-tpch
 
+      # files/Alex_Butler_CV.pdf is not tracked: typeset it from the about me data.
+      - name: Setup Typst
+        uses: typst-community/setup-typst@v4
+
+      - name: Build CV
+        run: make cv
+
       - name: Build Eleventy site
         run: bun run eleventy
 

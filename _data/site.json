@@ -10,5 +10,7 @@
     "street": "2233 Tech Drive",
     "city": "Evanston, IL 60208"
   },
-  "github": "lxbtlr"
+  "github": "lxbtlr",
+  "researchInterests": "My research interests lie in architecture-aware optimizations for parallel systems, from synchronization primitives to wimpy-node clusters. My current work focuses on low-level performance engineering for vectorized and compiled database execution engines: how micro-architectural bottlenecks, not only the execution paradigm, decide their performance on modern x86 and ARM servers.",
+  "cvPdf": "/files/Alex_Butler_CV.pdf"
 }

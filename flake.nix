@@ -17,6 +17,7 @@
             gnumake
             python3   # Thunderous-Pupil bin/build-views (make sync-tpch)
             sqlite
+            typst     # make cv
           ];
           shellHook = ''
             echo "make serve  -> dev server on http://localhost:8080"

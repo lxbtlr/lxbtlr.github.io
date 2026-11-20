@@ -6,3 +6,6 @@ result
 
 # Published TPC-H subset: rebuilt from data/tpch/runs.txt (make corpus-tpch)
 data/tpch/corpus.sqlite
+
+# CV PDF: built from cv/cv.typ (make cv)
+files/Alex_Butler_CV.pdf
