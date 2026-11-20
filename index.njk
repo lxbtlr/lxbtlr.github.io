@@ -59,7 +59,10 @@ layout: layouts/base.njk
     from its specifications.
   </p>
 </article>
-<div class="rolls">
+{#- The blog roll only shows once there is a published (non-draft) post;
+    until then the news roll takes the full width. #}
+{% set hasPosts = (collections.posts | published).length %}
+<div class="rolls{% if not hasPosts %} rolls-single{% endif %}">
   <article>
     <h2>News</h2>
 
@@ -73,6 +76,7 @@ layout: layouts/base.njk
     </dl>
   </article>
 
+  {% if hasPosts %}
   <article>
     <h2>Blog</h2>
 
@@ -94,6 +98,7 @@ layout: layouts/base.njk
     <p>No posts yet.</p>
     {% endif %}
   </article>
+  {% endif %}
 </div>
 
 <article>

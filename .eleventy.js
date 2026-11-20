@@ -78,6 +78,11 @@ module.exports = function(eleventyConfig) {
     return [...array].reverse();
   });
 
+  // Published filter - drops draft posts (they only exist under make serve)
+  eleventyConfig.addFilter("published", function(posts) {
+    return (posts || []).filter((post) => !post.data.draft);
+  });
+
   eleventyConfig.addFilter("dateFormat", function(date, format) {
     const d = new Date(date);
 

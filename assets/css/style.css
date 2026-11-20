@@ -747,6 +747,11 @@ pre[class*="language-"] > code {
   margin: 0;
 }
 
+/* News alone (no published blog posts): one full-width column */
+.rolls.rolls-single {
+  grid-template-columns: 1fr;
+}
+
 @media (max-width: 768px) {
   .rolls {
     grid-template-columns: 1fr;
