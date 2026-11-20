@@ -2,13 +2,26 @@
   {
     "role": "Ph.D. Researcher",
     "org": "Prescience Lab, Northwestern University",
+    "location": "Evanston, IL",
     "date": "2024–present",
-    "desc": "Architecture-aware optimizations for parallel systems and low-level performance engineering for database execution engines."
+    "desc": "Architecture-aware optimizations for parallel systems and low-level performance engineering for database execution engines.",
+    "bullets": [
+      "Performance engineering for vectorized and compiled query execution engines on x86 and ARM servers.",
+      "Micro-architectural analysis of database operators with VTune and Linux perf.",
+      "Architecture-aware synchronization primitives for parallel systems."
+    ],
+    "logo": "/assets/images/logos/plab.png"
   },
   {
     "role": "Intern, Millicode and System Architecture",
     "org": "IBM Z",
     "date": "2021–2025",
-    "desc": "Worked on IBM Z mainframes; most recently formalizing the z/Architecture memory model from its specifications."
+    "desc": "Worked on IBM Z mainframes; most recently formalizing the z/Architecture memory model from its specifications.",
+    "bullets": [
+      "Formalizing the z/Architecture memory model from its specifications.",
+      "IBM Extreme Blue: designed and built a defect-data collection system saving an estimated $635,000 per year.",
+      "Built internal CI/CD with Kubernetes, OpenShift and Tekton."
+    ],
+    "logo": "/assets/images/logos/ibm.png"
   }
 ]

@@ -1328,6 +1328,38 @@ nav a.home-link:hover {
   margin-inline: auto;
 }
 
+/* Education and experience entries: logo beside the text */
+.logo-entry {
+  display: flex;
+  align-items: flex-start;
+  gap: 1rem;
+}
+
+.entry-logo {
+  flex: none;
+  width: 3rem;
+  height: 3rem;
+  object-fit: contain;
+  margin-top: 0.2rem;
+  border-radius: 4px;
+}
+
+/* Dark mode: a light plate keeps dark logo artwork (e.g. the lab's black
+   lettering) visible */
+:root[data-theme="dark"] .entry-logo {
+  background: #fff;
+  padding: 0.2rem;
+}
+
+/* Section rule sits close under its heading */
+.cv h2:has(+ hr) {
+  margin-bottom: 0.4rem;
+}
+
+.cv h2 + hr {
+  margin-top: 0;
+}
+
 /* Project titles on the about me page: plain ink with a thin ink underline,
    turning green on hover */
 .cv h5 a {

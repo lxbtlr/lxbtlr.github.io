@@ -15,7 +15,9 @@
         "major": "Computer Science",
         "date": "2026"
       }
-    ]
+    ],
+    "date": "2024–present",
+    "logo": "/assets/images/logos/northwestern.png"
   },
   {
     "institution": "Olin College of Engineering",
@@ -26,6 +28,8 @@
         "major": "Electrical & Computer Engineering",
         "date": "2023"
       }
-    ]
+    ],
+    "date": "2019–2023",
+    "logo": "/assets/images/logos/olin.png"
   }
 ]
